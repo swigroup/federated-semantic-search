@@ -1,0 +1,7 @@
+nbactions.xml
+catalog.xml
+nb-configuration.xml
+/images
+/target
+/src/main/resources/keys
+/src/main/resources/ontologies.cfg
