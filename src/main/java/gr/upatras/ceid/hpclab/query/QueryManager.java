@@ -5,6 +5,8 @@
  */
 package gr.upatras.ceid.hpclab.query;
 
+import gr.dataverse.duth.semantic.owl.SKOSConcept;
+import gr.dataverse.duth.semantic.response.PrepareResponseWrapper;
 import java.util.HashSet;
 import java.util.LinkedHashMap;
 import java.util.Map;
@@ -29,7 +31,7 @@ public class QueryManager {
         return queryTuples.get(t);
     }
 
-    public Set<QueryTerm> putTranslations(QueryTerm t, Set<QueryTerm> translations) {
+    private Set<QueryTerm> putTranslations(QueryTerm t, Set<QueryTerm> translations) {
         //in case there is a matching term from the ontology, prefer it.
         if (queryTuples.containsKey(t)) {
             queryTuples.remove(t);
@@ -37,7 +39,7 @@ public class QueryManager {
         return queryTuples.put(t, translations);
     }
 
-    public Boolean addTranslation(QueryTerm t, QueryTerm l) {
+    private Boolean addTranslation(QueryTerm t, QueryTerm l) {
         Set<QueryTerm> translations = this.getTranslations(t);
         if (translations == null) {
             translations = new HashSet<>(); //initially empty
@@ -54,6 +56,27 @@ public class QueryManager {
      */
     public Map<QueryTerm, Set<QueryTerm>> getQueryTuples() {
         return queryTuples;
+    }
+
+    public void buildQuerySet(Set<SKOSConcept> concepts, PrepareResponseWrapper prepareResponseWrapper) {
+        for (SKOSConcept sc : concepts) {
+            for (QueryTerm t : sc.getPrefLabels()) {
+                if (t != null) {
+                    Set translations = new HashSet();
+                    translations.addAll(sc.getPrefLabels());
+                    translations.remove(t);
+                    putTranslations(t, translations);
+                }
+            }
+            for (QueryTerm t : sc.getAltLabels()) {
+                if (t != null) {
+                    Set translations = new HashSet();
+                    translations.addAll(sc.getAltLabels());
+                    translations.remove(t);
+                    putTranslations(t, translations);
+                }
+            }
+        }
     }
 
 }
