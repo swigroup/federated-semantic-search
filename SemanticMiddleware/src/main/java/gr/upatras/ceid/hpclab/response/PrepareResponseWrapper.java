@@ -75,7 +75,7 @@ public class PrepareResponseWrapper {
             qm.addQueryTerm(keyword, null);
             //Expand keywords
             ConceptMatcher cm = new ConceptMatcher(om);
-            buildQuerySet(cm.expandKeyword(keyword));
+            qm.buildQuerySet(cm.expandKeyword(keyword), this);
 
             /*KeywordTerms: Terms for current keyword
              temp: contains terms for previous keywords
@@ -102,28 +102,6 @@ public class PrepareResponseWrapper {
             qm.getQueryTuples().keySet().clear(); //possibly reduntant
         }
         return res;
-    }
-
-    void buildQuerySet(Set<SKOSConcept> concepts) {
-        for (SKOSConcept sc : concepts) {
-
-            for (QueryTerm t : sc.getPrefLabels()) {
-                if (t != null) {
-                    Set translations = new HashSet();
-                    translations.addAll(sc.getPrefLabels());
-                    translations.remove(t);
-                    qm.putTranslations(t, translations);
-                }
-            }
-            for (QueryTerm t : sc.getAltLabels()) {
-                if (t != null) {
-                    Set translations = new HashSet();
-                    translations.addAll(sc.getAltLabels());
-                    translations.remove(t);
-                    qm.putTranslations(t, translations);
-                }
-            }
-        }
     }
 
     private List<String> polishKeywordSet(List<String> keywords) {
