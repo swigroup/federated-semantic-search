@@ -138,7 +138,7 @@ public class ConceptMatcher {
                             || axn.getProperty().equals(altLabel)) {
                         OWLLiteral l = axn.getValue().asLiteral().get();
                         //WAS: l.getLiteral().equalsIgnoreCase(match)
-                        if (l.getLiteral().toLowerCase().contains(match)) {
+                        if (l.getLiteral().toLowerCase().equals(match)) {
 
                             OWLIndividual subject = m.getOWLDataFactory().
                                     getOWLNamedIndividual((IRI) axn.getSubject());
