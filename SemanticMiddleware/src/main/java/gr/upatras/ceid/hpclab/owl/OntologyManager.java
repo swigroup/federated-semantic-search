@@ -35,13 +35,16 @@ public class OntologyManager {
         manager = OWLManager.createOWLOntologyManager();
         prefixManager = new DefaultPrefixManager();
         prefixManager.setPrefix("skos:", "http://www.w3.org/2004/02/skos/core#");
-        try {
-            this.loadOntology("http://snf-630087.vm.okeanos.grnet.gr:8888/webprotege-2.5.0/download?ontology=999847fa-caca-4604-8b5b-461f4ec8cc4c");
-        } 
-        catch (OWLOntologyCreationException|OWLOntologyFactoryNotFoundException ex) {
-            Logger.getLogger(OntologyManager.class.getName()).log(Level.SEVERE, "Problems "
-                    + "loading ontology: "
-                    + "**URL**", ex);
+        OntologyConfiguration conf = new OntologyConfiguration();
+        for (String ontologyURL : conf.getOntologyList()) {
+            try {
+                this.loadOntology(ontologyURL);
+                //this.loadOntology("http://snf-630087.vm.okeanos.grnet.gr:8888/webprotege-2.5.0/download?ontology=999847fa-caca-4604-8b5b-461f4ec8cc4c");
+            } catch (OWLOntologyCreationException | OWLOntologyFactoryNotFoundException ex) {
+                Logger.getLogger(OntologyManager.class.getName()).log(Level.SEVERE, "Problems "
+                        + "loading ontology: "
+                        + ontologyURL, ex);
+            }
         }
 
     }
