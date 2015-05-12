@@ -45,11 +45,10 @@ public class ConceptMatcher {
     }
 
     /**
-     * 
+     *
      * @param keyword
-     * @return The set of matching concepts and their refinements
-     * for the keyword.
-     * Notice that there is a LIMIT in the number of concepts.
+     * @return The set of matching concepts and their refinements for the
+     * keyword. Notice that there is a LIMIT in the number of concepts.
      */
     public Set<SKOSConcept> expandKeyword(String keyword) {
         Set<SKOSConcept> expanded = new LinkedHashSet<>();
@@ -60,19 +59,37 @@ public class ConceptMatcher {
         }
         return expanded;
     }
-    
+
     public Set<SKOSConcept> getConceptRefinements(SKOSConcept root) {
         Set<SKOSConcept> resultSet = new LinkedHashSet<>();
         Set<SKOSConcept> temp = new LinkedHashSet<>();
-        if (size < LIMIT) {
-            resultSet.addAll(getShallowConceptRefinements(root));
-            temp.addAll(resultSet);
-            size += temp.size();
-            for (SKOSConcept sc : resultSet) {
-                temp.addAll(getConceptRefinements(sc));
+
+        //Implement BFS
+        temp.add(root);
+        while (!(temp.isEmpty()) && size < LIMIT) {
+            Set<SKOSConcept> copy = new LinkedHashSet(temp);
+            temp.clear();
+            for (SKOSConcept sc : copy) {
+                Set<SKOSConcept> refinements = getShallowConceptRefinements(sc);
+                int diff = resultSet.size();
+                resultSet.addAll(refinements);
+                temp.addAll(refinements);
+                //count size increment (no duplicates)
+                size += resultSet.size() - diff;
             }
         }
-        return temp;
+        
+        /* //Implement recursive DFS
+         if (size < LIMIT) {
+         resultSet.addAll(getShallowConceptRefinements(root));
+         temp.addAll(resultSet);
+         size += temp.size();
+         for (SKOSConcept sc : resultSet) {
+         temp.addAll(getConceptRefinements(sc));
+         }
+         }
+         */
+        return resultSet;
     }
 
     private Set<SKOSConcept> getShallowConceptRefinements(SKOSConcept root) {
@@ -100,7 +117,7 @@ public class ConceptMatcher {
                         SKOSConcept sc = SKOSConcept.
                                 buildSKOSConceptFromIndividual(object, manager);
                         resultSet.add(sc);
-                    }                    
+                    }
                 }
             }
         }
@@ -108,12 +125,11 @@ public class ConceptMatcher {
     }
 
     /**
-     * 
+     *
      * @param match
      * @return The set of SKOSConcepts in the loaded ontologies that match the
-     * string.
-     * Specifically, matching succeeds if the keyword is contained within any 
-     * of the lexical representations of the concept, ignoring case.
+     * string. Specifically, matching succeeds if the keyword is contained
+     * within any of the lexical representations of the concept, ignoring case.
      */
     private Set<SKOSConcept> getMatchingConcepts(String match) {
 
@@ -137,9 +153,7 @@ public class ConceptMatcher {
                     if (axn.getProperty().equals(prefLabel)
                             || axn.getProperty().equals(altLabel)) {
                         OWLLiteral l = axn.getValue().asLiteral().get();
-                        //WAS: l.getLiteral().equalsIgnoreCase(match)
-                        if (l.getLiteral().toLowerCase().equals(match)) {
-
+                        if (isMatch(l.getLiteral(), match, true)) {
                             OWLIndividual subject = m.getOWLDataFactory().
                                     getOWLNamedIndividual((IRI) axn.getSubject());
                             SKOSConcept sc = SKOSConcept.
@@ -154,4 +168,19 @@ public class ConceptMatcher {
         return resultSet;
     }
 
+    private boolean isMatch(String a, String b, boolean exact) {
+        if (!exact) {
+            a = a.toLowerCase();
+            b = b.toLowerCase();
+            return a.contains(b);
+        } else {
+            return isMatch(a, b);
+        }
+    }
+
+    private boolean isMatch(String a, String b) {
+        a = a.toLowerCase();
+        b = b.toLowerCase();
+        return a.equals(b);
+    }
 }
