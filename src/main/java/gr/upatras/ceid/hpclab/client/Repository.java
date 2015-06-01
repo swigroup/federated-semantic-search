@@ -46,6 +46,16 @@ enum Repository {
         return URL;
     }
 
+    public static Repository findRepoFromClass(Class<? extends RepositoryConnector> c) {
+        Repository[] repositories = Repository.values();
+        for (Repository res : repositories) {
+            if (res.classImpl.equals(c.getName())) {
+                return res;
+            }
+        }
+        return null;
+    }
+
     private static enum MapFields {
 
         ROOT,

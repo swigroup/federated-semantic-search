@@ -36,7 +36,7 @@ public class QueryClientManager {
         HashSet<ResultType> totalResults = new HashSet<>();
         for (Repository r : Repository.values()) {
             try {
-                //thid is a hashset, so no overlapping results (per category)
+                //this is a hashset, so no overlapping results (per category)
                 totalResults.addAll(getResultsFromRepository(r, query));
             } catch (ClassNotFoundException | InstantiationException | IllegalAccessException ex) {
                 Logger.getLogger(QueryClientManager.class.getName()).log(Level.SEVERE,
