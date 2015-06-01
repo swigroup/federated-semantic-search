@@ -9,14 +9,12 @@ import gr.upatras.ceid.hpclab.response.model.ObjectFactory;
 import gr.upatras.ceid.hpclab.response.model.ResultType;
 import java.io.IOException;
 import java.io.InputStream;
-import java.io.StringReader;
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
 import javax.xml.parsers.ParserConfigurationException;
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
 import org.w3c.dom.Node;
-import org.xml.sax.InputSource;
 import org.xml.sax.SAXException;
 
 /**
@@ -37,13 +35,15 @@ class XMLParser {
         doc = db.parse(xml);
     }
 
-    ResultType createResult(String title, String description, String URL) {
+    ResultType createResult(String title, String description, String URL, Repository res) {
         //add only results that have a URL
         if (URL != null && !URL.equals("")) {
             ResultType r = fact.createResultType();
-            r.setDescription(description);
+            String origin = res.name();
+            r.setDescription("("+origin+") " + description);
             r.setTitle(title);
             r.setURL(URL);
+            
             return r;
         }
         return null;

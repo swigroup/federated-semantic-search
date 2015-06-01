@@ -43,7 +43,7 @@ class MerlotConnectorImpl implements RepositoryConnector {
                     String lin
                             = parser.getChildElement(entry, "URL");
                     ResultType r
-                            = parser.createResult(tit, desc, lin);
+                            = parser.createResult(tit, desc, lin, Repository.findRepoFromClass(this.getClass()));
                     resultsList.add(r);
                 }
             }
