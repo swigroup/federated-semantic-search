@@ -40,6 +40,8 @@ class XMLParser {
         if (URL != null && !URL.equals("")) {
             ResultType r = fact.createResultType();
             String origin = res.name();
+            description = description == null ? "null" : description;
+            title = title == null ? "null" : title;
             r.setDescription("("+origin+") " + description);
             r.setTitle(title);
             r.setURL(URL);

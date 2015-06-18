@@ -19,7 +19,10 @@ enum Repository {
     PUBMED("gr.upatras.ceid.hpclab.client.PubMedConnectorImpl",
             "http://www.ebi.ac.uk/europepmc/webservices/rest/search", Mappings.PUBMED_MAPPING),
     MERLOT("gr.upatras.ceid.hpclab.client.MerlotConnectorImpl",
-            "http://www.merlot.org/merlot/materials.rest", Mappings.PUBMED_MAPPING);
+            "http://www.merlot.org/merlot/materials.rest", Mappings.PUBMED_MAPPING),
+    OJS("gr.upatras.ceid.hpclab.client.OJSConnectorImpl",
+            "http://83.212.133.37/ojs/index.php/MedCom/gateway/plugin/RestPlugin/searchArticleXML", Mappings.PUBMED_MAPPING);
+
 
     private final String classImpl;
     private final String URL;
