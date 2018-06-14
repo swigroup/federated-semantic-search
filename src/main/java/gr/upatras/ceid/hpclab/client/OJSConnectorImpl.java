@@ -3,9 +3,9 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package gr.dataverse.duth.semantic.client;
+package gr.upatras.ceid.hpclab.client;
 
-import gr.dataverse.duth.semantic.response.model.ResultType;
+import gr.upatras.ceid.hpclab.response.model.ResultType;
 import java.io.IOException;
 import java.io.InputStream;
 import java.util.HashSet;

@@ -45,5 +45,11 @@ public class ResultsResource {
         PrepareResponseWrapper response = new PrepareResponseWrapper();
         return response.getResults(query);
     }
-
+   /* @GET
+    @Produces({"application/xml", "application/rdf+xml"})
+    public Results getRdf(@QueryParam("q") List<String> query) {
+        PrepareResponseWrapper response = new PrepareResponseWrapper();
+        return response.getResults(query);
+    }
+*/
 }

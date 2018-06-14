@@ -12,6 +12,7 @@ import gr.upatras.ceid.hpclab.owl.SKOSConcept;
 import gr.upatras.ceid.hpclab.query.QueryManager;
 import gr.upatras.ceid.hpclab.query.QueryTerm;
 import gr.upatras.ceid.hpclab.response.model.CategoryType;
+import gr.upatras.ceid.hpclab.response.model.ConceptType;
 import gr.upatras.ceid.hpclab.response.model.ObjectFactory;
 import gr.upatras.ceid.hpclab.response.model.ResultType;
 import gr.upatras.ceid.hpclab.response.model.Results;
@@ -43,6 +44,16 @@ public class PrepareResponseWrapper {
         return ct.getResult().addAll(resultsList);
     }
 
+    private void buildMatchingConcepts(QueryTerm keyword, CategoryType ct) {
+        Set<SKOSConcept> concepts = qm.getMatchingConcepts(keyword);
+
+        for (SKOSConcept c : concepts) {
+            ConceptType cons = fact.createConceptType();
+            cons.setIRI(c.getIRI().toString());
+            ct.getMatchingConcept().add(cons);
+        }
+    }
+
     private void buildTranslations(QueryTerm keyword, CategoryType ct) {
         Set<QueryTerm> translations = qm.getTranslations(keyword);
         for (QueryTerm t : translations) {
@@ -58,6 +69,7 @@ public class PrepareResponseWrapper {
         ct.setKeyword(keyword.getLabel());
         ct.setLang(keyword.getLang());
         buildTranslations(keyword, ct);
+        buildMatchingConcepts(keyword, ct);
         res.getCategory().add(ct);
         return ct;
     }
