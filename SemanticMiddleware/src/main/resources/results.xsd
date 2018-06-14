@@ -1,0 +1,56 @@
+<?xml version="1.0"?>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+
+<xs:schema 
+   
+    xmlns:xs="http://www.w3.org/2001/XMLSchema"
+    elementFormDefault="qualified"
+    version="1.0">
+
+    <xs:import namespace="http://www.w3.org/XML/1998/namespace"
+               schemaLocation="http://www.w3.org/2001/xml.xsd"/>
+ 
+    <xs:element name="Results">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="Category" minOccurs="0" maxOccurs="unbounded" type="CategoryType"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+ 
+
+    <xs:complexType name="CategoryType">
+        <xs:sequence>
+            <xs:element name="alter_translation" minOccurs="0" maxOccurs="unbounded"  type="translationType"  />
+            <xs:element name="matching_concept" minOccurs="0" maxOccurs="unbounded" type="conceptType"/>
+            <xs:element name="Result" minOccurs="0" maxOccurs="unbounded"  type="ResultType"  />
+        </xs:sequence>
+        <xs:attribute name="keyword" type="xs:string"/>
+        <xs:attribute ref="xml:lang" />
+    </xs:complexType>
+        
+    <xs:complexType name="translationType">
+        <xs:simpleContent>
+            <xs:extension base="xs:string">
+                <xs:attribute ref="xml:lang">
+                </xs:attribute>
+            </xs:extension>
+        </xs:simpleContent>
+    </xs:complexType> 
+    <xs:complexType name="conceptType">
+        <xs:attribute name="IRI" type="xs:anyURI"/>
+    </xs:complexType>
+    <xs:complexType name="ResultType">
+        <xs:all>
+            <xs:element name="URL" type="xs:anyURI"/>
+            <xs:element name="Title" type="xs:string"/>
+            <xs:element name="Description" type="xs:string"/>                                                     
+        </xs:all>
+
+    </xs:complexType>
+</xs:schema>
+

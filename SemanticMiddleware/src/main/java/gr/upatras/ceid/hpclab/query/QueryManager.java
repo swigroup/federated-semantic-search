@@ -5,8 +5,9 @@
  */
 package gr.upatras.ceid.hpclab.query;
 
-import gr.dataverse.duth.semantic.owl.SKOSConcept;
-import gr.dataverse.duth.semantic.response.PrepareResponseWrapper;
+import gr.upatras.ceid.hpclab.owl.SKOSConcept;
+import gr.upatras.ceid.hpclab.response.PrepareResponseWrapper;
+import java.util.Arrays;
 import java.util.HashSet;
 import java.util.LinkedHashMap;
 import java.util.Map;
@@ -21,6 +22,9 @@ public class QueryManager {
     private final LinkedHashMap<QueryTerm, Set<QueryTerm>> queryTuples
             = new LinkedHashMap<>(); // L(v). Keys are unique per label only (not lang).
 
+    private final LinkedHashMap<QueryTerm, Set<SKOSConcept>> termConcepts
+            = new LinkedHashMap<>(); // Each QueryTerm carries its matching concepts.
+
     public QueryTerm addQueryTerm(String label, String lang) {
         QueryTerm qt = new QueryTerm(label, lang);
         addTranslation(qt, null);
@@ -29,6 +33,14 @@ public class QueryManager {
 
     public Set<QueryTerm> getTranslations(QueryTerm t) {
         return queryTuples.get(t);
+    }
+
+    public Set<SKOSConcept> getMatchingConcepts(QueryTerm t) {
+        if (termConcepts.get(t) == null) {
+            return new HashSet<>();
+        } else {
+            return termConcepts.get(t);
+        }
     }
 
     private Set<QueryTerm> putTranslations(QueryTerm t, Set<QueryTerm> translations) {
@@ -66,6 +78,7 @@ public class QueryManager {
                     translations.addAll(sc.getPrefLabels());
                     translations.remove(t);
                     putTranslations(t, translations);
+                    termConcepts.put(t, new HashSet<>(Arrays.asList(sc)));
                 }
             }
             for (QueryTerm t : sc.getAltLabels()) {
@@ -74,6 +87,7 @@ public class QueryManager {
                     translations.addAll(sc.getAltLabels());
                     translations.remove(t);
                     putTranslations(t, translations);
+                    termConcepts.put(t, concepts);
                 }
             }
         }

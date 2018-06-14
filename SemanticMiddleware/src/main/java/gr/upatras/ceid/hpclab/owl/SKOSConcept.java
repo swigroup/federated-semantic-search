@@ -17,6 +17,7 @@ import org.semanticweb.owlapi.model.OWLIndividual;
 import org.semanticweb.owlapi.model.OWLLiteral;
 import org.semanticweb.owlapi.model.OWLOntologyManager;
 import org.semanticweb.owlapi.model.PrefixManager;
+import org.semanticweb.owlapi.model.IRI;
 import org.semanticweb.owlapi.search.EntitySearcher;
 
 /**
@@ -94,6 +95,10 @@ public class SKOSConcept {
      */
     public OWLIndividual getIndividual() {
         return individual;
+    }
+    
+    public IRI getIRI() {
+        return individual.asOWLNamedIndividual().getIRI();
     }
 
     @Override
