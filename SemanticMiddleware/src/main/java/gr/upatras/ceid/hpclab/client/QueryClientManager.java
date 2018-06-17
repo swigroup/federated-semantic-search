@@ -34,8 +34,7 @@ public class QueryClientManager {
     public Set getResultsFromAllRepositories(String query) {
 
         HashSet<ResultType> totalResults = new HashSet<>();
-        Repository testRepos[] = {Repository.MERLOT, Repository.OPENARCHIVES, Repository.PUBMED};
-        for (Repository r : testRepos) {
+        for (Repository r : Repository.values()) {
             try {
                 //this is a hashset, so no overlapping results (per category)
                 totalResults.addAll(getResultsFromRepository(r, query));
