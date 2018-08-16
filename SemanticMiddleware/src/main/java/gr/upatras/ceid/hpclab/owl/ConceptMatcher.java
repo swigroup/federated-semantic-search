@@ -5,10 +5,13 @@
  */
 package gr.upatras.ceid.hpclab.owl;
 
+import java.util.Arrays;
 import java.util.Collection;
 import java.util.HashSet;
 import java.util.Iterator;
 import java.util.LinkedHashSet;
+import java.util.LinkedList;
+import java.util.List;
 import java.util.Set;
 import org.semanticweb.owlapi.model.AxiomType;
 import org.semanticweb.owlapi.model.IRI;
@@ -60,6 +63,21 @@ public class ConceptMatcher {
         return expanded;
     }
 
+    /**
+     *
+     * @param matches
+     * @return The set of refinements for the particular set of (matching)
+     * concepts.
+     */
+    public Set<SKOSConcept> expandKeyword(Set<SKOSConcept> matches) {
+        Set<SKOSConcept> expanded = new LinkedHashSet<>();
+        expanded.addAll(matches);
+        for (SKOSConcept sc : matches) {
+            expanded.addAll(getConceptRefinements(sc));
+        }
+        return expanded;
+    }
+
     public Set<SKOSConcept> getConceptRefinements(SKOSConcept root) {
         Set<SKOSConcept> resultSet = new LinkedHashSet<>();
         Set<SKOSConcept> temp = new LinkedHashSet<>();
@@ -78,7 +96,7 @@ public class ConceptMatcher {
                 size += resultSet.size() - diff;
             }
         }
-        
+
         /* //Implement recursive DFS
          if (size < LIMIT) {
          resultSet.addAll(getShallowConceptRefinements(root));
@@ -131,9 +149,9 @@ public class ConceptMatcher {
      * string. Specifically, matching succeeds if the keyword is contained
      * within any of the lexical representations of the concept, ignoring case.
      */
-    private Set<SKOSConcept> getMatchingConcepts(String match) {
+    public Set<SKOSConcept> getMatchingConcepts(String match) {
 
-        Set<SKOSConcept> resultSet = new HashSet<>();
+        LinkedList<SKOSConcept> resultList = new LinkedList<>();
         OWLAnnotationProperty prefLabel
                 = m.getOWLDataFactory().getOWLAnnotationProperty("skos:prefLabel", pm);
         OWLAnnotationProperty altLabel
@@ -153,26 +171,38 @@ public class ConceptMatcher {
                     if (axn.getProperty().equals(prefLabel)
                             || axn.getProperty().equals(altLabel)) {
                         OWLLiteral l = axn.getValue().asLiteral().get();
+                        //for now, consider only exact matches
                         if (isMatch(l.getLiteral(), match, true)) {
                             OWLIndividual subject = m.getOWLDataFactory().
                                     getOWLNamedIndividual((IRI) axn.getSubject());
                             SKOSConcept sc = SKOSConcept.
                                     buildSKOSConceptFromIndividual(subject, manager);
-                            resultSet.add(sc);
+                            //prioritize exact matches
+                            if (isMatch(l.getLiteral(), match)) {
+                                resultList.addFirst(sc);
+                            } else {
+                                resultList.add(sc);
+                            }
                             size++;
                         }
                     }
                 }
             }
         }
-        return resultSet;
+        return new LinkedHashSet<>(resultList);
     }
 
     private boolean isMatch(String a, String b, boolean exact) {
         if (!exact) {
             a = a.toLowerCase();
             b = b.toLowerCase();
-            return a.contains(b);
+            //perhaps tokenize first. Match whole words.
+            //Consider also phrases (fall back to exact match)
+            if (!isMatch(a,b)) {
+                return Arrays.asList(a.split(" ")).contains(b);
+            } else {
+                return isMatch(a,b);
+            }
         } else {
             return isMatch(a, b);
         }
