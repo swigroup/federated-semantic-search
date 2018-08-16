@@ -25,10 +25,26 @@ public class QueryManager {
     private final LinkedHashMap<QueryTerm, Set<SKOSConcept>> termConcepts
             = new LinkedHashMap<>(); // Each QueryTerm carries its matching concepts.
 
-    public QueryTerm addQueryTerm(String label, String lang) {
+    private QueryTerm keywordTerm = new QueryTerm(null);
+
+    public QueryTerm addQueryTerm(String label, String lang, Set<SKOSConcept> matches) {
+        //get proper lang for term (search within concept matches)
+        for (SKOSConcept sc : matches) {
+            for (QueryTerm t : sc.getPrefLabels()) {
+                if (t != null && t.getLabel().contains(label)) {
+                    lang = t.getLang();
+                }
+            }
+            for (QueryTerm t : sc.getAltLabels()) {
+                if (t != null && t.getLabel().contains(label)) {
+                    lang = t.getLang();
+                }
+            }
+        }
         QueryTerm qt = new QueryTerm(label, lang);
         addTranslation(qt, null);
-        return qt;
+        termConcepts.put(qt, matches);
+        return keywordTerm = qt;
     }
 
     public Set<QueryTerm> getTranslations(QueryTerm t) {
@@ -45,9 +61,14 @@ public class QueryManager {
 
     private Set<QueryTerm> putTranslations(QueryTerm t, Set<QueryTerm> translations) {
         //in case there is a matching term from the ontology, prefer it.
-        if (queryTuples.containsKey(t)) {
-            queryTuples.remove(t);
-        }
+        //Need to remove first, to force replace the key (with lang).
+        /**
+         * note: we already get the lang when adding the term *
+         */
+        // This may break ordering, so suppose matching terms come first.
+        /*if (queryTuples.containsKey(t)) {
+         queryTuples.remove(t);
+         }*/
         return queryTuples.put(t, translations);
     }
 
@@ -70,7 +91,7 @@ public class QueryManager {
         return queryTuples;
     }
 
-    public void buildQuerySet(Set<SKOSConcept> concepts, PrepareResponseWrapper prepareResponseWrapper) {
+    public void buildQuerySet(Set<SKOSConcept> concepts) {
         for (SKOSConcept sc : concepts) {
             for (QueryTerm t : sc.getPrefLabels()) {
                 if (t != null) {
@@ -78,7 +99,7 @@ public class QueryManager {
                     translations.addAll(sc.getPrefLabels());
                     translations.remove(t);
                     putTranslations(t, translations);
-                    termConcepts.put(t, new HashSet<>(Arrays.asList(sc)));
+                    putConcepts(t, sc);
                 }
             }
             for (QueryTerm t : sc.getAltLabels()) {
@@ -87,10 +108,28 @@ public class QueryManager {
                     translations.addAll(sc.getAltLabels());
                     translations.remove(t);
                     putTranslations(t, translations);
-                    termConcepts.put(t, concepts);
+                    putConcepts(t, sc);
                 }
             }
         }
+    }
+
+    private void putConcepts(QueryTerm t, SKOSConcept sc) {
+        Set<SKOSConcept> concepts = new HashSet<>();
+        if (termConcepts.containsKey(t)) {
+            //they are already there, but put replaces
+            concepts.addAll(termConcepts.get(t));
+        }
+        //add also parent concept,  one that exactly matches the initial 
+        // keyword if any (usually the first). 
+        /*TODO: get the whole broader path to parent. 
+                Currently sets are flattened*/
+        if (keywordTerm != null && !termConcepts.get(keywordTerm).isEmpty()) {
+            concepts.add(termConcepts.get(keywordTerm).iterator().next());
+        }
+        //For initial queryTerms, it is already there
+        concepts.add(sc);
+        termConcepts.put(t, concepts);
     }
 
 }
