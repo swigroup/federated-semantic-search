@@ -84,10 +84,14 @@ public class PrepareResponseWrapper {
 
         for (String keyword : polishKeywordSet(keywords)) {
 
-            qm.addQueryTerm(keyword, null);
             //Expand keywords
             ConceptMatcher cm = new ConceptMatcher(om);
-            qm.buildQuerySet(cm.expandKeyword(keyword), this);
+            //get direct matches first
+            Set<SKOSConcept> matches = cm.getMatchingConcepts(keyword);
+            //add the term and top-level matches
+            qm.addQueryTerm(keyword, null, matches);
+            //reuse them for expansion
+            qm.buildQuerySet(cm.expandKeyword(matches));
 
             /*KeywordTerms: Terms for current keyword
              temp: contains terms for previous keywords
