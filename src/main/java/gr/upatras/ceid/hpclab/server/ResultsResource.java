@@ -20,7 +20,7 @@ import javax.ws.rs.QueryParam;
  *
  * @author koutsomi
  */
-@Path("results")
+@Path("/")
 public class ResultsResource {
 
     @Context
@@ -35,17 +35,20 @@ public class ResultsResource {
     /**
      * Retrieves representation of an instance of
      * gr.upatras.ceid.hpclab.server.ResultsResource
-     *
      * @param query
      * @return an instance of gr.upatras.ceid.hpclab.response.model.Results
      */
+    
+    @Path("/results{p: (/update)?}")
     @GET
     @Produces({"application/xml", "application/json"})
     public Results getXml(@QueryParam("q") List<String> query) {
         PrepareResponseWrapper response = new PrepareResponseWrapper();
         return response.getResults(query);
     }
-   /* @GET
+   /* 
+    @Path("/update")
+    @GET
     @Produces({"application/xml", "application/rdf+xml"})
     public Results getRdf(@QueryParam("q") List<String> query) {
         PrepareResponseWrapper response = new PrepareResponseWrapper();
