@@ -7,6 +7,7 @@ package gr.upatras.ceid.hpclab.server;
 
 import gr.upatras.ceid.hpclab.response.PrepareResponseWrapper;
 import gr.upatras.ceid.hpclab.response.model.Results;
+import java.io.ByteArrayOutputStream;
 import java.io.IOException;
 import java.util.List;
 import javax.ws.rs.core.Context;
@@ -16,10 +17,15 @@ import javax.ws.rs.GET;
 import javax.ws.rs.Path;
 import javax.ws.rs.QueryParam;
 import java.io.OutputStream;
+import java.io.OutputStreamWriter;
+import java.io.StringWriter;
+import java.io.InputStreamReader;
 import javax.ws.rs.WebApplicationException;
 import javax.ws.rs.core.Response;
 import javax.ws.rs.core.StreamingOutput;
 import javax.xml.transform.stream.StreamResult;
+import org.json.JSONObject;
+import org.json.XML;
 
 /**
  * REST Web Service
@@ -38,9 +44,21 @@ public class ResultsResource {
     public ResultsResource() {
     }
 
+    private Results getResultsInXML(List<String> query) {
+        PrepareResponseWrapper response = new PrepareResponseWrapper();
+        return response.getResults(query);
+    }
+
     /**
      * Retrieves representation of an instance of
+<<<<<<< HEAD:SemanticMiddleware/src/main/java/gr/upatras/ceid/hpclab/server/ResultsResource.java
      * gr.upatras.ceid.hpclab.server.ResultsResource
+=======
+     * gr.dataverse.duth.semantic.server.ResultsResource
+     *
+     * @Path matches either /results or /results/update
+     *
+>>>>>>> 4490bcf... - added support for converting RDF to json (content negotiated):SemanticMiddleware/src/main/java/gr/dataverse/duth/semantic/server/ResultsResource.java
      * @param query
      * @return an instance of gr.upatras.ceid.hpclab.response.model.Results
      */
@@ -48,8 +66,7 @@ public class ResultsResource {
     @GET
     @Produces({"application/xml", "application/rdf+xml"})
     public Response getRdf(@QueryParam("q") List<String> query) {
-        PrepareResponseWrapper response = new PrepareResponseWrapper();
-        final Results  res = response.getResults(query);
+        final Results res = getResultsInXML(query);
         StreamingOutput stream = new StreamingOutput() {
             @Override
             public void write(OutputStream output) throws IOException, WebApplicationException {
@@ -59,13 +76,34 @@ public class ResultsResource {
 
         return Response.ok(stream).build();
     }
-     
-     @Path("/results2")
-     @GET
-     @Produces({"application/xml", "application/json"})
-     public Results getXml(@QueryParam("q") List<String> query) {
-     PrepareResponseWrapper response = new PrepareResponseWrapper();
-     return response.getResults(query);
-     }
-     
+
+    @Path("/results{p: (/update)?}")
+    @GET
+    @Produces({"application/json"})
+    public Response getJson(@QueryParam("q") List<String> query) {
+        final Results res = getResultsInXML(query);
+        StreamingOutput stream = new StreamingOutput() {
+            @Override
+            public void write(OutputStream output) throws IOException, WebApplicationException {
+                ByteArrayOutputStream bs = new ByteArrayOutputStream();
+                Transform2RDF.transform(res, new StreamResult(bs), context);
+                JSONObject json = XML.toJSONObject(bs.toString("UTF-8"));
+                OutputStreamWriter osw = new OutputStreamWriter(output, "UTF-8");
+                json.write(osw);
+                osw.flush();
+                osw.close();
+            }
+        };
+
+        return Response.ok(stream).build();
+    }
+
+    @Path("/results2")
+    @GET
+    @Produces({"application/xml", "application/json"})
+    public Results getXml(@QueryParam("q") List<String> query) {
+
+        return getResultsInXML(query);
+    }
+
 }
