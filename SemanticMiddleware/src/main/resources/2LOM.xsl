@@ -27,7 +27,7 @@
 <owl:NamedIndividual rdf:ID="{generate-id(.)}">
 <lom:keyword><xsl:value-of select="../@keyword"/></lom:keyword>
 <xsl:apply-templates select="../matching_concept/@IRI"/>
-<lom:identifier rdf:type="xsd:anyURI"><xsl:value-of select="URL"/></lom:identifier>
+<lom:identifier rdf:datatype="xsd:anyURI"><xsl:value-of select="URL"/></lom:identifier>
 <lom:title><xsl:value-of select="Title"/></lom:title>
 <lom:description><xsl:value-of select="Description"/></lom:description>
 </owl:NamedIndividual>
