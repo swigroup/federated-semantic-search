@@ -42,7 +42,7 @@ public class QueryTerm {
     @Override
     public int hashCode() {
         int hash = 3;
-        hash = 53 * hash + Objects.hashCode(this.label);
+        hash = 53 * hash + Objects.hashCode(this.label.toLowerCase());
         return hash;
     }
 
@@ -55,7 +55,7 @@ public class QueryTerm {
             return false;
         }
         final QueryTerm other = (QueryTerm) obj;
-        if (!Objects.equals(this.label, other.label)) {
+        if (!this.label.toLowerCase().equals(other.label.toLowerCase())) {
             return false;
         }
         return true;

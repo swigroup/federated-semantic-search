@@ -29,14 +29,15 @@ public class QueryManager {
 
     public QueryTerm addQueryTerm(String label, String lang, Set<SKOSConcept> matches) {
         //get proper lang for term (search within concept matches)
+        //IGNORE CASE
         for (SKOSConcept sc : matches) {
             for (QueryTerm t : sc.getPrefLabels()) {
-                if (t != null && t.getLabel().contains(label)) {
+                if (t != null && t.getLabel().toLowerCase().contains(label)) {
                     lang = t.getLang();
                 }
             }
             for (QueryTerm t : sc.getAltLabels()) {
-                if (t != null && t.getLabel().contains(label)) {
+                if (t != null && t.getLabel().toLowerCase().contains(label)) {
                     lang = t.getLang();
                 }
             }
@@ -61,9 +62,10 @@ public class QueryManager {
 
     private Set<QueryTerm> putTranslations(QueryTerm t, Set<QueryTerm> translations) {
         //in case there is a matching term from the ontology, prefer it.
-        //Need to remove first, to force replace the key (with lang).
+        //Put replaces: queryterms comparator now ignores case.
+        //Need to remove first, to force replace the key (with lang)
         /**
-         * note: we already get the lang when adding the term *
+         * note: we already get the lang when adding the term 
          */
         // This may break ordering, so suppose matching terms come first.
         /*if (queryTuples.containsKey(t)) {
