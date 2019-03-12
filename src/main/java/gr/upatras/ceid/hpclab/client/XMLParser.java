@@ -26,6 +26,10 @@ class XMLParser {
     private final ObjectFactory fact = new ObjectFactory();
     private final Document doc;
 
+    XMLParser () {
+        doc = null;
+    }
+    
     XMLParser(InputStream xml) throws
             SAXException, ParserConfigurationException, IOException {
         DocumentBuilderFactory dbf = DocumentBuilderFactory.newInstance();

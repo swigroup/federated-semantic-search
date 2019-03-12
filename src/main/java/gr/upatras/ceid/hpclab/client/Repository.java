@@ -17,7 +17,7 @@ enum Repository {
     OPENARCHIVES("gr.upatras.ceid.hpclab.client.OpenArchivesConnectorImpl",
             "https://openarchives.gr/aggregator-openarchives/api/search.json", Mappings.OPENARCHIVES_MAPPING),
     PUBMED("gr.upatras.ceid.hpclab.client.PubMedConnectorImpl",
-            "http://www.ebi.ac.uk/europepmc/webservices/rest/search", Mappings.PUBMED_MAPPING),
+            "https://www.ebi.ac.uk/europepmc/webservices/rest/search", Mappings.PUBMED_MAPPING),
     MERLOT("gr.upatras.ceid.hpclab.client.MerlotConnectorImpl",
             "http://www.merlot.org/merlot/materials.rest", Mappings.PUBMED_MAPPING),
     OJS("gr.upatras.ceid.hpclab.client.OJSConnectorImpl",
