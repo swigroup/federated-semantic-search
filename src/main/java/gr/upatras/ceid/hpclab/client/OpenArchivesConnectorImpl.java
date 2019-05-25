@@ -17,27 +17,38 @@ import org.json.JSONObject;
  * @author koutsomi
  */
 class OpenArchivesConnectorImpl implements RepositoryConnector {
+
     /**
      * Connect to the new OpenArchives.gr API that supports json.
+     *
      * @param json
-     * @return 
+     * @return
      */
+    private static final String apiKey = "your_key_here";
+
     @Override
     public Set parseResponse(InputStream json) {
         Set<ResultType> resultsList = new HashSet<>();
 
         XMLParser parser = new XMLParser();
-        JSONObject js = new JSONObject(json);
+        JSONParser jparser = new JSONParser();
+        JSONObject js = jparser.parse(json);
         JSONArray nodes = js.getJSONArray("results");
-        for (int i = 0; i < nodes.length(); i++) {
+        //50 results per page, limit to 25.
+        for (int i = 0; i < nodes.length() && i <25; i++) {
             JSONObject entry = nodes.getJSONObject(i);
             if (entry != null) {
-                String desc
-                        = entry.getString("desc");
-                String tit
-                        = entry.getString("title");
-                String lin
-                        = entry.getString("edm_isShownAt");
+                String desc;
+                //description may exist in the full item metadata
+                if (!entry.isNull("description")) {
+                    desc = entry.getString("description");
+                } else {
+                    desc = jparser.getValueFromURL(entry.getString("uri"), "description");
+                }
+                String tit = entry.isNull("dc_title") ? "" : entry.getJSONArray("dc_title").getString(0);
+
+                String lin = entry.isNull("edm_isShownAt") ? "" : entry.getString("edm_isShownAt");
+
                 ResultType r
                         = parser.createResult(tit, desc, lin, Repository.findRepoFromClass(this.getClass()));
                 resultsList.add(r); //unique results are added (per URL)
@@ -48,13 +59,12 @@ class OpenArchivesConnectorImpl implements RepositoryConnector {
 
     /**
      * @param query
-     * @return 
+     * @return
      */
     @Override
     public String buildConnectionUrl(String query) {
         String request;
-        //limit to first 50 results (make it 25?)
-        request = Repository.OPENARCHIVES.getURL() + "/" + query + "/limit:25";
+        request = Repository.OPENARCHIVES.getURL() + "?apiKey=" + apiKey + "&general_term=" + query;
         return request;
     }
 }
