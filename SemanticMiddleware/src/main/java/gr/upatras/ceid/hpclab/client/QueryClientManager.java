@@ -57,7 +57,7 @@ public class QueryClientManager {
                 = (RepositoryConnector) Class.forName(res.toString()).newInstance();
         request = rc.buildConnectionUrl(URLEncoder.encode(query, "UTF-8"));
         WebResource webResource = client.resource(request);
-        ClientResponse response = webResource.accept("application/xml")
+        ClientResponse response = webResource.accept("application/xml, application/json")
                 .get(ClientResponse.class);
 
         if (response.getStatus() != 200) {
@@ -66,7 +66,7 @@ public class QueryClientManager {
                     + ". HTTP error code : "
                     + response.getStatus());
         }
-        InputStream output = response.getEntity(InputStream.class);
+        InputStream output = response.getEntityInputStream();
         return rc.parseResponse(output);
     }
 
