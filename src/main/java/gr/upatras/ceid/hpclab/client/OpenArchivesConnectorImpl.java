@@ -34,8 +34,8 @@ class OpenArchivesConnectorImpl implements RepositoryConnector {
         JSONParser jparser = new JSONParser();
         JSONObject js = jparser.parse(json);
         JSONArray nodes = js.getJSONArray("results");
-        //50 results per page, limit to 25.
-        for (int i = 0; i < nodes.length() && i <25; i++) {
+        //50 results per page, limit to 10.
+        for (int i = 0; i < nodes.length() && i < 10; i++) {
             JSONObject entry = nodes.getJSONObject(i);
             if (entry != null) {
                 String desc;
