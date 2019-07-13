@@ -55,8 +55,8 @@ class PubMedConnectorImpl implements RepositoryConnector {
     @Override
     public String buildConnectionUrl(String query) {
         String request;
-        //27 results per page. Get the first page.
-        request = Repository.PUBMED.getURL() + "/query=" + query + "&resultType=core";
+        //25 results per page (default). Get the first 10.
+        request = Repository.PUBMED.getURL() + "/query=" + query + "&resultType=core" + "&pageSize=10";
         return request;
     }
 }

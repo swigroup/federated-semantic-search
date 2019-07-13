@@ -56,9 +56,9 @@ class MerlotConnectorImpl implements RepositoryConnector {
     @Override
     public String buildConnectionUrl(String query) {
         String request;
-        //10 results per page. Get the first page.
+        //25 results per page (default). Get the first 10.
         request = Repository.MERLOT.getURL() + "?licenseKey=" + licenseKey 
-                + "&allKeyWords=true&keywords=" + query;
+                + "&allKeyWords=true&keywords=" + query + "&size=10";
         return request;
     }
 }
