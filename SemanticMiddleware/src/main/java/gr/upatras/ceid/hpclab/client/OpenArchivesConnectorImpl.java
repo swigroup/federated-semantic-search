@@ -24,7 +24,8 @@ class OpenArchivesConnectorImpl implements RepositoryConnector {
      * @param json
      * @return
      */
-    private static final String apiKey = "your_key_here";
+    private static final APIKeysConfiguration keys = new APIKeysConfiguration();
+    private static final String apiKey = keys.getKey("oa_key");
 
     @Override
     public Set parseResponse(InputStream json) {
@@ -35,7 +36,7 @@ class OpenArchivesConnectorImpl implements RepositoryConnector {
         JSONObject js = jparser.parse(json);
         JSONArray nodes = js.getJSONArray("results");
         //50 results per page, limit to 25.
-        for (int i = 0; i < nodes.length() && i <25; i++) {
+        for (int i = 0; i < nodes.length() && i < 25; i++) {
             JSONObject entry = nodes.getJSONObject(i);
             if (entry != null) {
                 String desc;

@@ -143,7 +143,7 @@
                                 <include>jaxb/model/*.xsd</include>
                             </schemaIncludes>
                             <episodeFile>${project.build.directory}/generated-sources/xjc/META-INF/jaxb-model.episode</episodeFile>
-                            <generatePackage>gr.dataverse.duth.semantic.model</generatePackage>
+                            <generatePackage>gr.upatras.ceid.hpclab.model</generatePackage>
                         </configuration>
                         <id>jaxb-generate-model_1</id>
                     </execution>
@@ -156,7 +156,7 @@
                                 <include>jaxb/rdfmodel/*.xsd</include>
                             </schemaIncludes>
                             <episodeFile>${project.build.directory}/generated-sources/xjc/META-INF/jaxb-rdfmodel.episode</episodeFile>
-                            <generatePackage>gr.dataverse.duth.semantic.response.model</generatePackage>
+                            <generatePackage>gr.upatras.ceid.hpclab.response.model</generatePackage>
                         </configuration>
                         <id>jaxb-generate-rdfmodel</id>
                     </execution>

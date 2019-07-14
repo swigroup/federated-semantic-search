@@ -1,0 +1,5 @@
+nbactions.xml
+catalog.xml
+nb-configuration.xml
+/target
+/src/main/resources/keys
