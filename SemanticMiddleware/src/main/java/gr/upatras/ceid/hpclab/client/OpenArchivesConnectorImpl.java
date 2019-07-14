@@ -39,11 +39,12 @@ class OpenArchivesConnectorImpl implements RepositoryConnector {
             JSONObject entry = nodes.getJSONObject(i);
             if (entry != null) {
                 String desc;
-                //description may exist in the full item metadata
+                //description may exist in the full item metadata.
+                //Use XML because JSON seems broken 
                 if (!entry.isNull("description")) {
                     desc = entry.getString("description");
                 } else {
-                    desc = jparser.getValueFromURL(entry.getString("uri"), "description");
+                    desc = XMLParser.getValueFromURL(entry.getString("uri"), "description");
                 }
                 String tit = entry.isNull("dc_title") ? "" : entry.getJSONArray("dc_title").getString(0);
 
