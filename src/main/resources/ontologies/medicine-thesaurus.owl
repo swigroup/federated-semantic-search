@@ -1,0 +1,1445 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://thesaurus.duth.gr/medicine/"
+     xml:base="http://thesaurus.duth.gr/medicine/"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:skos="http://www.w3.org/2004/02/skos/core#">
+    <owl:Ontology rdf:about="http://thesaurus.duth.gr/medicine/">
+        <owl:imports rdf:resource="http://www.w3.org/TR/skos-reference/skos-owl1-dl.rdf"/>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#altLabel -->
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#altLabel"/>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#prefLabel -->
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#prefLabel"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Datatypes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://dewey.info/schema-terms/Notation -->
+
+    <rdfs:Datatype rdf:about="http://dewey.info/schema-terms/Notation"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#broader -->
+
+    <owl:ObjectProperty rdf:about="http://www.w3.org/2004/02/skos/core#broader"/>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#broaderTransitive -->
+
+    <owl:ObjectProperty rdf:about="http://www.w3.org/2004/02/skos/core#broaderTransitive"/>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#hasTopConcept -->
+
+    <owl:ObjectProperty rdf:about="http://www.w3.org/2004/02/skos/core#hasTopConcept"/>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#narrower -->
+
+    <owl:ObjectProperty rdf:about="http://www.w3.org/2004/02/skos/core#narrower"/>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#related -->
+
+    <owl:ObjectProperty rdf:about="http://www.w3.org/2004/02/skos/core#related"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#notation -->
+
+    <owl:DatatypeProperty rdf:about="http://www.w3.org/2004/02/skos/core#notation"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#Concept -->
+
+    <owl:Class rdf:about="http://www.w3.org/2004/02/skos/core#Concept"/>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#ConceptScheme -->
+
+    <owl:Class rdf:about="http://www.w3.org/2004/02/skos/core#ConceptScheme"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://thesaurus.duth.gr/medicine/AIDS -->
+
+    <owl:NamedIndividual rdf:about="http://thesaurus.duth.gr/medicine/AIDS">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:notation rdf:datatype="http://dewey.info/schema-terms/Notation">616.97</skos:notation>
+        <skos:prefLabel xml:lang="el">AIDS</skos:prefLabel>
+        <skos:altLabel xml:lang="el">σύνδρομο επίκτητης ανοσοανεπάρκειας</skos:altLabel>
+        <skos:altLabel xml:lang="el">σύνδρομο επίκτητης ανοσολογικής ανεπάρκειας</skos:altLabel>
+        <skos:prefLabel xml:lang="en">AIDS</skos:prefLabel>
+        <skos:broaderTransitive rdf:resource="http://thesaurus.duth.gr/medicine/Ιατρικές_επιστήμες"/>
+        <skos:broader rdf:resource="http://thesaurus.duth.gr/medicine/σεξουαλικά_μεταδιδόμενες_ασθένειες"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://thesaurus.duth.gr/medicine/EKT_THESAURUS -->
+
+    <owl:NamedIndividual rdf:about="http://thesaurus.duth.gr/medicine/EKT_THESAURUS">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#ConceptScheme"/>
+        <skos:hasTopConcept rdf:resource="http://thesaurus.duth.gr/medicine/Ιατρικές_επιστήμες"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://thesaurus.duth.gr/medicine/Ιατρικές_επιστήμες -->
+
+    <owl:NamedIndividual rdf:about="http://thesaurus.duth.gr/medicine/Ιατρικές_επιστήμες"/>
+    
+
+
+    <!-- http://thesaurus.duth.gr/medicine/άγχος -->
+
+    <owl:NamedIndividual rdf:about="http://thesaurus.duth.gr/medicine/άγχος"/>
+    
+
+
+    <!-- http://thesaurus.duth.gr/medicine/άσθμα -->
+
+    <owl:NamedIndividual rdf:about="http://thesaurus.duth.gr/medicine/άσθμα"/>
+    
+
+
+    <!-- http://thesaurus.duth.gr/medicine/έμφραγμα_μυοκαρδίου -->
+
+    <owl:NamedIndividual rdf:about="http://thesaurus.duth.gr/medicine/έμφραγμα_μυοκαρδίου"/>
+    
+
+
+    <!-- http://thesaurus.duth.gr/medicine/αδυνάτισμα -->
+
+    <owl:NamedIndividual rdf:about="http://thesaurus.duth.gr/medicine/αδυνάτισμα"/>
+    
+
+
+    <!-- http://thesaurus.duth.gr/medicine/αθλητισμός -->
+
+    <owl:NamedIndividual rdf:about="http://thesaurus.duth.gr/medicine/αθλητισμός"/>
+    
+
+
+    <!-- http://thesaurus.duth.gr/medicine/αιματολογία -->
+
+    <owl:NamedIndividual rdf:about="http://thesaurus.duth.gr/medicine/αιματολογία">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:notation rdf:datatype="http://dewey.info/schema-terms/Notation">616.1</skos:notation>
+        <skos:prefLabel xml:lang="el">αιματολογία</skos:prefLabel>
+        <skos:prefLabel xml:lang="en">hematology</skos:prefLabel>
+        <skos:broaderTransitive rdf:resource="http://thesaurus.duth.gr/medicine/Ιατρικές_επιστήμες"/>
+        <skos:related rdf:resource="http://thesaurus.duth.gr/medicine/αναιμία"/>
+        <skos:related rdf:resource="http://thesaurus.duth.gr/medicine/λευχαιμία"/>
+        <skos:related rdf:resource="http://thesaurus.duth.gr/medicine/μετάγγιση_αίματος"/>
+        <skos:broader rdf:resource="http://thesaurus.duth.gr/medicine/παθολογία"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://thesaurus.duth.gr/medicine/ακοή -->
+
+    <owl:NamedIndividual rdf:about="http://thesaurus.duth.gr/medicine/ακοή"/>
+    
+
+
+    <!-- http://thesaurus.duth.gr/medicine/ακουστικές_συσκευές -->
+
+    <owl:NamedIndividual rdf:about="http://thesaurus.duth.gr/medicine/ακουστικές_συσκευές"/>
+    
+
+
+    <!-- http://thesaurus.duth.gr/medicine/ακτινογραφία -->
+
+    <owl:NamedIndividual rdf:about="http://thesaurus.duth.gr/medicine/ακτινογραφία"/>
+    
+
+
+    <!-- http://thesaurus.duth.gr/medicine/ακτινογραφική_εξέταση -->
+
+    <owl:NamedIndividual rdf:about="http://thesaurus.duth.gr/medicine/ακτινογραφική_εξέταση"/>
+    
+
+
+    <!-- http://thesaurus.duth.gr/medicine/ακτινοθεραπεία -->
+
+    <owl:NamedIndividual rdf:about="http://thesaurus.duth.gr/medicine/ακτινοθεραπεία">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:notation rdf:datatype="http://dewey.info/schema-terms/Notation">615.8</skos:notation>
+        <skos:prefLabel xml:lang="el">ακτινοθεραπεία</skos:prefLabel>
+        <skos:prefLabel xml:lang="en">radiotherapy</skos:prefLabel>
+        <skos:broaderTransitive rdf:resource="http://thesaurus.duth.gr/medicine/Ιατρικές_επιστήμες"/>
+        <skos:broader rdf:resource="http://thesaurus.duth.gr/medicine/θεραπευτική"/>
+        <skos:related rdf:resource="http://thesaurus.duth.gr/medicine/ραδιοβιολογία"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://thesaurus.duth.gr/medicine/αναιμία -->
+
+    <owl:NamedIndividual rdf:about="http://thesaurus.duth.gr/medicine/αναιμία">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:notation rdf:datatype="http://dewey.info/schema-terms/Notation">616.1</skos:notation>
+        <skos:prefLabel xml:lang="el">αναιμία</skos:prefLabel>
+        <skos:prefLabel xml:lang="en">anemia</skos:prefLabel>
+        <skos:broaderTransitive rdf:resource="http://thesaurus.duth.gr/medicine/Ιατρικές_επιστήμες"/>
+        <skos:related rdf:resource="http://thesaurus.duth.gr/medicine/αιματολογία"/>
+        <skos:narrower rdf:resource="http://thesaurus.duth.gr/medicine/μεσογειακή_αναιμία"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://thesaurus.duth.gr/medicine/ανατομία -->
+
+    <owl:NamedIndividual rdf:about="http://thesaurus.duth.gr/medicine/ανατομία"/>
+    
+
+
+    <!-- http://thesaurus.duth.gr/medicine/ανθυγιεινά_επαγγέλματα -->
+
+    <owl:NamedIndividual rdf:about="http://thesaurus.duth.gr/medicine/ανθυγιεινά_επαγγέλματα"/>
+    
+
+
+    <!-- http://thesaurus.duth.gr/medicine/ανορεξία -->
+
+    <owl:NamedIndividual rdf:about="http://thesaurus.duth.gr/medicine/ανορεξία"/>
+    
+
+
+    <!-- http://thesaurus.duth.gr/medicine/ανοσολογία -->
+
+    <owl:NamedIndividual rdf:about="http://thesaurus.duth.gr/medicine/ανοσολογία"/>
+    
+
+
+    <!-- http://thesaurus.duth.gr/medicine/αντισύλληψη -->
+
+    <owl:NamedIndividual rdf:about="http://thesaurus.duth.gr/medicine/αντισύλληψη"/>
+    
+
+
+    <!-- http://thesaurus.duth.gr/medicine/αξονική_τομογραφία -->
+
+    <owl:NamedIndividual rdf:about="http://thesaurus.duth.gr/medicine/αξονική_τομογραφία"/>
+    
+
+
+    <!-- http://thesaurus.duth.gr/medicine/αρθριτικά -->
+
+    <owl:NamedIndividual rdf:about="http://thesaurus.duth.gr/medicine/αρθριτικά"/>
+    
+
+
+    <!-- http://thesaurus.duth.gr/medicine/ασθένειες -->
+
+    <owl:NamedIndividual rdf:about="http://thesaurus.duth.gr/medicine/ασθένειες">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:notation rdf:datatype="http://dewey.info/schema-terms/Notation">616</skos:notation>
+        <skos:altLabel xml:lang="el">αρρώστιες</skos:altLabel>
+        <skos:prefLabel xml:lang="el">ασθένειες</skos:prefLabel>
+        <skos:prefLabel xml:lang="en">diseases</skos:prefLabel>
+        <skos:broaderTransitive rdf:resource="http://thesaurus.duth.gr/medicine/Ιατρικές_επιστήμες"/>
+        <skos:narrower rdf:resource="http://thesaurus.duth.gr/medicine/επαγγελματικές_ασθένειες"/>
+        <skos:related rdf:resource="http://thesaurus.duth.gr/medicine/επιδημία"/>
+        <skos:related rdf:resource="http://thesaurus.duth.gr/medicine/επιδημιολογία"/>
+        <skos:related rdf:resource="http://thesaurus.duth.gr/medicine/ιατρική_διάγνωση"/>
+        <skos:related rdf:resource="http://thesaurus.duth.gr/medicine/κοινωνιολογία_της_υγείας"/>
+        <skos:related rdf:resource="http://thesaurus.duth.gr/medicine/παθολογία"/>
+        <skos:narrower rdf:resource="http://thesaurus.duth.gr/medicine/σεξουαλικά_μεταδιδόμενες_ασθένειες"/>
+        <skos:narrower rdf:resource="http://thesaurus.duth.gr/medicine/ψυχικές_ασθένειες"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://thesaurus.duth.gr/medicine/ατομική_περιποίηση -->
+
+    <owl:NamedIndividual rdf:about="http://thesaurus.duth.gr/medicine/ατομική_περιποίηση"/>
+    
+
+
+    <!-- http://thesaurus.duth.gr/medicine/βελονισμός -->
+
+    <owl:NamedIndividual rdf:about="http://thesaurus.duth.gr/medicine/βελονισμός">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:notation rdf:datatype="http://dewey.info/schema-terms/Notation">615.8</skos:notation>
+        <skos:prefLabel xml:lang="el">βελονισμός</skos:prefLabel>
+        <skos:prefLabel xml:lang="en">acupuncture</skos:prefLabel>
+        <skos:broaderTransitive rdf:resource="http://thesaurus.duth.gr/medicine/Ιατρικές_επιστήμες"/>
+        <skos:broader rdf:resource="http://thesaurus.duth.gr/medicine/θεραπευτική"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://thesaurus.duth.gr/medicine/βουλιμία -->
+
+    <owl:NamedIndividual rdf:about="http://thesaurus.duth.gr/medicine/βουλιμία"/>
+    
+
+
+    <!-- http://thesaurus.duth.gr/medicine/γαστρεντερολογία -->
+
+    <owl:NamedIndividual rdf:about="http://thesaurus.duth.gr/medicine/γαστρεντερολογία">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:notation rdf:datatype="http://dewey.info/schema-terms/Notation">616.3</skos:notation>
+        <skos:prefLabel xml:lang="el">γαστρεντερολογία</skos:prefLabel>
+        <skos:prefLabel xml:lang="en">gastroenterology</skos:prefLabel>
+        <skos:broaderTransitive rdf:resource="http://thesaurus.duth.gr/medicine/Ιατρικές_επιστήμες"/>
+        <skos:related rdf:resource="http://thesaurus.duth.gr/medicine/διάρροια"/>
+        <skos:broader rdf:resource="http://thesaurus.duth.gr/medicine/παθολογία"/>
+        <skos:related rdf:resource="http://thesaurus.duth.gr/medicine/πεπτικά_έλκη"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://thesaurus.duth.gr/medicine/γηριατρική -->
+
+    <owl:NamedIndividual rdf:about="http://thesaurus.duth.gr/medicine/γηριατρική">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:notation rdf:datatype="http://dewey.info/schema-terms/Notation">618.97</skos:notation>
+        <skos:prefLabel xml:lang="el">γηριατρική</skos:prefLabel>
+        <skos:prefLabel xml:lang="en">geriatrics</skos:prefLabel>
+        <skos:broaderTransitive rdf:resource="http://thesaurus.duth.gr/medicine/Ιατρικές_επιστήμες"/>
+        <skos:related rdf:resource="http://thesaurus.duth.gr/medicine/ηλικιωμένοι"/>
+        <skos:broader rdf:resource="http://thesaurus.duth.gr/medicine/ιατρική"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://thesaurus.duth.gr/medicine/γλαύκωμα -->
+
+    <owl:NamedIndividual rdf:about="http://thesaurus.duth.gr/medicine/γλαύκωμα"/>
+    
+
+
+    <!-- http://thesaurus.duth.gr/medicine/γναθοχειρουργική -->
+
+    <owl:NamedIndividual rdf:about="http://thesaurus.duth.gr/medicine/γναθοχειρουργική">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:notation rdf:datatype="http://dewey.info/schema-terms/Notation">617.6</skos:notation>
+        <skos:prefLabel xml:lang="el">γναθοχειρουργική</skos:prefLabel>
+        <skos:altLabel xml:lang="el">χειρουργική στόματος</skos:altLabel>
+        <skos:broaderTransitive rdf:resource="http://thesaurus.duth.gr/medicine/Ιατρικές_επιστήμες"/>
+        <skos:broader rdf:resource="http://thesaurus.duth.gr/medicine/οδοντιατρική"/>
+        <skos:broader rdf:resource="http://thesaurus.duth.gr/medicine/χειρουργική"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://thesaurus.duth.gr/medicine/γυαλιά -->
+
+    <owl:NamedIndividual rdf:about="http://thesaurus.duth.gr/medicine/γυαλιά"/>
+    
+
+
+    <!-- http://thesaurus.duth.gr/medicine/γυναίκες -->
+
+    <owl:NamedIndividual rdf:about="http://thesaurus.duth.gr/medicine/γυναίκες"/>
+    
+
+
+    <!-- http://thesaurus.duth.gr/medicine/γυναικολογία -->
+
+    <owl:NamedIndividual rdf:about="http://thesaurus.duth.gr/medicine/γυναικολογία">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:notation rdf:datatype="http://dewey.info/schema-terms/Notation">618.1</skos:notation>
+        <skos:prefLabel xml:lang="el">γυναικολογία</skos:prefLabel>
+        <skos:prefLabel xml:lang="en">gynecology</skos:prefLabel>
+        <skos:broaderTransitive rdf:resource="http://thesaurus.duth.gr/medicine/Ιατρικές_επιστήμες"/>
+        <skos:related rdf:resource="http://thesaurus.duth.gr/medicine/αντισύλληψη"/>
+        <skos:related rdf:resource="http://thesaurus.duth.gr/medicine/γυναίκες"/>
+        <skos:broader rdf:resource="http://thesaurus.duth.gr/medicine/ιατρική"/>
+        <skos:related rdf:resource="http://thesaurus.duth.gr/medicine/μαιευτική"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://thesaurus.duth.gr/medicine/δέρμα -->
+
+    <owl:NamedIndividual rdf:about="http://thesaurus.duth.gr/medicine/δέρμα"/>
+    
+
+
+    <!-- http://thesaurus.duth.gr/medicine/δίαιτες -->
+
+    <owl:NamedIndividual rdf:about="http://thesaurus.duth.gr/medicine/δίαιτες"/>
+    
+
+
+    <!-- http://thesaurus.duth.gr/medicine/δερματολογία -->
+
+    <owl:NamedIndividual rdf:about="http://thesaurus.duth.gr/medicine/δερματολογία">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:notation rdf:datatype="http://dewey.info/schema-terms/Notation">616.5</skos:notation>
+        <skos:prefLabel xml:lang="el">δερματολογία</skos:prefLabel>
+        <skos:prefLabel xml:lang="en">dermatology</skos:prefLabel>
+        <skos:broaderTransitive rdf:resource="http://thesaurus.duth.gr/medicine/Ιατρικές_επιστήμες"/>
+        <skos:related rdf:resource="http://thesaurus.duth.gr/medicine/δέρμα"/>
+        <skos:related rdf:resource="http://thesaurus.duth.gr/medicine/μελάνωμα"/>
+        <skos:broader rdf:resource="http://thesaurus.duth.gr/medicine/παθολογία"/>
+        <skos:related rdf:resource="http://thesaurus.duth.gr/medicine/ψωρίαση"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://thesaurus.duth.gr/medicine/δηλητήρια -->
+
+    <owl:NamedIndividual rdf:about="http://thesaurus.duth.gr/medicine/δηλητήρια"/>
+    
+
+
+    <!-- http://thesaurus.duth.gr/medicine/δημόσια_υγεία -->
+
+    <owl:NamedIndividual rdf:about="http://thesaurus.duth.gr/medicine/δημόσια_υγεία"/>
+    
+
+
+    <!-- http://thesaurus.duth.gr/medicine/διάρροια -->
+
+    <owl:NamedIndividual rdf:about="http://thesaurus.duth.gr/medicine/διάρροια"/>
+    
+
+
+    <!-- http://thesaurus.duth.gr/medicine/διαιτητική -->
+
+    <owl:NamedIndividual rdf:about="http://thesaurus.duth.gr/medicine/διαιτητική">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:notation rdf:datatype="http://dewey.info/schema-terms/Notation">613.2</skos:notation>
+        <skos:prefLabel xml:lang="el">διαιτητική</skos:prefLabel>
+        <skos:prefLabel xml:lang="en">dietetics</skos:prefLabel>
+        <skos:broaderTransitive rdf:resource="http://thesaurus.duth.gr/medicine/Ιατρικές_επιστήμες"/>
+        <skos:related rdf:resource="http://thesaurus.duth.gr/medicine/ανορεξία"/>
+        <skos:related rdf:resource="http://thesaurus.duth.gr/medicine/βουλιμία"/>
+        <skos:related rdf:resource="http://thesaurus.duth.gr/medicine/δίαιτες"/>
+        <skos:broader rdf:resource="http://thesaurus.duth.gr/medicine/διατροφή"/>
+        <skos:related rdf:resource="http://thesaurus.duth.gr/medicine/υγεία"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://thesaurus.duth.gr/medicine/διατροφή -->
+
+    <owl:NamedIndividual rdf:about="http://thesaurus.duth.gr/medicine/διατροφή">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:notation rdf:datatype="http://dewey.info/schema-terms/Notation">613.2</skos:notation>
+        <skos:prefLabel xml:lang="el">διατροφή</skos:prefLabel>
+        <skos:prefLabel xml:lang="en">nutrition</skos:prefLabel>
+        <skos:broaderTransitive rdf:resource="http://thesaurus.duth.gr/medicine/Ιατρικές_επιστήμες"/>
+        <skos:related rdf:resource="http://thesaurus.duth.gr/medicine/αδυνάτισμα"/>
+        <skos:related rdf:resource="http://thesaurus.duth.gr/medicine/δίαιτες"/>
+        <skos:narrower rdf:resource="http://thesaurus.duth.gr/medicine/διαιτητική"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://thesaurus.duth.gr/medicine/επαγγελματικές_ασθένειες -->
+
+    <owl:NamedIndividual rdf:about="http://thesaurus.duth.gr/medicine/επαγγελματικές_ασθένειες">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:prefLabel xml:lang="el">επαγγελματικές ασθένειες</skos:prefLabel>
+        <skos:prefLabel xml:lang="en">occupational diseases</skos:prefLabel>
+        <skos:broaderTransitive rdf:resource="http://thesaurus.duth.gr/medicine/Ιατρικές_επιστήμες"/>
+        <skos:related rdf:resource="http://thesaurus.duth.gr/medicine/ανθυγιεινά_επαγγέλματα"/>
+        <skos:broader rdf:resource="http://thesaurus.duth.gr/medicine/ασθένειες"/>
+        <skos:related rdf:resource="http://thesaurus.duth.gr/medicine/επαγγελματικός_κίνδυνος"/>
+        <skos:related rdf:resource="http://thesaurus.duth.gr/medicine/εργατικά_ατυχήματα"/>
+        <skos:related rdf:resource="http://thesaurus.duth.gr/medicine/υγιεινή_και_ασφάλεια_στην_εργασία"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://thesaurus.duth.gr/medicine/επαγγελματικός_κίνδυνος -->
+
+    <owl:NamedIndividual rdf:about="http://thesaurus.duth.gr/medicine/επαγγελματικός_κίνδυνος"/>
+    
+
+
+    <!-- http://thesaurus.duth.gr/medicine/επιδημία -->
+
+    <owl:NamedIndividual rdf:about="http://thesaurus.duth.gr/medicine/επιδημία"/>
+    
+
+
+    <!-- http://thesaurus.duth.gr/medicine/επιδημιολογία -->
+
+    <owl:NamedIndividual rdf:about="http://thesaurus.duth.gr/medicine/επιδημιολογία">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:notation rdf:datatype="http://dewey.info/schema-terms/Notation">614.4</skos:notation>
+        <skos:prefLabel xml:lang="el">επιδημιολογία</skos:prefLabel>
+        <skos:prefLabel xml:lang="en">epidemiology</skos:prefLabel>
+        <skos:broaderTransitive rdf:resource="http://thesaurus.duth.gr/medicine/Ιατρικές_επιστήμες"/>
+        <skos:related rdf:resource="http://thesaurus.duth.gr/medicine/ασθένειες"/>
+        <skos:related rdf:resource="http://thesaurus.duth.gr/medicine/επιδημία"/>
+        <skos:broader rdf:resource="http://thesaurus.duth.gr/medicine/ιατρικές_επιστήμες"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://thesaurus.duth.gr/medicine/επιληψία -->
+
+    <owl:NamedIndividual rdf:about="http://thesaurus.duth.gr/medicine/επιληψία"/>
+    
+
+
+    <!-- http://thesaurus.duth.gr/medicine/εργατικά_ατυχήματα -->
+
+    <owl:NamedIndividual rdf:about="http://thesaurus.duth.gr/medicine/εργατικά_ατυχήματα"/>
+    
+
+
+    <!-- http://thesaurus.duth.gr/medicine/ηλικιωμένοι -->
+
+    <owl:NamedIndividual rdf:about="http://thesaurus.duth.gr/medicine/ηλικιωμένοι"/>
+    
+
+
+    <!-- http://thesaurus.duth.gr/medicine/ημικρανία -->
+
+    <owl:NamedIndividual rdf:about="http://thesaurus.duth.gr/medicine/ημικρανία"/>
+    
+
+
+    <!-- http://thesaurus.duth.gr/medicine/θεραπευτική -->
+
+    <owl:NamedIndividual rdf:about="http://thesaurus.duth.gr/medicine/θεραπευτική">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:notation rdf:datatype="http://dewey.info/schema-terms/Notation">615.5</skos:notation>
+        <skos:prefLabel xml:lang="el">θεραπευτική</skos:prefLabel>
+        <skos:altLabel xml:lang="el">νοσηλεία ασθενών</skos:altLabel>
+        <skos:prefLabel xml:lang="en">therapeutics</skos:prefLabel>
+        <skos:broaderTransitive rdf:resource="http://thesaurus.duth.gr/medicine/Ιατρικές_επιστήμες"/>
+        <skos:narrower rdf:resource="http://thesaurus.duth.gr/medicine/ακτινοθεραπεία"/>
+        <skos:narrower rdf:resource="http://thesaurus.duth.gr/medicine/βελονισμός"/>
+        <skos:broader rdf:resource="http://thesaurus.duth.gr/medicine/ιατρικές_επιστήμες"/>
+        <skos:narrower rdf:resource="http://thesaurus.duth.gr/medicine/φαρμακοθεραπεία"/>
+        <skos:narrower rdf:resource="http://thesaurus.duth.gr/medicine/φυσικοθεραπεία"/>
+        <skos:narrower rdf:resource="http://thesaurus.duth.gr/medicine/χημειοθεραπεία"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://thesaurus.duth.gr/medicine/ιατρικές_επιστήμες -->
+
+    <owl:NamedIndividual rdf:about="http://thesaurus.duth.gr/medicine/ιατρικές_επιστήμες">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:notation rdf:datatype="http://dewey.info/schema-terms/Notation">610</skos:notation>
+        <skos:prefLabel xml:lang="el">ιατρικές επιστήμες</skos:prefLabel>
+        <skos:prefLabel xml:lang="en">medical sciences</skos:prefLabel>
+        <skos:broaderTransitive rdf:resource="http://thesaurus.duth.gr/medicine/Ιατρικές_επιστήμες"/>
+        <skos:related rdf:resource="http://thesaurus.duth.gr/medicine/ανατομία"/>
+        <skos:narrower rdf:resource="http://thesaurus.duth.gr/medicine/επιδημιολογία"/>
+        <skos:narrower rdf:resource="http://thesaurus.duth.gr/medicine/θεραπευτική"/>
+        <skos:narrower rdf:resource="http://thesaurus.duth.gr/medicine/ιατρική"/>
+        <skos:narrower rdf:resource="http://thesaurus.duth.gr/medicine/ιατρική_έρευνα"/>
+        <skos:narrower rdf:resource="http://thesaurus.duth.gr/medicine/ιατρική_διάγνωση"/>
+        <skos:related rdf:resource="http://thesaurus.duth.gr/medicine/ιστορία_της_ιατρικής"/>
+        <skos:narrower rdf:resource="http://thesaurus.duth.gr/medicine/νοσηλευτική"/>
+        <skos:narrower rdf:resource="http://thesaurus.duth.gr/medicine/πειραματική_ιατρική"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://thesaurus.duth.gr/medicine/ιατρική -->
+
+    <owl:NamedIndividual rdf:about="http://thesaurus.duth.gr/medicine/ιατρική">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:notation rdf:datatype="http://dewey.info/schema-terms/Notation">610</skos:notation>
+        <skos:prefLabel xml:lang="el">ιατρική</skos:prefLabel>
+        <skos:prefLabel xml:lang="en">medicine</skos:prefLabel>
+        <skos:broaderTransitive rdf:resource="http://thesaurus.duth.gr/medicine/Ιατρικές_επιστήμες"/>
+        <skos:narrower rdf:resource="http://thesaurus.duth.gr/medicine/ανοσολογία"/>
+        <skos:narrower rdf:resource="http://thesaurus.duth.gr/medicine/γηριατρική"/>
+        <skos:narrower rdf:resource="http://thesaurus.duth.gr/medicine/γυναικολογία"/>
+        <skos:broader rdf:resource="http://thesaurus.duth.gr/medicine/ιατρικές_επιστήμες"/>
+        <skos:related rdf:resource="http://thesaurus.duth.gr/medicine/ιατρική_έρευνα"/>
+        <skos:narrower rdf:resource="http://thesaurus.duth.gr/medicine/ιατρική_διάγνωση"/>
+        <skos:related rdf:resource="http://thesaurus.duth.gr/medicine/ιατρική_εκπαίδευση"/>
+        <skos:related rdf:resource="http://thesaurus.duth.gr/medicine/ιατρική_ηθική"/>
+        <skos:narrower rdf:resource="http://thesaurus.duth.gr/medicine/ιατροί"/>
+        <skos:narrower rdf:resource="http://thesaurus.duth.gr/medicine/ιατροδικαστική"/>
+        <skos:narrower rdf:resource="http://thesaurus.duth.gr/medicine/μαιευτική"/>
+        <skos:narrower rdf:resource="http://thesaurus.duth.gr/medicine/νευρολογία"/>
+        <skos:narrower rdf:resource="http://thesaurus.duth.gr/medicine/οδοντιατρική"/>
+        <skos:narrower rdf:resource="http://thesaurus.duth.gr/medicine/ορθοπαιδική"/>
+        <skos:narrower rdf:resource="http://thesaurus.duth.gr/medicine/οφθαλμολογία"/>
+        <skos:narrower rdf:resource="http://thesaurus.duth.gr/medicine/παθολογία"/>
+        <skos:narrower rdf:resource="http://thesaurus.duth.gr/medicine/παιδιατρική"/>
+        <skos:narrower rdf:resource="http://thesaurus.duth.gr/medicine/υγεία"/>
+        <skos:narrower rdf:resource="http://thesaurus.duth.gr/medicine/χειρουργική"/>
+        <skos:narrower rdf:resource="http://thesaurus.duth.gr/medicine/ψυχιατρική"/>
+        <skos:narrower rdf:resource="http://thesaurus.duth.gr/medicine/ωτορινολαρυγγολογία"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://thesaurus.duth.gr/medicine/ιατρική_έρευνα -->
+
+    <owl:NamedIndividual rdf:about="http://thesaurus.duth.gr/medicine/ιατρική_έρευνα">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:notation rdf:datatype="http://dewey.info/schema-terms/Notation">619</skos:notation>
+        <skos:prefLabel xml:lang="el">ιατρική έρευνα</skos:prefLabel>
+        <skos:prefLabel xml:lang="en">medical research</skos:prefLabel>
+        <skos:broaderTransitive rdf:resource="http://thesaurus.duth.gr/medicine/Ιατρικές_επιστήμες"/>
+        <skos:broader rdf:resource="http://thesaurus.duth.gr/medicine/ιατρικές_επιστήμες"/>
+        <skos:related rdf:resource="http://thesaurus.duth.gr/medicine/πειραματική_ιατρική"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://thesaurus.duth.gr/medicine/ιατρική_διάγνωση -->
+
+    <owl:NamedIndividual rdf:about="http://thesaurus.duth.gr/medicine/ιατρική_διάγνωση">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:notation rdf:datatype="http://dewey.info/schema-terms/Notation">616.07</skos:notation>
+        <skos:altLabel xml:lang="el">διάγνωση</skos:altLabel>
+        <skos:prefLabel xml:lang="el">ιατρική διάγνωση</skos:prefLabel>
+        <skos:prefLabel xml:lang="en">medical diagnosis</skos:prefLabel>
+        <skos:broaderTransitive rdf:resource="http://thesaurus.duth.gr/medicine/Ιατρικές_επιστήμες"/>
+        <skos:related rdf:resource="http://thesaurus.duth.gr/medicine/ακτινογραφία"/>
+        <skos:related rdf:resource="http://thesaurus.duth.gr/medicine/ακτινογραφική_εξέταση"/>
+        <skos:related rdf:resource="http://thesaurus.duth.gr/medicine/αξονική_τομογραφία"/>
+        <skos:related rdf:resource="http://thesaurus.duth.gr/medicine/ασθένειες"/>
+        <skos:broader rdf:resource="http://thesaurus.duth.gr/medicine/ιατρικές_επιστήμες"/>
+        <skos:broader rdf:resource="http://thesaurus.duth.gr/medicine/ιατρική"/>
+        <skos:related rdf:resource="http://thesaurus.duth.gr/medicine/παθολογία"/>
+        <skos:related rdf:resource="http://thesaurus.duth.gr/medicine/σπινθηρογράφημα"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://thesaurus.duth.gr/medicine/ιατρική_εκπαίδευση -->
+
+    <owl:NamedIndividual rdf:about="http://thesaurus.duth.gr/medicine/ιατρική_εκπαίδευση"/>
+    
+
+
+    <!-- http://thesaurus.duth.gr/medicine/ιατρική_ηθική -->
+
+    <owl:NamedIndividual rdf:about="http://thesaurus.duth.gr/medicine/ιατρική_ηθική"/>
+    
+
+
+    <!-- http://thesaurus.duth.gr/medicine/ιατροί -->
+
+    <owl:NamedIndividual rdf:about="http://thesaurus.duth.gr/medicine/ιατροί">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:notation rdf:datatype="http://dewey.info/schema-terms/Notation">610.69</skos:notation>
+        <skos:altLabel xml:lang="el">γιατροί</skos:altLabel>
+        <skos:prefLabel xml:lang="el">ιατροί</skos:prefLabel>
+        <skos:prefLabel xml:lang="en">physicians</skos:prefLabel>
+        <skos:broaderTransitive rdf:resource="http://thesaurus.duth.gr/medicine/Ιατρικές_επιστήμες"/>
+        <skos:broader rdf:resource="http://thesaurus.duth.gr/medicine/ιατρική"/>
+        <skos:related rdf:resource="http://thesaurus.duth.gr/medicine/ιατρική_εκπαίδευση"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://thesaurus.duth.gr/medicine/ιατροδικαστική -->
+
+    <owl:NamedIndividual rdf:about="http://thesaurus.duth.gr/medicine/ιατροδικαστική">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:notation rdf:datatype="http://dewey.info/schema-terms/Notation">614</skos:notation>
+        <skos:prefLabel xml:lang="el">ιατροδικαστική</skos:prefLabel>
+        <skos:prefLabel xml:lang="en">forensic medicine</skos:prefLabel>
+        <skos:broaderTransitive rdf:resource="http://thesaurus.duth.gr/medicine/Ιατρικές_επιστήμες"/>
+        <skos:broader rdf:resource="http://thesaurus.duth.gr/medicine/ιατρική"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://thesaurus.duth.gr/medicine/ιστορία_της_ιατρικής -->
+
+    <owl:NamedIndividual rdf:about="http://thesaurus.duth.gr/medicine/ιστορία_της_ιατρικής"/>
+    
+
+
+    <!-- http://thesaurus.duth.gr/medicine/καρδιά -->
+
+    <owl:NamedIndividual rdf:about="http://thesaurus.duth.gr/medicine/καρδιά"/>
+    
+
+
+    <!-- http://thesaurus.duth.gr/medicine/καρδιολογία -->
+
+    <owl:NamedIndividual rdf:about="http://thesaurus.duth.gr/medicine/καρδιολογία">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:notation rdf:datatype="http://dewey.info/schema-terms/Notation">616.1</skos:notation>
+        <skos:prefLabel xml:lang="el">καρδιολογία</skos:prefLabel>
+        <skos:prefLabel xml:lang="en">cardiology</skos:prefLabel>
+        <skos:broaderTransitive rdf:resource="http://thesaurus.duth.gr/medicine/Ιατρικές_επιστήμες"/>
+        <skos:related rdf:resource="http://thesaurus.duth.gr/medicine/έμφραγμα_μυοκαρδίου"/>
+        <skos:related rdf:resource="http://thesaurus.duth.gr/medicine/καρδιά"/>
+        <skos:broader rdf:resource="http://thesaurus.duth.gr/medicine/παθολογία"/>
+        <skos:related rdf:resource="http://thesaurus.duth.gr/medicine/υπέρταση"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://thesaurus.duth.gr/medicine/καρκίνος -->
+
+    <owl:NamedIndividual rdf:about="http://thesaurus.duth.gr/medicine/καρκίνος"/>
+    
+
+
+    <!-- http://thesaurus.duth.gr/medicine/κατάγματα -->
+
+    <owl:NamedIndividual rdf:about="http://thesaurus.duth.gr/medicine/κατάγματα"/>
+    
+
+
+    <!-- http://thesaurus.duth.gr/medicine/κατάθλιψη -->
+
+    <owl:NamedIndividual rdf:about="http://thesaurus.duth.gr/medicine/κατάθλιψη"/>
+    
+
+
+    <!-- http://thesaurus.duth.gr/medicine/καταρράκτης -->
+
+    <owl:NamedIndividual rdf:about="http://thesaurus.duth.gr/medicine/καταρράκτης"/>
+    
+
+
+    <!-- http://thesaurus.duth.gr/medicine/κοινωνιολογία_της_υγείας -->
+
+    <owl:NamedIndividual rdf:about="http://thesaurus.duth.gr/medicine/κοινωνιολογία_της_υγείας"/>
+    
+
+
+    <!-- http://thesaurus.duth.gr/medicine/κύηση -->
+
+    <owl:NamedIndividual rdf:about="http://thesaurus.duth.gr/medicine/κύηση"/>
+    
+
+
+    <!-- http://thesaurus.duth.gr/medicine/λευχαιμία -->
+
+    <owl:NamedIndividual rdf:about="http://thesaurus.duth.gr/medicine/λευχαιμία"/>
+    
+
+
+    <!-- http://thesaurus.duth.gr/medicine/μαιευτική -->
+
+    <owl:NamedIndividual rdf:about="http://thesaurus.duth.gr/medicine/μαιευτική">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:notation rdf:datatype="http://dewey.info/schema-terms/Notation">618.2</skos:notation>
+        <skos:prefLabel xml:lang="el">μαιευτική</skos:prefLabel>
+        <skos:prefLabel xml:lang="en">οbstetrics</skos:prefLabel>
+        <skos:broaderTransitive rdf:resource="http://thesaurus.duth.gr/medicine/Ιατρικές_επιστήμες"/>
+        <skos:related rdf:resource="http://thesaurus.duth.gr/medicine/γυναικολογία"/>
+        <skos:broader rdf:resource="http://thesaurus.duth.gr/medicine/ιατρική"/>
+        <skos:related rdf:resource="http://thesaurus.duth.gr/medicine/κύηση"/>
+        <skos:related rdf:resource="http://thesaurus.duth.gr/medicine/τοκετός"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://thesaurus.duth.gr/medicine/μελάνωμα -->
+
+    <owl:NamedIndividual rdf:about="http://thesaurus.duth.gr/medicine/μελάνωμα"/>
+    
+
+
+    <!-- http://thesaurus.duth.gr/medicine/μεσογειακή_αναιμία -->
+
+    <owl:NamedIndividual rdf:about="http://thesaurus.duth.gr/medicine/μεσογειακή_αναιμία">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:notation rdf:datatype="http://dewey.info/schema-terms/Notation">616.1</skos:notation>
+        <skos:altLabel xml:lang="el">θαλασσαιμία</skos:altLabel>
+        <skos:prefLabel xml:lang="el">μεσογειακή αναιμία</skos:prefLabel>
+        <skos:prefLabel xml:lang="en">thalassemia</skos:prefLabel>
+        <skos:broaderTransitive rdf:resource="http://thesaurus.duth.gr/medicine/Ιατρικές_επιστήμες"/>
+        <skos:related rdf:resource="http://thesaurus.duth.gr/medicine/αιματολογία"/>
+        <skos:broader rdf:resource="http://thesaurus.duth.gr/medicine/αναιμία"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://thesaurus.duth.gr/medicine/μετάγγιση_αίματος -->
+
+    <owl:NamedIndividual rdf:about="http://thesaurus.duth.gr/medicine/μετάγγιση_αίματος"/>
+    
+
+
+    <!-- http://thesaurus.duth.gr/medicine/μυϊκό_σύστημα -->
+
+    <owl:NamedIndividual rdf:about="http://thesaurus.duth.gr/medicine/μυϊκό_σύστημα"/>
+    
+
+
+    <!-- http://thesaurus.duth.gr/medicine/νευρολογία -->
+
+    <owl:NamedIndividual rdf:about="http://thesaurus.duth.gr/medicine/νευρολογία">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:notation rdf:datatype="http://dewey.info/schema-terms/Notation">616.8</skos:notation>
+        <skos:prefLabel xml:lang="el">νευρολογία</skos:prefLabel>
+        <skos:prefLabel xml:lang="en">neurology</skos:prefLabel>
+        <skos:broaderTransitive rdf:resource="http://thesaurus.duth.gr/medicine/Ιατρικές_επιστήμες"/>
+        <skos:related rdf:resource="http://thesaurus.duth.gr/medicine/επιληψία"/>
+        <skos:related rdf:resource="http://thesaurus.duth.gr/medicine/ημικρανία"/>
+        <skos:broader rdf:resource="http://thesaurus.duth.gr/medicine/ιατρική"/>
+        <skos:related rdf:resource="http://thesaurus.duth.gr/medicine/σκλήρυνση_κατά_πλάκας"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://thesaurus.duth.gr/medicine/νευρώσεις -->
+
+    <owl:NamedIndividual rdf:about="http://thesaurus.duth.gr/medicine/νευρώσεις">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:notation rdf:datatype="http://dewey.info/schema-terms/Notation">616.852</skos:notation>
+        <skos:prefLabel xml:lang="el">νευρώσεις</skos:prefLabel>
+        <skos:prefLabel xml:lang="en">neuroses</skos:prefLabel>
+        <skos:broaderTransitive rdf:resource="http://thesaurus.duth.gr/medicine/Ιατρικές_επιστήμες"/>
+        <skos:broader rdf:resource="http://thesaurus.duth.gr/medicine/ψυχικές_ασθένειες"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://thesaurus.duth.gr/medicine/νεφρά -->
+
+    <owl:NamedIndividual rdf:about="http://thesaurus.duth.gr/medicine/νεφρά"/>
+    
+
+
+    <!-- http://thesaurus.duth.gr/medicine/νοσηλευτές -->
+
+    <owl:NamedIndividual rdf:about="http://thesaurus.duth.gr/medicine/νοσηλευτές"/>
+    
+
+
+    <!-- http://thesaurus.duth.gr/medicine/νοσηλευτική -->
+
+    <owl:NamedIndividual rdf:about="http://thesaurus.duth.gr/medicine/νοσηλευτική">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:notation rdf:datatype="http://dewey.info/schema-terms/Notation">610.73</skos:notation>
+        <skos:prefLabel xml:lang="el">νοσηλευτική</skos:prefLabel>
+        <skos:altLabel xml:lang="en">medical nursing</skos:altLabel>
+        <skos:prefLabel xml:lang="en">nursing</skos:prefLabel>
+        <skos:broaderTransitive rdf:resource="http://thesaurus.duth.gr/medicine/Ιατρικές_επιστήμες"/>
+        <skos:broader rdf:resource="http://thesaurus.duth.gr/medicine/ιατρικές_επιστήμες"/>
+        <skos:related rdf:resource="http://thesaurus.duth.gr/medicine/νοσηλευτές"/>
+        <skos:related rdf:resource="http://thesaurus.duth.gr/medicine/νοσοκομεία"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://thesaurus.duth.gr/medicine/νοσοκομεία -->
+
+    <owl:NamedIndividual rdf:about="http://thesaurus.duth.gr/medicine/νοσοκομεία"/>
+    
+
+
+    <!-- http://thesaurus.duth.gr/medicine/ογκολογία -->
+
+    <owl:NamedIndividual rdf:about="http://thesaurus.duth.gr/medicine/ογκολογία">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:notation rdf:datatype="http://dewey.info/schema-terms/Notation">616.99</skos:notation>
+        <skos:prefLabel xml:lang="el">ογκολογία</skos:prefLabel>
+        <skos:prefLabel xml:lang="en">oncology</skos:prefLabel>
+        <skos:broaderTransitive rdf:resource="http://thesaurus.duth.gr/medicine/Ιατρικές_επιστήμες"/>
+        <skos:related rdf:resource="http://thesaurus.duth.gr/medicine/καρκίνος"/>
+        <skos:broader rdf:resource="http://thesaurus.duth.gr/medicine/παθολογία"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://thesaurus.duth.gr/medicine/οδοντιατρική -->
+
+    <owl:NamedIndividual rdf:about="http://thesaurus.duth.gr/medicine/οδοντιατρική">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:notation rdf:datatype="http://dewey.info/schema-terms/Notation">617.6</skos:notation>
+        <skos:prefLabel xml:lang="el">οδοντιατρική</skos:prefLabel>
+        <skos:prefLabel xml:lang="en">dentistry</skos:prefLabel>
+        <skos:broaderTransitive rdf:resource="http://thesaurus.duth.gr/medicine/Ιατρικές_επιστήμες"/>
+        <skos:narrower rdf:resource="http://thesaurus.duth.gr/medicine/γναθοχειρουργική"/>
+        <skos:broader rdf:resource="http://thesaurus.duth.gr/medicine/ιατρική"/>
+        <skos:narrower rdf:resource="http://thesaurus.duth.gr/medicine/οδοντική_προσθετική"/>
+        <skos:narrower rdf:resource="http://thesaurus.duth.gr/medicine/ορθοδοντική"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://thesaurus.duth.gr/medicine/οδοντική_προσθετική -->
+
+    <owl:NamedIndividual rdf:about="http://thesaurus.duth.gr/medicine/οδοντική_προσθετική">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:notation rdf:datatype="http://dewey.info/schema-terms/Notation">617.6</skos:notation>
+        <skos:prefLabel xml:lang="el">οδοντική προσθετική</skos:prefLabel>
+        <skos:altLabel xml:lang="el">προσθετολογία</skos:altLabel>
+        <skos:broaderTransitive rdf:resource="http://thesaurus.duth.gr/medicine/Ιατρικές_επιστήμες"/>
+        <skos:broader rdf:resource="http://thesaurus.duth.gr/medicine/οδοντιατρική"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://thesaurus.duth.gr/medicine/ορθοδοντική -->
+
+    <owl:NamedIndividual rdf:about="http://thesaurus.duth.gr/medicine/ορθοδοντική">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:notation rdf:datatype="http://dewey.info/schema-terms/Notation">617.6</skos:notation>
+        <skos:prefLabel xml:lang="el">ορθοδοντική</skos:prefLabel>
+        <skos:prefLabel xml:lang="en">orthodontics</skos:prefLabel>
+        <skos:broaderTransitive rdf:resource="http://thesaurus.duth.gr/medicine/Ιατρικές_επιστήμες"/>
+        <skos:broader rdf:resource="http://thesaurus.duth.gr/medicine/οδοντιατρική"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://thesaurus.duth.gr/medicine/ορθοπαιδική -->
+
+    <owl:NamedIndividual rdf:about="http://thesaurus.duth.gr/medicine/ορθοπαιδική">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:notation rdf:datatype="http://dewey.info/schema-terms/Notation">616.7</skos:notation>
+        <skos:notation rdf:datatype="http://dewey.info/schema-terms/Notation">617.4</skos:notation>
+        <skos:notation rdf:datatype="http://dewey.info/schema-terms/Notation">617.5</skos:notation>
+        <skos:prefLabel xml:lang="el">ορθοπαιδική</skos:prefLabel>
+        <skos:altLabel xml:lang="el">ορθοπεδική</skos:altLabel>
+        <skos:prefLabel xml:lang="en">orthopedics</skos:prefLabel>
+        <skos:broaderTransitive rdf:resource="http://thesaurus.duth.gr/medicine/Ιατρικές_επιστήμες"/>
+        <skos:broader rdf:resource="http://thesaurus.duth.gr/medicine/ιατρική"/>
+        <skos:related rdf:resource="http://thesaurus.duth.gr/medicine/κατάγματα"/>
+        <skos:related rdf:resource="http://thesaurus.duth.gr/medicine/μυϊκό_σύστημα"/>
+        <skos:related rdf:resource="http://thesaurus.duth.gr/medicine/οστεοπόρωση"/>
+        <skos:related rdf:resource="http://thesaurus.duth.gr/medicine/σκελετικό_σύστημα"/>
+        <skos:related rdf:resource="http://thesaurus.duth.gr/medicine/χειρουργική"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://thesaurus.duth.gr/medicine/οστεοπόρωση -->
+
+    <owl:NamedIndividual rdf:about="http://thesaurus.duth.gr/medicine/οστεοπόρωση"/>
+    
+
+
+    <!-- http://thesaurus.duth.gr/medicine/ουρολογία -->
+
+    <owl:NamedIndividual rdf:about="http://thesaurus.duth.gr/medicine/ουρολογία">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:notation rdf:datatype="http://dewey.info/schema-terms/Notation">616.6</skos:notation>
+        <skos:prefLabel xml:lang="el">ουρολογία</skos:prefLabel>
+        <skos:prefLabel xml:lang="en">urology</skos:prefLabel>
+        <skos:broaderTransitive rdf:resource="http://thesaurus.duth.gr/medicine/Ιατρικές_επιστήμες"/>
+        <skos:related rdf:resource="http://thesaurus.duth.gr/medicine/νεφρά"/>
+        <skos:broader rdf:resource="http://thesaurus.duth.gr/medicine/παθολογία"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://thesaurus.duth.gr/medicine/οφθαλμολογία -->
+
+    <owl:NamedIndividual rdf:about="http://thesaurus.duth.gr/medicine/οφθαλμολογία">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:notation rdf:datatype="http://dewey.info/schema-terms/Notation">617.7</skos:notation>
+        <skos:prefLabel xml:lang="el">οφθαλμολογία</skos:prefLabel>
+        <skos:prefLabel xml:lang="en">ophthalmology</skos:prefLabel>
+        <skos:broaderTransitive rdf:resource="http://thesaurus.duth.gr/medicine/Ιατρικές_επιστήμες"/>
+        <skos:related rdf:resource="http://thesaurus.duth.gr/medicine/γλαύκωμα"/>
+        <skos:related rdf:resource="http://thesaurus.duth.gr/medicine/γυαλιά"/>
+        <skos:broader rdf:resource="http://thesaurus.duth.gr/medicine/ιατρική"/>
+        <skos:related rdf:resource="http://thesaurus.duth.gr/medicine/καταρράκτης"/>
+        <skos:related rdf:resource="http://thesaurus.duth.gr/medicine/φακοί_επαφής"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://thesaurus.duth.gr/medicine/παθολογία -->
+
+    <owl:NamedIndividual rdf:about="http://thesaurus.duth.gr/medicine/παθολογία">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:notation rdf:datatype="http://dewey.info/schema-terms/Notation">616</skos:notation>
+        <skos:prefLabel xml:lang="el">παθολογία</skos:prefLabel>
+        <skos:prefLabel xml:lang="en">internal medicine</skos:prefLabel>
+        <skos:broaderTransitive rdf:resource="http://thesaurus.duth.gr/medicine/Ιατρικές_επιστήμες"/>
+        <skos:narrower rdf:resource="http://thesaurus.duth.gr/medicine/αιματολογία"/>
+        <skos:related rdf:resource="http://thesaurus.duth.gr/medicine/ανοσολογία"/>
+        <skos:narrower rdf:resource="http://thesaurus.duth.gr/medicine/γαστρεντερολογία"/>
+        <skos:narrower rdf:resource="http://thesaurus.duth.gr/medicine/δερματολογία"/>
+        <skos:broader rdf:resource="http://thesaurus.duth.gr/medicine/ιατρική"/>
+        <skos:narrower rdf:resource="http://thesaurus.duth.gr/medicine/καρδιολογία"/>
+        <skos:narrower rdf:resource="http://thesaurus.duth.gr/medicine/ογκολογία"/>
+        <skos:narrower rdf:resource="http://thesaurus.duth.gr/medicine/ουρολογία"/>
+        <skos:narrower rdf:resource="http://thesaurus.duth.gr/medicine/πνευμονολογία"/>
+        <skos:narrower rdf:resource="http://thesaurus.duth.gr/medicine/ρευματολογία"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://thesaurus.duth.gr/medicine/παιδιά -->
+
+    <owl:NamedIndividual rdf:about="http://thesaurus.duth.gr/medicine/παιδιά"/>
+    
+
+
+    <!-- http://thesaurus.duth.gr/medicine/παιδιατρική -->
+
+    <owl:NamedIndividual rdf:about="http://thesaurus.duth.gr/medicine/παιδιατρική">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:notation rdf:datatype="http://dewey.info/schema-terms/Notation">618.92</skos:notation>
+        <skos:prefLabel xml:lang="el">παιδιατρική</skos:prefLabel>
+        <skos:prefLabel xml:lang="en">pediatrics</skos:prefLabel>
+        <skos:broaderTransitive rdf:resource="http://thesaurus.duth.gr/medicine/Ιατρικές_επιστήμες"/>
+        <skos:broader rdf:resource="http://thesaurus.duth.gr/medicine/ιατρική"/>
+        <skos:related rdf:resource="http://thesaurus.duth.gr/medicine/παιδιά"/>
+        <skos:related rdf:resource="http://thesaurus.duth.gr/medicine/παιδοψυχιατρική"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://thesaurus.duth.gr/medicine/παιδοψυχιατρική -->
+
+    <owl:NamedIndividual rdf:about="http://thesaurus.duth.gr/medicine/παιδοψυχιατρική">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:prefLabel xml:lang="el">παιδοψυχιατρική</skos:prefLabel>
+        <skos:prefLabel xml:lang="en">child psychiatry</skos:prefLabel>
+        <skos:broaderTransitive rdf:resource="http://thesaurus.duth.gr/medicine/Ιατρικές_επιστήμες"/>
+        <skos:related rdf:resource="http://thesaurus.duth.gr/medicine/παιδιατρική"/>
+        <skos:broader rdf:resource="http://thesaurus.duth.gr/medicine/ψυχιατρική"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://thesaurus.duth.gr/medicine/πειραματική_ιατρική -->
+
+    <owl:NamedIndividual rdf:about="http://thesaurus.duth.gr/medicine/πειραματική_ιατρική">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:notation rdf:datatype="http://dewey.info/schema-terms/Notation">619</skos:notation>
+        <skos:prefLabel xml:lang="el">πειραματική ιατρική</skos:prefLabel>
+        <skos:prefLabel xml:lang="en">experimental medicine</skos:prefLabel>
+        <skos:broaderTransitive rdf:resource="http://thesaurus.duth.gr/medicine/Ιατρικές_επιστήμες"/>
+        <skos:broader rdf:resource="http://thesaurus.duth.gr/medicine/ιατρικές_επιστήμες"/>
+        <skos:related rdf:resource="http://thesaurus.duth.gr/medicine/ιατρική_έρευνα"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://thesaurus.duth.gr/medicine/πεπτικά_έλκη -->
+
+    <owl:NamedIndividual rdf:about="http://thesaurus.duth.gr/medicine/πεπτικά_έλκη"/>
+    
+
+
+    <!-- http://thesaurus.duth.gr/medicine/πλαστική_χειρουργική -->
+
+    <owl:NamedIndividual rdf:about="http://thesaurus.duth.gr/medicine/πλαστική_χειρουργική"/>
+    
+
+
+    <!-- http://thesaurus.duth.gr/medicine/πνευμονία -->
+
+    <owl:NamedIndividual rdf:about="http://thesaurus.duth.gr/medicine/πνευμονία"/>
+    
+
+
+    <!-- http://thesaurus.duth.gr/medicine/πνευμονολογία -->
+
+    <owl:NamedIndividual rdf:about="http://thesaurus.duth.gr/medicine/πνευμονολογία">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:notation rdf:datatype="http://dewey.info/schema-terms/Notation">616.2</skos:notation>
+        <skos:prefLabel xml:lang="el">πνευμονολογία</skos:prefLabel>
+        <skos:prefLabel xml:lang="en">pneumonology</skos:prefLabel>
+        <skos:broaderTransitive rdf:resource="http://thesaurus.duth.gr/medicine/Ιατρικές_επιστήμες"/>
+        <skos:related rdf:resource="http://thesaurus.duth.gr/medicine/άσθμα"/>
+        <skos:broader rdf:resource="http://thesaurus.duth.gr/medicine/παθολογία"/>
+        <skos:related rdf:resource="http://thesaurus.duth.gr/medicine/πνευμονία"/>
+        <skos:related rdf:resource="http://thesaurus.duth.gr/medicine/φυματίωση"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://thesaurus.duth.gr/medicine/ραδιοβιολογία -->
+
+    <owl:NamedIndividual rdf:about="http://thesaurus.duth.gr/medicine/ραδιοβιολογία"/>
+    
+
+
+    <!-- http://thesaurus.duth.gr/medicine/ρευματισμοί -->
+
+    <owl:NamedIndividual rdf:about="http://thesaurus.duth.gr/medicine/ρευματισμοί"/>
+    
+
+
+    <!-- http://thesaurus.duth.gr/medicine/ρευματολογία -->
+
+    <owl:NamedIndividual rdf:about="http://thesaurus.duth.gr/medicine/ρευματολογία">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:notation rdf:datatype="http://dewey.info/schema-terms/Notation">616.7</skos:notation>
+        <skos:prefLabel xml:lang="el">ρευματολογία</skos:prefLabel>
+        <skos:prefLabel xml:lang="en">rheumatology</skos:prefLabel>
+        <skos:broaderTransitive rdf:resource="http://thesaurus.duth.gr/medicine/Ιατρικές_επιστήμες"/>
+        <skos:related rdf:resource="http://thesaurus.duth.gr/medicine/αρθριτικά"/>
+        <skos:broader rdf:resource="http://thesaurus.duth.gr/medicine/παθολογία"/>
+        <skos:related rdf:resource="http://thesaurus.duth.gr/medicine/ρευματισμοί"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://thesaurus.duth.gr/medicine/σεξουαλικά_μεταδιδόμενες_ασθένειες -->
+
+    <owl:NamedIndividual rdf:about="http://thesaurus.duth.gr/medicine/σεξουαλικά_μεταδιδόμενες_ασθένειες">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:altLabel xml:lang="el">αφροδίσια νοσήματα</skos:altLabel>
+        <skos:prefLabel xml:lang="el">σεξουαλικά μεταδιδόμενες ασθένειες</skos:prefLabel>
+        <skos:prefLabel xml:lang="en">sexually transmitted diseases</skos:prefLabel>
+        <skos:narrower rdf:resource="http://thesaurus.duth.gr/medicine/AIDS"/>
+        <skos:broaderTransitive rdf:resource="http://thesaurus.duth.gr/medicine/Ιατρικές_επιστήμες"/>
+        <skos:broader rdf:resource="http://thesaurus.duth.gr/medicine/ασθένειες"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://thesaurus.duth.gr/medicine/σκελετικό_σύστημα -->
+
+    <owl:NamedIndividual rdf:about="http://thesaurus.duth.gr/medicine/σκελετικό_σύστημα"/>
+    
+
+
+    <!-- http://thesaurus.duth.gr/medicine/σκλήρυνση_κατά_πλάκας -->
+
+    <owl:NamedIndividual rdf:about="http://thesaurus.duth.gr/medicine/σκλήρυνση_κατά_πλάκας"/>
+    
+
+
+    <!-- http://thesaurus.duth.gr/medicine/σπινθηρογράφημα -->
+
+    <owl:NamedIndividual rdf:about="http://thesaurus.duth.gr/medicine/σπινθηρογράφημα"/>
+    
+
+
+    <!-- http://thesaurus.duth.gr/medicine/σχιζοφρένεια -->
+
+    <owl:NamedIndividual rdf:about="http://thesaurus.duth.gr/medicine/σχιζοφρένεια"/>
+    
+
+
+    <!-- http://thesaurus.duth.gr/medicine/τοκετός -->
+
+    <owl:NamedIndividual rdf:about="http://thesaurus.duth.gr/medicine/τοκετός"/>
+    
+
+
+    <!-- http://thesaurus.duth.gr/medicine/τοξικολογία -->
+
+    <owl:NamedIndividual rdf:about="http://thesaurus.duth.gr/medicine/τοξικολογία">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:notation rdf:datatype="http://dewey.info/schema-terms/Notation">615.9</skos:notation>
+        <skos:prefLabel xml:lang="el">τοξικολογία</skos:prefLabel>
+        <skos:prefLabel xml:lang="en">toxicology</skos:prefLabel>
+        <skos:broaderTransitive rdf:resource="http://thesaurus.duth.gr/medicine/Ιατρικές_επιστήμες"/>
+        <skos:related rdf:resource="http://thesaurus.duth.gr/medicine/δηλητήρια"/>
+        <skos:broader rdf:resource="http://thesaurus.duth.gr/medicine/φαρμακολογία"/>
+        <skos:related rdf:resource="http://thesaurus.duth.gr/medicine/χρήση_ουσιών"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://thesaurus.duth.gr/medicine/υγεία -->
+
+    <owl:NamedIndividual rdf:about="http://thesaurus.duth.gr/medicine/υγεία">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:notation rdf:datatype="http://dewey.info/schema-terms/Notation">613</skos:notation>
+        <skos:prefLabel xml:lang="el">υγεία</skos:prefLabel>
+        <skos:altLabel xml:lang="el">υγιεινή</skos:altLabel>
+        <skos:prefLabel xml:lang="en">health</skos:prefLabel>
+        <skos:broaderTransitive rdf:resource="http://thesaurus.duth.gr/medicine/Ιατρικές_επιστήμες"/>
+        <skos:related rdf:resource="http://thesaurus.duth.gr/medicine/δημόσια_υγεία"/>
+        <skos:related rdf:resource="http://thesaurus.duth.gr/medicine/διαιτητική"/>
+        <skos:broader rdf:resource="http://thesaurus.duth.gr/medicine/ιατρική"/>
+        <skos:narrower rdf:resource="http://thesaurus.duth.gr/medicine/γυμναστική_(υγεία)"/>
+        <skos:related rdf:resource="http://thesaurus.duth.gr/medicine/γυμναστική_(υγεία)"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://thesaurus.duth.gr/medicine/υγιεινή_και_ασφάλεια_στην_εργασία -->
+
+    <owl:NamedIndividual rdf:about="http://thesaurus.duth.gr/medicine/υγιεινή_και_ασφάλεια_στην_εργασία"/>
+    
+
+
+    <!-- http://thesaurus.duth.gr/medicine/υπέρταση -->
+
+    <owl:NamedIndividual rdf:about="http://thesaurus.duth.gr/medicine/υπέρταση"/>
+    
+
+
+    <!-- http://thesaurus.duth.gr/medicine/φάρμακα -->
+
+    <owl:NamedIndividual rdf:about="http://thesaurus.duth.gr/medicine/φάρμακα"/>
+    
+
+
+    <!-- http://thesaurus.duth.gr/medicine/φακοί_επαφής -->
+
+    <owl:NamedIndividual rdf:about="http://thesaurus.duth.gr/medicine/φακοί_επαφής"/>
+    
+
+
+    <!-- http://thesaurus.duth.gr/medicine/φαρμακοθεραπεία -->
+
+    <owl:NamedIndividual rdf:about="http://thesaurus.duth.gr/medicine/φαρμακοθεραπεία">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:notation rdf:datatype="http://dewey.info/schema-terms/Notation">615.8</skos:notation>
+        <skos:prefLabel xml:lang="el">φαρμακοθεραπεία</skos:prefLabel>
+        <skos:prefLabel xml:lang="en">pharmacotherapy</skos:prefLabel>
+        <skos:broaderTransitive rdf:resource="http://thesaurus.duth.gr/medicine/Ιατρικές_επιστήμες"/>
+        <skos:broader rdf:resource="http://thesaurus.duth.gr/medicine/θεραπευτική"/>
+        <skos:related rdf:resource="http://thesaurus.duth.gr/medicine/φαρμακολογία"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://thesaurus.duth.gr/medicine/φαρμακολογία -->
+
+    <owl:NamedIndividual rdf:about="http://thesaurus.duth.gr/medicine/φαρμακολογία">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:notation rdf:datatype="http://dewey.info/schema-terms/Notation">615</skos:notation>
+        <skos:altLabel xml:lang="el">φαρμακευτική</skos:altLabel>
+        <skos:prefLabel xml:lang="el">φαρμακολογία</skos:prefLabel>
+        <skos:prefLabel xml:lang="en">pharmacology</skos:prefLabel>
+        <skos:broaderTransitive rdf:resource="http://thesaurus.duth.gr/medicine/Ιατρικές_επιστήμες"/>
+        <skos:narrower rdf:resource="http://thesaurus.duth.gr/medicine/τοξικολογία"/>
+        <skos:related rdf:resource="http://thesaurus.duth.gr/medicine/φάρμακα"/>
+        <skos:related rdf:resource="http://thesaurus.duth.gr/medicine/φαρμακοθεραπεία"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://thesaurus.duth.gr/medicine/φυματίωση -->
+
+    <owl:NamedIndividual rdf:about="http://thesaurus.duth.gr/medicine/φυματίωση"/>
+    
+
+
+    <!-- http://thesaurus.duth.gr/medicine/φυσικοθεραπεία -->
+
+    <owl:NamedIndividual rdf:about="http://thesaurus.duth.gr/medicine/φυσικοθεραπεία">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:notation rdf:datatype="http://dewey.info/schema-terms/Notation">615.8</skos:notation>
+        <skos:prefLabel xml:lang="el">φυσικοθεραπεία</skos:prefLabel>
+        <skos:prefLabel xml:lang="en">physical therapy</skos:prefLabel>
+        <skos:broaderTransitive rdf:resource="http://thesaurus.duth.gr/medicine/Ιατρικές_επιστήμες"/>
+        <skos:broader rdf:resource="http://thesaurus.duth.gr/medicine/θεραπευτική"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://thesaurus.duth.gr/medicine/χειρουργική -->
+
+    <owl:NamedIndividual rdf:about="http://thesaurus.duth.gr/medicine/χειρουργική">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:notation rdf:datatype="http://dewey.info/schema-terms/Notation">617</skos:notation>
+        <skos:prefLabel xml:lang="el">χειρουργική</skos:prefLabel>
+        <skos:prefLabel xml:lang="en">surgery</skos:prefLabel>
+        <skos:broaderTransitive rdf:resource="http://thesaurus.duth.gr/medicine/Ιατρικές_επιστήμες"/>
+        <skos:narrower rdf:resource="http://thesaurus.duth.gr/medicine/γναθοχειρουργική"/>
+        <skos:broader rdf:resource="http://thesaurus.duth.gr/medicine/ιατρική"/>
+        <skos:related rdf:resource="http://thesaurus.duth.gr/medicine/ορθοπαιδική"/>
+        <skos:related rdf:resource="http://thesaurus.duth.gr/medicine/πλαστική_χειρουργική"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://thesaurus.duth.gr/medicine/χημειοθεραπεία -->
+
+    <owl:NamedIndividual rdf:about="http://thesaurus.duth.gr/medicine/χημειοθεραπεία">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:notation rdf:datatype="http://dewey.info/schema-terms/Notation">615.5</skos:notation>
+        <skos:prefLabel xml:lang="el">χημειοθεραπεία</skos:prefLabel>
+        <skos:prefLabel xml:lang="en">chemotherapy</skos:prefLabel>
+        <skos:broaderTransitive rdf:resource="http://thesaurus.duth.gr/medicine/Ιατρικές_επιστήμες"/>
+        <skos:broader rdf:resource="http://thesaurus.duth.gr/medicine/θεραπευτική"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://thesaurus.duth.gr/medicine/χρήση_ουσιών -->
+
+    <owl:NamedIndividual rdf:about="http://thesaurus.duth.gr/medicine/χρήση_ουσιών"/>
+    
+
+
+    <!-- http://thesaurus.duth.gr/medicine/ψυχιατρική -->
+
+    <owl:NamedIndividual rdf:about="http://thesaurus.duth.gr/medicine/ψυχιατρική">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:notation rdf:datatype="http://dewey.info/schema-terms/Notation">616.89</skos:notation>
+        <skos:prefLabel xml:lang="el">ψυχιατρική</skos:prefLabel>
+        <skos:prefLabel xml:lang="en">psychiatry</skos:prefLabel>
+        <skos:broaderTransitive rdf:resource="http://thesaurus.duth.gr/medicine/Ιατρικές_επιστήμες"/>
+        <skos:related rdf:resource="http://thesaurus.duth.gr/medicine/άγχος"/>
+        <skos:broader rdf:resource="http://thesaurus.duth.gr/medicine/ιατρική"/>
+        <skos:related rdf:resource="http://thesaurus.duth.gr/medicine/κατάθλιψη"/>
+        <skos:narrower rdf:resource="http://thesaurus.duth.gr/medicine/παιδοψυχιατρική"/>
+        <skos:related rdf:resource="http://thesaurus.duth.gr/medicine/σχιζοφρένεια"/>
+        <skos:related rdf:resource="http://thesaurus.duth.gr/medicine/ψυχολογία"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://thesaurus.duth.gr/medicine/ψυχικές_ασθένειες -->
+
+    <owl:NamedIndividual rdf:about="http://thesaurus.duth.gr/medicine/ψυχικές_ασθένειες">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:altLabel xml:lang="el">ψυχικά νοσήματα</skos:altLabel>
+        <skos:prefLabel xml:lang="el">ψυχικές ασθένειες</skos:prefLabel>
+        <skos:altLabel xml:lang="el">ψυχικές νόσοι</skos:altLabel>
+        <skos:prefLabel xml:lang="en">mental illnesses</skos:prefLabel>
+        <skos:broaderTransitive rdf:resource="http://thesaurus.duth.gr/medicine/Ιατρικές_επιστήμες"/>
+        <skos:broader rdf:resource="http://thesaurus.duth.gr/medicine/ασθένειες"/>
+        <skos:narrower rdf:resource="http://thesaurus.duth.gr/medicine/νευρώσεις"/>
+        <skos:related rdf:resource="http://thesaurus.duth.gr/medicine/ψυχοπαθολογία"/>
+        <skos:narrower rdf:resource="http://thesaurus.duth.gr/medicine/ψυχώσεις"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://thesaurus.duth.gr/medicine/ψυχολογία -->
+
+    <owl:NamedIndividual rdf:about="http://thesaurus.duth.gr/medicine/ψυχολογία"/>
+    
+
+
+    <!-- http://thesaurus.duth.gr/medicine/ψυχοπαθολογία -->
+
+    <owl:NamedIndividual rdf:about="http://thesaurus.duth.gr/medicine/ψυχοπαθολογία"/>
+    
+
+
+    <!-- http://thesaurus.duth.gr/medicine/ψυχώσεις -->
+
+    <owl:NamedIndividual rdf:about="http://thesaurus.duth.gr/medicine/ψυχώσεις">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:notation rdf:datatype="http://dewey.info/schema-terms/Notation">616.89</skos:notation>
+        <skos:prefLabel xml:lang="el">ψυχώσεις</skos:prefLabel>
+        <skos:prefLabel xml:lang="en">psychoses</skos:prefLabel>
+        <skos:broaderTransitive rdf:resource="http://thesaurus.duth.gr/medicine/Ιατρικές_επιστήμες"/>
+        <skos:broader rdf:resource="http://thesaurus.duth.gr/medicine/ψυχικές_ασθένειες"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://thesaurus.duth.gr/medicine/ψωρίαση -->
+
+    <owl:NamedIndividual rdf:about="http://thesaurus.duth.gr/medicine/ψωρίαση"/>
+    
+
+
+    <!-- http://thesaurus.duth.gr/medicine/ωτορινολαρυγγολογία -->
+
+    <owl:NamedIndividual rdf:about="http://thesaurus.duth.gr/medicine/ωτορινολαρυγγολογία">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:notation rdf:datatype="http://dewey.info/schema-terms/Notation">617.8</skos:notation>
+        <skos:prefLabel xml:lang="el">ωτορινολαρυγγολογία</skos:prefLabel>
+        <skos:prefLabel xml:lang="en">otology</skos:prefLabel>
+        <skos:broaderTransitive rdf:resource="http://thesaurus.duth.gr/medicine/Ιατρικές_επιστήμες"/>
+        <skos:related rdf:resource="http://thesaurus.duth.gr/medicine/ακοή"/>
+        <skos:related rdf:resource="http://thesaurus.duth.gr/medicine/ακουστικές_συσκευές"/>
+        <skos:broader rdf:resource="http://thesaurus.duth.gr/medicine/ιατρική"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://thesaurus.duth.gr/medicine/γυμναστική_(υγεία) -->
+
+    <owl:NamedIndividual rdf:about="http://thesaurus.duth.gr/medicine/γυμναστική_(υγεία)">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:notation rdf:datatype="http://dewey.info/schema-terms/Notation">613.7</skos:notation>
+        <skos:altLabel xml:lang="el">άσκηση (υγεία)</skos:altLabel>
+        <skos:prefLabel xml:lang="el">γυμναστική (υγεία)</skos:prefLabel>
+        <skos:prefLabel xml:lang="en">exercise (health)</skos:prefLabel>
+        <skos:altLabel xml:lang="en">fitness (health)</skos:altLabel>
+        <skos:broaderTransitive rdf:resource="http://thesaurus.duth.gr/medicine/Ιατρικές_επιστήμες"/>
+        <skos:related rdf:resource="http://thesaurus.duth.gr/medicine/αθλητισμός"/>
+        <skos:related rdf:resource="http://thesaurus.duth.gr/medicine/ατομική_περιποίηση"/>
+        <skos:broader rdf:resource="http://thesaurus.duth.gr/medicine/υγεία"/>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 3.5.0) http://owlapi.sourceforge.net -->
+
