@@ -5,6 +5,7 @@
  */
 package gr.upatras.ceid.hpclab.owl;
 
+import java.net.URL;
 import java.util.HashSet;
 import java.util.Set;
 import java.util.logging.Level;
@@ -35,10 +36,13 @@ class OntologyConfiguration {
 
         Set<String> values = new HashSet();
         UrlValidator urlValidator = new UrlValidator();
-        String [] ontologyList = prop.getStringArray("ontology");
+        String[] ontologyList = prop.getStringArray("ontology");
         for (String value : ontologyList) {
             if (urlValidator.isValid(value)) {
                 values.add(value);
+            } else if (getClass().getResource(value) != null) {
+                URL url = getClass().getResource(value);
+                values.add(url.toString());
             } else {
                 Logger.getLogger(OntologyConfiguration.class.getName()).log(Level.WARNING,
                         "Ontology URL {0} is not valid. Ignoring.", value);

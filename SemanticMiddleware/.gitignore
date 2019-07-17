@@ -3,3 +3,4 @@ catalog.xml
 nb-configuration.xml
 /target
 /src/main/resources/keys
+/src/main/resources/ontologies.cfg

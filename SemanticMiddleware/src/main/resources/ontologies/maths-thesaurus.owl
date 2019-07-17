@@ -1,0 +1,1480 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://thesaurus.duth.gr/maths/"
+     xml:base="http://thesaurus.duth.gr/maths/"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:skos="http://www.w3.org/2004/02/skos/core#">
+    <owl:Ontology rdf:about="http://thesaurus.duth.gr/maths/">
+        <owl:imports rdf:resource="http://www.w3.org/TR/skos-reference/skos-owl1-dl.rdf"/>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#altLabel -->
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#altLabel"/>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#prefLabel -->
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#prefLabel"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Datatypes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://dewey.info/schema-terms/Notation -->
+
+    <rdfs:Datatype rdf:about="http://dewey.info/schema-terms/Notation"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#broader -->
+
+    <owl:ObjectProperty rdf:about="http://www.w3.org/2004/02/skos/core#broader"/>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#broaderTransitive -->
+
+    <owl:ObjectProperty rdf:about="http://www.w3.org/2004/02/skos/core#broaderTransitive"/>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#hasTopConcept -->
+
+    <owl:ObjectProperty rdf:about="http://www.w3.org/2004/02/skos/core#hasTopConcept"/>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#narrower -->
+
+    <owl:ObjectProperty rdf:about="http://www.w3.org/2004/02/skos/core#narrower"/>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#related -->
+
+    <owl:ObjectProperty rdf:about="http://www.w3.org/2004/02/skos/core#related"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#notation -->
+
+    <owl:DatatypeProperty rdf:about="http://www.w3.org/2004/02/skos/core#notation"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#Concept -->
+
+    <owl:Class rdf:about="http://www.w3.org/2004/02/skos/core#Concept"/>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#ConceptScheme -->
+
+    <owl:Class rdf:about="http://www.w3.org/2004/02/skos/core#ConceptScheme"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://thesaurus.duth.gr/maths/EKT_THESAURUS -->
+
+    <owl:NamedIndividual rdf:about="http://thesaurus.duth.gr/maths/EKT_THESAURUS">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#ConceptScheme"/>
+        <skos:hasTopConcept rdf:resource="http://thesaurus.duth.gr/maths/Μαθηματικά"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://thesaurus.duth.gr/maths/Μαθηματικά -->
+
+    <owl:NamedIndividual rdf:about="http://thesaurus.duth.gr/maths/Μαθηματικά"/>
+    
+
+
+    <!-- http://thesaurus.duth.gr/maths/Φιλοσοφία -->
+
+    <owl:NamedIndividual rdf:about="http://thesaurus.duth.gr/maths/Φιλοσοφία"/>
+    
+
+
+    <!-- http://thesaurus.duth.gr/maths/άλγεβρα -->
+
+    <owl:NamedIndividual rdf:about="http://thesaurus.duth.gr/maths/άλγεβρα">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:notation rdf:datatype="http://dewey.info/schema-terms/Notation">512</skos:notation>
+        <skos:prefLabel xml:lang="el">άλγεβρα</skos:prefLabel>
+        <skos:altLabel xml:lang="el">αλγεβρικές δομές</skos:altLabel>
+        <skos:altLabel xml:lang="el">αφηρημένη άλγεβρα</skos:altLabel>
+        <skos:altLabel xml:lang="en">abstract algebra</skos:altLabel>
+        <skos:prefLabel xml:lang="en">algebra</skos:prefLabel>
+        <skos:altLabel xml:lang="en">algebraic structures</skos:altLabel>
+        <skos:broaderTransitive rdf:resource="http://thesaurus.duth.gr/maths/Μαθηματικά"/>
+        <skos:related rdf:resource="http://thesaurus.duth.gr/maths/άλγεβρα_Μπουλ"/>
+        <skos:related rdf:resource="http://thesaurus.duth.gr/maths/αλγόριθμοι"/>
+        <skos:narrower rdf:resource="http://thesaurus.duth.gr/maths/γραμμική_άλγεβρα"/>
+        <skos:narrower rdf:resource="http://thesaurus.duth.gr/maths/θεωρία_δακτυλίων"/>
+        <skos:narrower rdf:resource="http://thesaurus.duth.gr/maths/θεωρία_ομάδων"/>
+        <skos:narrower rdf:resource="http://thesaurus.duth.gr/maths/θεωρία_συνδέσμων"/>
+        <skos:narrower rdf:resource="http://thesaurus.duth.gr/maths/θεωρία_σωμάτων"/>
+        <skos:broader rdf:resource="http://thesaurus.duth.gr/maths/μαθηματικά"/>
+        <skos:narrower rdf:resource="http://thesaurus.duth.gr/maths/ομολογική_άλγεβρα"/>
+        <skos:related rdf:resource="http://thesaurus.duth.gr/maths/συνδυαστική_ανάλυση"/>
+        <skos:related rdf:resource="http://thesaurus.duth.gr/maths/ακολουθίες_(μαθηματικά)"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://thesaurus.duth.gr/maths/άλγεβρα_Μπουλ -->
+
+    <owl:NamedIndividual rdf:about="http://thesaurus.duth.gr/maths/άλγεβρα_Μπουλ">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:notation rdf:datatype="http://dewey.info/schema-terms/Notation">511.324</skos:notation>
+        <skos:altLabel xml:lang="el">άλγεβρα Boole</skos:altLabel>
+        <skos:prefLabel xml:lang="el">άλγεβρα Μπουλ</skos:prefLabel>
+        <skos:prefLabel xml:lang="en">Boolean algebra</skos:prefLabel>
+        <skos:broaderTransitive rdf:resource="http://thesaurus.duth.gr/maths/Φιλοσοφία"/>
+        <skos:related rdf:resource="http://thesaurus.duth.gr/maths/άλγεβρα"/>
+        <skos:related rdf:resource="http://thesaurus.duth.gr/maths/θεωρία_συνδέσμων"/>
+        <skos:broader rdf:resource="http://thesaurus.duth.gr/maths/μαθηματική_λογική"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://thesaurus.duth.gr/maths/αλγεβρική_γεωμετρία -->
+
+    <owl:NamedIndividual rdf:about="http://thesaurus.duth.gr/maths/αλγεβρική_γεωμετρία">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:notation rdf:datatype="http://dewey.info/schema-terms/Notation">516.35</skos:notation>
+        <skos:prefLabel xml:lang="el">αλγεβρική γεωμετρία</skos:prefLabel>
+        <skos:prefLabel xml:lang="en">algebraic geometry</skos:prefLabel>
+        <skos:broaderTransitive rdf:resource="http://thesaurus.duth.gr/maths/Μαθηματικά"/>
+        <skos:narrower rdf:resource="http://thesaurus.duth.gr/maths/αφινική_γεωμετρία"/>
+        <skos:broader rdf:resource="http://thesaurus.duth.gr/maths/γεωμετρία"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://thesaurus.duth.gr/maths/αλγόριθμοι -->
+
+    <owl:NamedIndividual rdf:about="http://thesaurus.duth.gr/maths/αλγόριθμοι">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:notation rdf:datatype="http://dewey.info/schema-terms/Notation">511.8</skos:notation>
+        <skos:prefLabel xml:lang="el">αλγόριθμοι</skos:prefLabel>
+        <skos:altLabel xml:lang="el">θεωρία αλγορίθμων</skos:altLabel>
+        <skos:prefLabel xml:lang="en">algorithms</skos:prefLabel>
+        <skos:altLabel xml:lang="en">theory of algorithms</skos:altLabel>
+        <skos:broaderTransitive rdf:resource="http://thesaurus.duth.gr/maths/Μαθηματικά"/>
+        <skos:related rdf:resource="http://thesaurus.duth.gr/maths/άλγεβρα"/>
+        <skos:related rdf:resource="http://thesaurus.duth.gr/maths/αριθμητική_ανάλυση"/>
+        <skos:broader rdf:resource="http://thesaurus.duth.gr/maths/διακριτά_μαθηματικά"/>
+        <skos:broader rdf:resource="http://thesaurus.duth.gr/maths/μαθηματική_λογική"/>
+        <skos:related rdf:resource="http://thesaurus.duth.gr/maths/προγραμματισμός_ηλεκτρονικών_υπολογιστών"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://thesaurus.duth.gr/maths/αναλυτική_γεωμετρία -->
+
+    <owl:NamedIndividual rdf:about="http://thesaurus.duth.gr/maths/αναλυτική_γεωμετρία">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:notation rdf:datatype="http://dewey.info/schema-terms/Notation">516.3</skos:notation>
+        <skos:prefLabel xml:lang="el">αναλυτική γεωμετρία</skos:prefLabel>
+        <skos:prefLabel xml:lang="en">analytic geometry</skos:prefLabel>
+        <skos:broaderTransitive rdf:resource="http://thesaurus.duth.gr/maths/Μαθηματικά"/>
+        <skos:broader rdf:resource="http://thesaurus.duth.gr/maths/γεωμετρία"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://thesaurus.duth.gr/maths/απειροστικός_λογισμός -->
+
+    <owl:NamedIndividual rdf:about="http://thesaurus.duth.gr/maths/απειροστικός_λογισμός">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:notation rdf:datatype="http://dewey.info/schema-terms/Notation">515</skos:notation>
+        <skos:prefLabel xml:lang="el">απειροστικός λογισμός</skos:prefLabel>
+        <skos:prefLabel xml:lang="en">calculus</skos:prefLabel>
+        <skos:altLabel xml:lang="en">infinitesimal calculus</skos:altLabel>
+        <skos:broaderTransitive rdf:resource="http://thesaurus.duth.gr/maths/Μαθηματικά"/>
+        <skos:related rdf:resource="http://thesaurus.duth.gr/maths/διαφορικές_εξισώσεις"/>
+        <skos:broader rdf:resource="http://thesaurus.duth.gr/maths/πραγματική_ανάλυση"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://thesaurus.duth.gr/maths/αριθμητική -->
+
+    <owl:NamedIndividual rdf:about="http://thesaurus.duth.gr/maths/αριθμητική">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:notation rdf:datatype="http://dewey.info/schema-terms/Notation">513</skos:notation>
+        <skos:prefLabel xml:lang="el">αριθμητική</skos:prefLabel>
+        <skos:prefLabel xml:lang="en">arithmetic</skos:prefLabel>
+        <skos:broaderTransitive rdf:resource="http://thesaurus.duth.gr/maths/Μαθηματικά"/>
+        <skos:related rdf:resource="http://thesaurus.duth.gr/maths/θεωρία_αριθμών"/>
+        <skos:broader rdf:resource="http://thesaurus.duth.gr/maths/σχολικά_μαθηματικά"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://thesaurus.duth.gr/maths/αριθμητική_ανάλυση -->
+
+    <owl:NamedIndividual rdf:about="http://thesaurus.duth.gr/maths/αριθμητική_ανάλυση">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:notation rdf:datatype="http://dewey.info/schema-terms/Notation">515</skos:notation>
+        <skos:altLabel xml:lang="el">αριθμητικές μέθοδοι</skos:altLabel>
+        <skos:prefLabel xml:lang="el">αριθμητική ανάλυση</skos:prefLabel>
+        <skos:prefLabel xml:lang="en">numerical analysis</skos:prefLabel>
+        <skos:altLabel xml:lang="en">numerical methods</skos:altLabel>
+        <skos:broaderTransitive rdf:resource="http://thesaurus.duth.gr/maths/Μαθηματικά"/>
+        <skos:related rdf:resource="http://thesaurus.duth.gr/maths/αλγόριθμοι"/>
+        <skos:related rdf:resource="http://thesaurus.duth.gr/maths/γραμμική_άλγεβρα"/>
+        <skos:related rdf:resource="http://thesaurus.duth.gr/maths/διαφορικός_λογισμός"/>
+        <skos:related rdf:resource="http://thesaurus.duth.gr/maths/ηλεκτρονικοί_υπολογιστές"/>
+        <skos:broader rdf:resource="http://thesaurus.duth.gr/maths/μαθηματική_ανάλυση"/>
+        <skos:related rdf:resource="http://thesaurus.duth.gr/maths/συναρτησιακή_ανάλυση"/>
+        <skos:broader rdf:resource="http://thesaurus.duth.gr/maths/υπολογιστικά_μαθηματικά"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://thesaurus.duth.gr/maths/αφινική_γεωμετρία -->
+
+    <owl:NamedIndividual rdf:about="http://thesaurus.duth.gr/maths/αφινική_γεωμετρία">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:notation rdf:datatype="http://dewey.info/schema-terms/Notation">516.4</skos:notation>
+        <skos:prefLabel xml:lang="el">αφινική γεωμετρία</skos:prefLabel>
+        <skos:altLabel xml:lang="el">ομοπαραλληλική γεωμετρία</skos:altLabel>
+        <skos:altLabel xml:lang="el">συσχετισμένη γεωμετρία</skos:altLabel>
+        <skos:prefLabel xml:lang="en">affine geometry</skos:prefLabel>
+        <skos:broaderTransitive rdf:resource="http://thesaurus.duth.gr/maths/Μαθηματικά"/>
+        <skos:broader rdf:resource="http://thesaurus.duth.gr/maths/αλγεβρική_γεωμετρία"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://thesaurus.duth.gr/maths/βιονική -->
+
+    <owl:NamedIndividual rdf:about="http://thesaurus.duth.gr/maths/βιονική"/>
+    
+
+
+    <!-- http://thesaurus.duth.gr/maths/γεωμετρία -->
+
+    <owl:NamedIndividual rdf:about="http://thesaurus.duth.gr/maths/γεωμετρία">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:notation rdf:datatype="http://dewey.info/schema-terms/Notation">516</skos:notation>
+        <skos:prefLabel xml:lang="el">γεωμετρία</skos:prefLabel>
+        <skos:prefLabel xml:lang="en">geometry</skos:prefLabel>
+        <skos:broaderTransitive rdf:resource="http://thesaurus.duth.gr/maths/Μαθηματικά"/>
+        <skos:narrower rdf:resource="http://thesaurus.duth.gr/maths/αλγεβρική_γεωμετρία"/>
+        <skos:narrower rdf:resource="http://thesaurus.duth.gr/maths/αναλυτική_γεωμετρία"/>
+        <skos:narrower rdf:resource="http://thesaurus.duth.gr/maths/διαφορική_γεωμετρία"/>
+        <skos:narrower rdf:resource="http://thesaurus.duth.gr/maths/ευκλείδεια_γεωμετρία"/>
+        <skos:related rdf:resource="http://thesaurus.duth.gr/maths/θεωρία_γραφημάτων"/>
+        <skos:related rdf:resource="http://thesaurus.duth.gr/maths/θεωρία_κατηγοριών"/>
+        <skos:broader rdf:resource="http://thesaurus.duth.gr/maths/μαθηματικά"/>
+        <skos:narrower rdf:resource="http://thesaurus.duth.gr/maths/μη_ευκλείδειες_γεωμετρίες"/>
+        <skos:narrower rdf:resource="http://thesaurus.duth.gr/maths/παραστατική_γεωμετρία"/>
+        <skos:narrower rdf:resource="http://thesaurus.duth.gr/maths/προβολική_γεωμετρία"/>
+        <skos:narrower rdf:resource="http://thesaurus.duth.gr/maths/υπολογιστική_γεωμετρία"/>
+        <skos:narrower rdf:resource="http://thesaurus.duth.gr/maths/φράκταλ_γεωμετρία"/>
+        <skos:related rdf:resource="http://thesaurus.duth.gr/maths/θεωρία_καταστροφών_(μαθηματικά)"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://thesaurus.duth.gr/maths/γεωμετρία_Ρήμαν -->
+
+    <owl:NamedIndividual rdf:about="http://thesaurus.duth.gr/maths/γεωμετρία_Ρήμαν">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:notation rdf:datatype="http://dewey.info/schema-terms/Notation">516.373</skos:notation>
+        <skos:altLabel xml:lang="el">Ρήμαν γεωμετρία</skos:altLabel>
+        <skos:altLabel xml:lang="el">γεωμετρία Riemann</skos:altLabel>
+        <skos:prefLabel xml:lang="el">γεωμετρία Ρήμαν</skos:prefLabel>
+        <skos:prefLabel xml:lang="en">Riemannian geometry</skos:prefLabel>
+        <skos:broaderTransitive rdf:resource="http://thesaurus.duth.gr/maths/Μαθηματικά"/>
+        <skos:broader rdf:resource="http://thesaurus.duth.gr/maths/διαφορική_γεωμετρία"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://thesaurus.duth.gr/maths/γραμμική_άλγεβρα -->
+
+    <owl:NamedIndividual rdf:about="http://thesaurus.duth.gr/maths/γραμμική_άλγεβρα">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:notation rdf:datatype="http://dewey.info/schema-terms/Notation">512.5</skos:notation>
+        <skos:prefLabel xml:lang="el">γραμμική άλγεβρα</skos:prefLabel>
+        <skos:prefLabel xml:lang="en">linear algebra</skos:prefLabel>
+        <skos:broaderTransitive rdf:resource="http://thesaurus.duth.gr/maths/Μαθηματικά"/>
+        <skos:broader rdf:resource="http://thesaurus.duth.gr/maths/άλγεβρα"/>
+        <skos:related rdf:resource="http://thesaurus.duth.gr/maths/αριθμητική_ανάλυση"/>
+        <skos:related rdf:resource="http://thesaurus.duth.gr/maths/τοπολογία"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://thesaurus.duth.gr/maths/γραφικά_υπολογιστή -->
+
+    <owl:NamedIndividual rdf:about="http://thesaurus.duth.gr/maths/γραφικά_υπολογιστή"/>
+    
+
+
+    <!-- http://thesaurus.duth.gr/maths/διαγράμματα_Venn -->
+
+    <owl:NamedIndividual rdf:about="http://thesaurus.duth.gr/maths/διαγράμματα_Venn"/>
+    
+
+
+    <!-- http://thesaurus.duth.gr/maths/διακριτά_μαθηματικά -->
+
+    <owl:NamedIndividual rdf:about="http://thesaurus.duth.gr/maths/διακριτά_μαθηματικά">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:prefLabel xml:lang="el">διακριτά μαθηματικά</skos:prefLabel>
+        <skos:prefLabel xml:lang="en">discrete mathematics</skos:prefLabel>
+        <skos:broaderTransitive rdf:resource="http://thesaurus.duth.gr/maths/Μαθηματικά"/>
+        <skos:narrower rdf:resource="http://thesaurus.duth.gr/maths/αλγόριθμοι"/>
+        <skos:narrower rdf:resource="http://thesaurus.duth.gr/maths/συστήματα_αρίθμησης"/>
+        <skos:broader rdf:resource="http://thesaurus.duth.gr/maths/υπολογιστικά_μαθηματικά"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://thesaurus.duth.gr/maths/διαφορικά_δυναμικά_συστήματα -->
+
+    <owl:NamedIndividual rdf:about="http://thesaurus.duth.gr/maths/διαφορικά_δυναμικά_συστήματα">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:notation rdf:datatype="http://dewey.info/schema-terms/Notation">514.74</skos:notation>
+        <skos:notation rdf:datatype="http://dewey.info/schema-terms/Notation">515.352</skos:notation>
+        <skos:prefLabel xml:lang="el">διαφορικά δυναμικά συστήματα</skos:prefLabel>
+        <skos:altLabel xml:lang="el">ποιοτική θεωρία διαφορικών εξισώσεων</skos:altLabel>
+        <skos:prefLabel xml:lang="en">differentiable dynamical systems</skos:prefLabel>
+        <skos:altLabel xml:lang="en">qualitative theory of differential equations</skos:altLabel>
+        <skos:broaderTransitive rdf:resource="http://thesaurus.duth.gr/maths/Μαθηματικά"/>
+        <skos:broader rdf:resource="http://thesaurus.duth.gr/maths/διαφορικές_εξισώσεις"/>
+        <skos:related rdf:resource="http://thesaurus.duth.gr/maths/μη_γραμμικά_δυναμικά_συστήματα"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://thesaurus.duth.gr/maths/διαφορικές_εξισώσεις -->
+
+    <owl:NamedIndividual rdf:about="http://thesaurus.duth.gr/maths/διαφορικές_εξισώσεις">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:notation rdf:datatype="http://dewey.info/schema-terms/Notation">515.35</skos:notation>
+        <skos:prefLabel xml:lang="el">διαφορικές εξισώσεις</skos:prefLabel>
+        <skos:prefLabel xml:lang="en">differential equations</skos:prefLabel>
+        <skos:broaderTransitive rdf:resource="http://thesaurus.duth.gr/maths/Μαθηματικά"/>
+        <skos:related rdf:resource="http://thesaurus.duth.gr/maths/απειροστικός_λογισμός"/>
+        <skos:narrower rdf:resource="http://thesaurus.duth.gr/maths/διαφορικά_δυναμικά_συστήματα"/>
+        <skos:related rdf:resource="http://thesaurus.duth.gr/maths/διαφορικός_λογισμός"/>
+        <skos:narrower rdf:resource="http://thesaurus.duth.gr/maths/κανονικές_διαφορικές_εξισώσεις"/>
+        <skos:broader rdf:resource="http://thesaurus.duth.gr/maths/μαθηματική_ανάλυση"/>
+        <skos:narrower rdf:resource="http://thesaurus.duth.gr/maths/μερικές_διαφορικές_εξισώσεις"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://thesaurus.duth.gr/maths/διαφορική_γεωμετρία -->
+
+    <owl:NamedIndividual rdf:about="http://thesaurus.duth.gr/maths/διαφορική_γεωμετρία">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:notation rdf:datatype="http://dewey.info/schema-terms/Notation">516.36</skos:notation>
+        <skos:prefLabel xml:lang="el">διαφορική γεωμετρία</skos:prefLabel>
+        <skos:prefLabel xml:lang="en">differential geometry</skos:prefLabel>
+        <skos:broaderTransitive rdf:resource="http://thesaurus.duth.gr/maths/Μαθηματικά"/>
+        <skos:broader rdf:resource="http://thesaurus.duth.gr/maths/γεωμετρία"/>
+        <skos:narrower rdf:resource="http://thesaurus.duth.gr/maths/γεωμετρία_Ρήμαν"/>
+        <skos:related rdf:resource="http://thesaurus.duth.gr/maths/τοπολογία"/>
+        <skos:narrower rdf:resource="http://thesaurus.duth.gr/maths/πολλαπλότητες_(μαθηματικά)"/>
+        <skos:related rdf:resource="http://thesaurus.duth.gr/maths/σχετικότητα_(φυσική)"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://thesaurus.duth.gr/maths/διαφορικός_λογισμός -->
+
+    <owl:NamedIndividual rdf:about="http://thesaurus.duth.gr/maths/διαφορικός_λογισμός">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:notation rdf:datatype="http://dewey.info/schema-terms/Notation">515.33</skos:notation>
+        <skos:prefLabel xml:lang="el">διαφορικός λογισμός</skos:prefLabel>
+        <skos:prefLabel xml:lang="en">differential calculus</skos:prefLabel>
+        <skos:broaderTransitive rdf:resource="http://thesaurus.duth.gr/maths/Μαθηματικά"/>
+        <skos:related rdf:resource="http://thesaurus.duth.gr/maths/αριθμητική_ανάλυση"/>
+        <skos:related rdf:resource="http://thesaurus.duth.gr/maths/διαφορικές_εξισώσεις"/>
+        <skos:broader rdf:resource="http://thesaurus.duth.gr/maths/πραγματική_ανάλυση"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://thesaurus.duth.gr/maths/διδακτική_των_μαθηματικών -->
+
+    <owl:NamedIndividual rdf:about="http://thesaurus.duth.gr/maths/διδακτική_των_μαθηματικών">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:prefLabel xml:lang="el">διδακτική των μαθηματικών</skos:prefLabel>
+        <skos:altLabel xml:lang="en">didactics of mathematics</skos:altLabel>
+        <skos:altLabel xml:lang="en">methodology of mathematics</skos:altLabel>
+        <skos:prefLabel xml:lang="en">teaching of mathematics</skos:prefLabel>
+        <skos:broaderTransitive rdf:resource="http://thesaurus.duth.gr/maths/Μαθηματικά"/>
+        <skos:broader rdf:resource="http://thesaurus.duth.gr/maths/μαθηματικά"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://thesaurus.duth.gr/maths/διοίκηση_επιχειρήσεων -->
+
+    <owl:NamedIndividual rdf:about="http://thesaurus.duth.gr/maths/διοίκηση_επιχειρήσεων"/>
+    
+
+
+    <!-- http://thesaurus.duth.gr/maths/επιπεδομετρία -->
+
+    <owl:NamedIndividual rdf:about="http://thesaurus.duth.gr/maths/επιπεδομετρία">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:prefLabel xml:lang="el">επιπεδομετρία</skos:prefLabel>
+        <skos:prefLabel xml:lang="en">plane geometry</skos:prefLabel>
+        <skos:broaderTransitive rdf:resource="http://thesaurus.duth.gr/maths/Μαθηματικά"/>
+        <skos:broader rdf:resource="http://thesaurus.duth.gr/maths/σχολική_γεωμετρία"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://thesaurus.duth.gr/maths/επιχειρησιακή_έρευνα -->
+
+    <owl:NamedIndividual rdf:about="http://thesaurus.duth.gr/maths/επιχειρησιακή_έρευνα">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:notation rdf:datatype="http://dewey.info/schema-terms/Notation">658.4034</skos:notation>
+        <skos:prefLabel xml:lang="el">επιχειρησιακή έρευνα</skos:prefLabel>
+        <skos:prefLabel xml:lang="en">operations research</skos:prefLabel>
+        <skos:broaderTransitive rdf:resource="http://thesaurus.duth.gr/maths/Μαθηματικά"/>
+        <skos:related rdf:resource="http://thesaurus.duth.gr/maths/διοίκηση_επιχειρήσεων"/>
+        <skos:narrower rdf:resource="http://thesaurus.duth.gr/maths/θεωρία_βελτιστοποίησης"/>
+        <skos:related rdf:resource="http://thesaurus.duth.gr/maths/θεωρία_γραφημάτων"/>
+        <skos:narrower rdf:resource="http://thesaurus.duth.gr/maths/θεωρία_παιγνίων"/>
+        <skos:related rdf:resource="http://thesaurus.duth.gr/maths/θεωρία_πιθανοτήτων"/>
+        <skos:related rdf:resource="http://thesaurus.duth.gr/maths/λήψη_αποφάσεων"/>
+        <skos:broader rdf:resource="http://thesaurus.duth.gr/maths/μαθηματικά"/>
+        <skos:related rdf:resource="http://thesaurus.duth.gr/maths/μαθηματικά_μοντέλα"/>
+        <skos:related rdf:resource="http://thesaurus.duth.gr/maths/μαθηματική_στατιστική"/>
+        <skos:narrower rdf:resource="http://thesaurus.duth.gr/maths/μαθηματικός_προγραμματισμός"/>
+        <skos:related rdf:resource="http://thesaurus.duth.gr/maths/στατιστική"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://thesaurus.duth.gr/maths/ευκλείδεια_γεωμετρία -->
+
+    <owl:NamedIndividual rdf:about="http://thesaurus.duth.gr/maths/ευκλείδεια_γεωμετρία">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:notation rdf:datatype="http://dewey.info/schema-terms/Notation">516.2</skos:notation>
+        <skos:prefLabel xml:lang="el">ευκλείδεια γεωμετρία</skos:prefLabel>
+        <skos:prefLabel xml:lang="en">Euclidean geometry</skos:prefLabel>
+        <skos:broaderTransitive rdf:resource="http://thesaurus.duth.gr/maths/Μαθηματικά"/>
+        <skos:broader rdf:resource="http://thesaurus.duth.gr/maths/γεωμετρία"/>
+        <skos:related rdf:resource="http://thesaurus.duth.gr/maths/σχολική_γεωμετρία"/>
+        <skos:related rdf:resource="http://thesaurus.duth.gr/maths/τριγωνομετρία"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://thesaurus.duth.gr/maths/ηλεκτρονικοί_υπολογιστές -->
+
+    <owl:NamedIndividual rdf:about="http://thesaurus.duth.gr/maths/ηλεκτρονικοί_υπολογιστές"/>
+    
+
+
+    <!-- http://thesaurus.duth.gr/maths/θεμελίωση_μαθηματικών -->
+
+    <owl:NamedIndividual rdf:about="http://thesaurus.duth.gr/maths/θεμελίωση_μαθηματικών">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:prefLabel xml:lang="el">θεμελίωση μαθηματικών</skos:prefLabel>
+        <skos:prefLabel xml:lang="en">foundations of mathematics</skos:prefLabel>
+        <skos:broaderTransitive rdf:resource="http://thesaurus.duth.gr/maths/Μαθηματικά"/>
+        <skos:narrower rdf:resource="http://thesaurus.duth.gr/maths/θεωρία_κατηγοριών"/>
+        <skos:narrower rdf:resource="http://thesaurus.duth.gr/maths/θεωρία_συνόλων"/>
+        <skos:related rdf:resource="http://thesaurus.duth.gr/maths/ιστορία_των_μαθηματικών"/>
+        <skos:broader rdf:resource="http://thesaurus.duth.gr/maths/μαθηματικά"/>
+        <skos:narrower rdf:resource="http://thesaurus.duth.gr/maths/μαθηματική_λογική"/>
+        <skos:related rdf:resource="http://thesaurus.duth.gr/maths/φιλοσοφία_των_μαθηματικών"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://thesaurus.duth.gr/maths/θετικές_επιστήμες -->
+
+    <owl:NamedIndividual rdf:about="http://thesaurus.duth.gr/maths/θετικές_επιστήμες"/>
+    
+
+
+    <!-- http://thesaurus.duth.gr/maths/θετικοί_επιστήμονες -->
+
+    <owl:NamedIndividual rdf:about="http://thesaurus.duth.gr/maths/θετικοί_επιστήμονες"/>
+    
+
+
+    <!-- http://thesaurus.duth.gr/maths/θεωρία_Γκαλουά -->
+
+    <owl:NamedIndividual rdf:about="http://thesaurus.duth.gr/maths/θεωρία_Γκαλουά">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:notation rdf:datatype="http://dewey.info/schema-terms/Notation">512.3</skos:notation>
+        <skos:altLabel xml:lang="el">Γκαλουά θεωρία</skos:altLabel>
+        <skos:altLabel xml:lang="el">θεωρία Galois</skos:altLabel>
+        <skos:prefLabel xml:lang="el">θεωρία Γκαλουά</skos:prefLabel>
+        <skos:prefLabel xml:lang="en">Galois theory</skos:prefLabel>
+        <skos:broaderTransitive rdf:resource="http://thesaurus.duth.gr/maths/Μαθηματικά"/>
+        <skos:broader rdf:resource="http://thesaurus.duth.gr/maths/θεωρία_σωμάτων"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://thesaurus.duth.gr/maths/θεωρία_αριθμών -->
+
+    <owl:NamedIndividual rdf:about="http://thesaurus.duth.gr/maths/θεωρία_αριθμών">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:notation rdf:datatype="http://dewey.info/schema-terms/Notation">512.7</skos:notation>
+        <skos:altLabel xml:lang="el">αριθμοθεωρία</skos:altLabel>
+        <skos:prefLabel xml:lang="el">θεωρία αριθμών</skos:prefLabel>
+        <skos:prefLabel xml:lang="en">number theory</skos:prefLabel>
+        <skos:broaderTransitive rdf:resource="http://thesaurus.duth.gr/maths/Μαθηματικά"/>
+        <skos:related rdf:resource="http://thesaurus.duth.gr/maths/αριθμητική"/>
+        <skos:broader rdf:resource="http://thesaurus.duth.gr/maths/μαθηματικά"/>
+        <skos:related rdf:resource="http://thesaurus.duth.gr/maths/συνδυαστική_ανάλυση"/>
+        <skos:narrower rdf:resource="http://thesaurus.duth.gr/maths/συστήματα_αρίθμησης"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://thesaurus.duth.gr/maths/θεωρία_βελτιστοποίησης -->
+
+    <owl:NamedIndividual rdf:about="http://thesaurus.duth.gr/maths/θεωρία_βελτιστοποίησης">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:notation rdf:datatype="http://dewey.info/schema-terms/Notation">519.3</skos:notation>
+        <skos:altLabel xml:lang="el">βελτιστοποίηση</skos:altLabel>
+        <skos:prefLabel xml:lang="el">θεωρία βελτιστοποίησης</skos:prefLabel>
+        <skos:altLabel xml:lang="el">μαθηματική αριστοποίηση</skos:altLabel>
+        <skos:altLabel xml:lang="el">μαθηματική βελτιστοποίηση</skos:altLabel>
+        <skos:altLabel xml:lang="en">mathematical optimization</skos:altLabel>
+        <skos:prefLabel xml:lang="en">optimization theory</skos:prefLabel>
+        <skos:broaderTransitive rdf:resource="http://thesaurus.duth.gr/maths/Μαθηματικά"/>
+        <skos:broader rdf:resource="http://thesaurus.duth.gr/maths/επιχειρησιακή_έρευνα"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://thesaurus.duth.gr/maths/θεωρία_γραφημάτων -->
+
+    <owl:NamedIndividual rdf:about="http://thesaurus.duth.gr/maths/θεωρία_γραφημάτων">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:notation rdf:datatype="http://dewey.info/schema-terms/Notation">511.5</skos:notation>
+        <skos:prefLabel xml:lang="el">θεωρία γραφημάτων</skos:prefLabel>
+        <skos:prefLabel xml:lang="en">graph theory</skos:prefLabel>
+        <skos:broaderTransitive rdf:resource="http://thesaurus.duth.gr/maths/Μαθηματικά"/>
+        <skos:related rdf:resource="http://thesaurus.duth.gr/maths/γεωμετρία"/>
+        <skos:related rdf:resource="http://thesaurus.duth.gr/maths/επιχειρησιακή_έρευνα"/>
+        <skos:related rdf:resource="http://thesaurus.duth.gr/maths/θεωρία_συνδέσμων"/>
+        <skos:related rdf:resource="http://thesaurus.duth.gr/maths/συνδυαστική_ανάλυση"/>
+        <skos:related rdf:resource="http://thesaurus.duth.gr/maths/τοπολογία"/>
+        <skos:broader rdf:resource="http://thesaurus.duth.gr/maths/υπολογιστικά_μαθηματικά"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://thesaurus.duth.gr/maths/θεωρία_δακτυλίων -->
+
+    <owl:NamedIndividual rdf:about="http://thesaurus.duth.gr/maths/θεωρία_δακτυλίων">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:notation rdf:datatype="http://dewey.info/schema-terms/Notation">512.4</skos:notation>
+        <skos:altLabel xml:lang="el">δακτύλιοι (άλγεβρα)</skos:altLabel>
+        <skos:prefLabel xml:lang="el">θεωρία δακτυλίων</skos:prefLabel>
+        <skos:prefLabel xml:lang="en">ring theory</skos:prefLabel>
+        <skos:altLabel xml:lang="en">rings (algebra)</skos:altLabel>
+        <skos:broaderTransitive rdf:resource="http://thesaurus.duth.gr/maths/Μαθηματικά"/>
+        <skos:broader rdf:resource="http://thesaurus.duth.gr/maths/άλγεβρα"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://thesaurus.duth.gr/maths/θεωρία_κατηγοριών -->
+
+    <owl:NamedIndividual rdf:about="http://thesaurus.duth.gr/maths/θεωρία_κατηγοριών">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:notation rdf:datatype="http://dewey.info/schema-terms/Notation">511.3</skos:notation>
+        <skos:prefLabel xml:lang="el">θεωρία κατηγοριών</skos:prefLabel>
+        <skos:altLabel xml:lang="el">κατηγορίες (μαθηματικά)</skos:altLabel>
+        <skos:altLabel xml:lang="en">categories (mathematics)</skos:altLabel>
+        <skos:prefLabel xml:lang="en">category theory</skos:prefLabel>
+        <skos:broaderTransitive rdf:resource="http://thesaurus.duth.gr/maths/Μαθηματικά"/>
+        <skos:related rdf:resource="http://thesaurus.duth.gr/maths/γεωμετρία"/>
+        <skos:broader rdf:resource="http://thesaurus.duth.gr/maths/θεμελίωση_μαθηματικών"/>
+        <skos:related rdf:resource="http://thesaurus.duth.gr/maths/ομολογική_άλγεβρα"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://thesaurus.duth.gr/maths/θεωρία_μέτρου -->
+
+    <owl:NamedIndividual rdf:about="http://thesaurus.duth.gr/maths/θεωρία_μέτρου">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:notation rdf:datatype="http://dewey.info/schema-terms/Notation">515.42</skos:notation>
+        <skos:prefLabel xml:lang="el">θεωρία μέτρου</skos:prefLabel>
+        <skos:prefLabel xml:lang="en">measure theory</skos:prefLabel>
+        <skos:broaderTransitive rdf:resource="http://thesaurus.duth.gr/maths/Μαθηματικά"/>
+        <skos:broader rdf:resource="http://thesaurus.duth.gr/maths/μαθηματική_ανάλυση"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://thesaurus.duth.gr/maths/θεωρία_ομάδων -->
+
+    <owl:NamedIndividual rdf:about="http://thesaurus.duth.gr/maths/θεωρία_ομάδων">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:notation rdf:datatype="http://dewey.info/schema-terms/Notation">512.2</skos:notation>
+        <skos:prefLabel xml:lang="el">θεωρία ομάδων</skos:prefLabel>
+        <skos:altLabel xml:lang="el">ομάδες (άλγεβρα)</skos:altLabel>
+        <skos:prefLabel xml:lang="en">group theory</skos:prefLabel>
+        <skos:altLabel xml:lang="en">groups (algebra)</skos:altLabel>
+        <skos:broaderTransitive rdf:resource="http://thesaurus.duth.gr/maths/Μαθηματικά"/>
+        <skos:broader rdf:resource="http://thesaurus.duth.gr/maths/άλγεβρα"/>
+        <skos:narrower rdf:resource="http://thesaurus.duth.gr/maths/ομάδες_μετασχηματισμών"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://thesaurus.duth.gr/maths/θεωρία_παιγνίων -->
+
+    <owl:NamedIndividual rdf:about="http://thesaurus.duth.gr/maths/θεωρία_παιγνίων">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:notation rdf:datatype="http://dewey.info/schema-terms/Notation">519.3</skos:notation>
+        <skos:prefLabel xml:lang="el">θεωρία παιγνίων</skos:prefLabel>
+        <skos:altLabel xml:lang="el">θεωρία παιχνιδιών</skos:altLabel>
+        <skos:prefLabel xml:lang="en">game theory</skos:prefLabel>
+        <skos:broaderTransitive rdf:resource="http://thesaurus.duth.gr/maths/Μαθηματικά"/>
+        <skos:broader rdf:resource="http://thesaurus.duth.gr/maths/επιχειρησιακή_έρευνα"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://thesaurus.duth.gr/maths/θεωρία_πιθανοτήτων -->
+
+    <owl:NamedIndividual rdf:about="http://thesaurus.duth.gr/maths/θεωρία_πιθανοτήτων">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:notation rdf:datatype="http://dewey.info/schema-terms/Notation">519</skos:notation>
+        <skos:prefLabel xml:lang="el">θεωρία πιθανοτήτων</skos:prefLabel>
+        <skos:altLabel xml:lang="el">πιθανότητες</skos:altLabel>
+        <skos:altLabel xml:lang="en">probabilities</skos:altLabel>
+        <skos:prefLabel xml:lang="en">probability theory</skos:prefLabel>
+        <skos:broaderTransitive rdf:resource="http://thesaurus.duth.gr/maths/Μαθηματικά"/>
+        <skos:related rdf:resource="http://thesaurus.duth.gr/maths/επιχειρησιακή_έρευνα"/>
+        <skos:broader rdf:resource="http://thesaurus.duth.gr/maths/μαθηματικά"/>
+        <skos:related rdf:resource="http://thesaurus.duth.gr/maths/μαθηματική_στατιστική"/>
+        <skos:narrower rdf:resource="http://thesaurus.duth.gr/maths/στοχαστικές_ανελίξεις"/>
+        <skos:narrower rdf:resource="http://thesaurus.duth.gr/maths/συνδυαστική_ανάλυση"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://thesaurus.duth.gr/maths/θεωρία_συνδέσμων -->
+
+    <owl:NamedIndividual rdf:about="http://thesaurus.duth.gr/maths/θεωρία_συνδέσμων">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:notation rdf:datatype="http://dewey.info/schema-terms/Notation">511.33</skos:notation>
+        <skos:prefLabel xml:lang="el">θεωρία συνδέσμων</skos:prefLabel>
+        <skos:altLabel xml:lang="el">σύνδεσμοι (μαθηματικά)</skos:altLabel>
+        <skos:prefLabel xml:lang="en">lattice theory</skos:prefLabel>
+        <skos:altLabel xml:lang="en">lattices (mathematics)</skos:altLabel>
+        <skos:broaderTransitive rdf:resource="http://thesaurus.duth.gr/maths/Μαθηματικά"/>
+        <skos:broader rdf:resource="http://thesaurus.duth.gr/maths/άλγεβρα"/>
+        <skos:related rdf:resource="http://thesaurus.duth.gr/maths/άλγεβρα_Μπουλ"/>
+        <skos:related rdf:resource="http://thesaurus.duth.gr/maths/θεωρία_γραφημάτων"/>
+        <skos:related rdf:resource="http://thesaurus.duth.gr/maths/θεωρία_συνόλων"/>
+        <skos:related rdf:resource="http://thesaurus.duth.gr/maths/μη_γραμμικά_δυναμικά_συστήματα"/>
+        <skos:related rdf:resource="http://thesaurus.duth.gr/maths/τοπολογία"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://thesaurus.duth.gr/maths/θεωρία_συνόλων -->
+
+    <owl:NamedIndividual rdf:about="http://thesaurus.duth.gr/maths/θεωρία_συνόλων">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:notation rdf:datatype="http://dewey.info/schema-terms/Notation">511.322</skos:notation>
+        <skos:prefLabel xml:lang="el">θεωρία συνόλων</skos:prefLabel>
+        <skos:altLabel xml:lang="el">σύνολα (μαθηματικά)</skos:altLabel>
+        <skos:prefLabel xml:lang="en">set theory</skos:prefLabel>
+        <skos:altLabel xml:lang="en">sets (mathematics)</skos:altLabel>
+        <skos:broaderTransitive rdf:resource="http://thesaurus.duth.gr/maths/Μαθηματικά"/>
+        <skos:broader rdf:resource="http://thesaurus.duth.gr/maths/θεμελίωση_μαθηματικών"/>
+        <skos:related rdf:resource="http://thesaurus.duth.gr/maths/θεωρία_συνδέσμων"/>
+        <skos:related rdf:resource="http://thesaurus.duth.gr/maths/ομολογική_άλγεβρα"/>
+        <skos:related rdf:resource="http://thesaurus.duth.gr/maths/συνδυαστική_ανάλυση"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://thesaurus.duth.gr/maths/θεωρία_σωμάτων -->
+
+    <owl:NamedIndividual rdf:about="http://thesaurus.duth.gr/maths/θεωρία_σωμάτων">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:notation rdf:datatype="http://dewey.info/schema-terms/Notation">512.3</skos:notation>
+        <skos:altLabel xml:lang="el">αλγεβρικά σώματα</skos:altLabel>
+        <skos:prefLabel xml:lang="el">θεωρία σωμάτων</skos:prefLabel>
+        <skos:altLabel xml:lang="en">algebraic fields</skos:altLabel>
+        <skos:prefLabel xml:lang="en">field theory (algebra)</skos:prefLabel>
+        <skos:broaderTransitive rdf:resource="http://thesaurus.duth.gr/maths/Μαθηματικά"/>
+        <skos:broader rdf:resource="http://thesaurus.duth.gr/maths/άλγεβρα"/>
+        <skos:narrower rdf:resource="http://thesaurus.duth.gr/maths/θεωρία_Γκαλουά"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://thesaurus.duth.gr/maths/θεωρία_του_χάους -->
+
+    <owl:NamedIndividual rdf:about="http://thesaurus.duth.gr/maths/θεωρία_του_χάους">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:prefLabel xml:lang="el">θεωρία του χάους</skos:prefLabel>
+        <skos:altLabel xml:lang="el">συμπεριφορά συστημάτων</skos:altLabel>
+        <skos:altLabel xml:lang="el">χαοτική δυναμική</skos:altLabel>
+        <skos:altLabel xml:lang="el">χαοτική συμπεριφορά σε συστήματα</skos:altLabel>
+        <skos:prefLabel xml:lang="en">chaos theory</skos:prefLabel>
+        <skos:altLabel xml:lang="en">chaotic behavior in systems</skos:altLabel>
+        <skos:altLabel xml:lang="en">chaotic behaviour in systems</skos:altLabel>
+        <skos:altLabel xml:lang="en">chaotic dynamics</skos:altLabel>
+        <skos:broaderTransitive rdf:resource="http://thesaurus.duth.gr/maths/Μαθηματικά"/>
+        <skos:broader rdf:resource="http://thesaurus.duth.gr/maths/μη_γραμμικά_δυναμικά_συστήματα"/>
+        <skos:related rdf:resource="http://thesaurus.duth.gr/maths/φράκταλ_γεωμετρία"/>
+        <skos:related rdf:resource="http://thesaurus.duth.gr/maths/φυσική"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://thesaurus.duth.gr/maths/ιστορία_των_μαθηματικών -->
+
+    <owl:NamedIndividual rdf:about="http://thesaurus.duth.gr/maths/ιστορία_των_μαθηματικών">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:prefLabel xml:lang="el">ιστορία των μαθηματικών</skos:prefLabel>
+        <skos:prefLabel xml:lang="en">history of mathematics</skos:prefLabel>
+        <skos:broaderTransitive rdf:resource="http://thesaurus.duth.gr/maths/Μαθηματικά"/>
+        <skos:related rdf:resource="http://thesaurus.duth.gr/maths/θεμελίωση_μαθηματικών"/>
+        <skos:broader rdf:resource="http://thesaurus.duth.gr/maths/μαθηματικά"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://thesaurus.duth.gr/maths/κανονικές_διαφορικές_εξισώσεις -->
+
+    <owl:NamedIndividual rdf:about="http://thesaurus.duth.gr/maths/κανονικές_διαφορικές_εξισώσεις">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:notation rdf:datatype="http://dewey.info/schema-terms/Notation">515.352</skos:notation>
+        <skos:prefLabel xml:lang="el">κανονικές διαφορικές εξισώσεις</skos:prefLabel>
+        <skos:altLabel xml:lang="el">συνήθεις διαφορικές εξισώσεις</skos:altLabel>
+        <skos:prefLabel xml:lang="en">ordinary differential equations</skos:prefLabel>
+        <skos:broaderTransitive rdf:resource="http://thesaurus.duth.gr/maths/Μαθηματικά"/>
+        <skos:broader rdf:resource="http://thesaurus.duth.gr/maths/διαφορικές_εξισώσεις"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://thesaurus.duth.gr/maths/κυρτότητα -->
+
+    <owl:NamedIndividual rdf:about="http://thesaurus.duth.gr/maths/κυρτότητα">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:prefLabel xml:lang="el">κυρτότητα</skos:prefLabel>
+        <skos:prefLabel xml:lang="en">convexity</skos:prefLabel>
+        <skos:broaderTransitive rdf:resource="http://thesaurus.duth.gr/maths/Μαθηματικά"/>
+        <skos:broader rdf:resource="http://thesaurus.duth.gr/maths/μαθηματικός_προγραμματισμός"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://thesaurus.duth.gr/maths/λήψη_αποφάσεων -->
+
+    <owl:NamedIndividual rdf:about="http://thesaurus.duth.gr/maths/λήψη_αποφάσεων"/>
+    
+
+
+    <!-- http://thesaurus.duth.gr/maths/μαθηματικά -->
+
+    <owl:NamedIndividual rdf:about="http://thesaurus.duth.gr/maths/μαθηματικά">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:notation rdf:datatype="http://dewey.info/schema-terms/Notation">510</skos:notation>
+        <skos:prefLabel xml:lang="el">μαθηματικά</skos:prefLabel>
+        <skos:prefLabel xml:lang="en">mathematics</skos:prefLabel>
+        <skos:broaderTransitive rdf:resource="http://thesaurus.duth.gr/maths/Μαθηματικά"/>
+        <skos:narrower rdf:resource="http://thesaurus.duth.gr/maths/άλγεβρα"/>
+        <skos:narrower rdf:resource="http://thesaurus.duth.gr/maths/γεωμετρία"/>
+        <skos:narrower rdf:resource="http://thesaurus.duth.gr/maths/διδακτική_των_μαθηματικών"/>
+        <skos:narrower rdf:resource="http://thesaurus.duth.gr/maths/επιχειρησιακή_έρευνα"/>
+        <skos:narrower rdf:resource="http://thesaurus.duth.gr/maths/θεμελίωση_μαθηματικών"/>
+        <skos:broader rdf:resource="http://thesaurus.duth.gr/maths/θετικές_επιστήμες"/>
+        <skos:narrower rdf:resource="http://thesaurus.duth.gr/maths/θεωρία_αριθμών"/>
+        <skos:narrower rdf:resource="http://thesaurus.duth.gr/maths/θεωρία_πιθανοτήτων"/>
+        <skos:narrower rdf:resource="http://thesaurus.duth.gr/maths/ιστορία_των_μαθηματικών"/>
+        <skos:narrower rdf:resource="http://thesaurus.duth.gr/maths/μαθηματικά_μοντέλα"/>
+        <skos:narrower rdf:resource="http://thesaurus.duth.gr/maths/μαθηματική_ανάλυση"/>
+        <skos:narrower rdf:resource="http://thesaurus.duth.gr/maths/μαθηματική_στατιστική"/>
+        <skos:related rdf:resource="http://thesaurus.duth.gr/maths/μαθηματικοί"/>
+        <skos:narrower rdf:resource="http://thesaurus.duth.gr/maths/σχολικά_μαθηματικά"/>
+        <skos:narrower rdf:resource="http://thesaurus.duth.gr/maths/υπολογιστικά_μαθηματικά"/>
+        <skos:related rdf:resource="http://thesaurus.duth.gr/maths/φιλοσοφία_των_μαθηματικών"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://thesaurus.duth.gr/maths/μαθηματικά_μοντέλα -->
+
+    <owl:NamedIndividual rdf:about="http://thesaurus.duth.gr/maths/μαθηματικά_μοντέλα">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:notation rdf:datatype="http://dewey.info/schema-terms/Notation">511.8</skos:notation>
+        <skos:prefLabel xml:lang="el">μαθηματικά μοντέλα</skos:prefLabel>
+        <skos:altLabel xml:lang="el">μαθηματικά πρότυπα</skos:altLabel>
+        <skos:altLabel xml:lang="el">μαθηματικά υποδείγματα</skos:altLabel>
+        <skos:altLabel xml:lang="el">μαθηματική προτυποποίηση</skos:altLabel>
+        <skos:altLabel xml:lang="en">mathematical modeling</skos:altLabel>
+        <skos:altLabel xml:lang="en">mathematical modelling</skos:altLabel>
+        <skos:prefLabel xml:lang="en">mathematical models</skos:prefLabel>
+        <skos:broaderTransitive rdf:resource="http://thesaurus.duth.gr/maths/Μαθηματικά"/>
+        <skos:related rdf:resource="http://thesaurus.duth.gr/maths/επιχειρησιακή_έρευνα"/>
+        <skos:broader rdf:resource="http://thesaurus.duth.gr/maths/μαθηματικά"/>
+        <skos:narrower rdf:resource="http://thesaurus.duth.gr/maths/μη_γραμμικά_δυναμικά_συστήματα"/>
+        <skos:narrower rdf:resource="http://thesaurus.duth.gr/maths/στοχαστικά_μοντέλα"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://thesaurus.duth.gr/maths/μαθηματική_ανάλυση -->
+
+    <owl:NamedIndividual rdf:about="http://thesaurus.duth.gr/maths/μαθηματική_ανάλυση">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:notation rdf:datatype="http://dewey.info/schema-terms/Notation">515</skos:notation>
+        <skos:altLabel xml:lang="el">ανάλυση (μαθηματικά)</skos:altLabel>
+        <skos:prefLabel xml:lang="el">μαθηματική ανάλυση</skos:prefLabel>
+        <skos:altLabel xml:lang="en">analysis (mathematics)</skos:altLabel>
+        <skos:prefLabel xml:lang="en">mathematical analysis</skos:prefLabel>
+        <skos:broaderTransitive rdf:resource="http://thesaurus.duth.gr/maths/Μαθηματικά"/>
+        <skos:narrower rdf:resource="http://thesaurus.duth.gr/maths/αριθμητική_ανάλυση"/>
+        <skos:narrower rdf:resource="http://thesaurus.duth.gr/maths/διαφορικές_εξισώσεις"/>
+        <skos:narrower rdf:resource="http://thesaurus.duth.gr/maths/θεωρία_μέτρου"/>
+        <skos:broader rdf:resource="http://thesaurus.duth.gr/maths/μαθηματικά"/>
+        <skos:narrower rdf:resource="http://thesaurus.duth.gr/maths/μιγαδική_ανάλυση"/>
+        <skos:narrower rdf:resource="http://thesaurus.duth.gr/maths/πραγματική_ανάλυση"/>
+        <skos:narrower rdf:resource="http://thesaurus.duth.gr/maths/συναρτησιακή_ανάλυση"/>
+        <skos:narrower rdf:resource="http://thesaurus.duth.gr/maths/τοπολογία"/>
+        <skos:related rdf:resource="http://thesaurus.duth.gr/maths/φράκταλ_γεωμετρία"/>
+        <skos:narrower rdf:resource="http://thesaurus.duth.gr/maths/ολική_ανάλυση_(μαθηματικά)"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://thesaurus.duth.gr/maths/μαθηματική_λογική -->
+
+    <owl:NamedIndividual rdf:about="http://thesaurus.duth.gr/maths/μαθηματική_λογική">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:notation rdf:datatype="http://dewey.info/schema-terms/Notation">510.1</skos:notation>
+        <skos:notation rdf:datatype="http://dewey.info/schema-terms/Notation">511.3</skos:notation>
+        <skos:prefLabel xml:lang="el">μαθηματική λογική</skos:prefLabel>
+        <skos:prefLabel xml:lang="en">mathematical logic</skos:prefLabel>
+        <skos:broaderTransitive rdf:resource="http://thesaurus.duth.gr/maths/Φιλοσοφία"/>
+        <skos:narrower rdf:resource="http://thesaurus.duth.gr/maths/άλγεβρα_Μπουλ"/>
+        <skos:narrower rdf:resource="http://thesaurus.duth.gr/maths/αλγόριθμοι"/>
+        <skos:narrower rdf:resource="http://thesaurus.duth.gr/maths/διαγράμματα_Venn"/>
+        <skos:broader rdf:resource="http://thesaurus.duth.gr/maths/θεμελίωση_μαθηματικών"/>
+        <skos:broader rdf:resource="http://thesaurus.duth.gr/maths/συμβολική_λογική"/>
+        <skos:narrower rdf:resource="http://thesaurus.duth.gr/maths/τεχνητή_νοημοσύνη"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://thesaurus.duth.gr/maths/μαθηματική_στατιστική -->
+
+    <owl:NamedIndividual rdf:about="http://thesaurus.duth.gr/maths/μαθηματική_στατιστική">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:notation rdf:datatype="http://dewey.info/schema-terms/Notation">519.5</skos:notation>
+        <skos:prefLabel xml:lang="el">μαθηματική στατιστική</skos:prefLabel>
+        <skos:prefLabel xml:lang="en">mathematical statistics</skos:prefLabel>
+        <skos:broaderTransitive rdf:resource="http://thesaurus.duth.gr/maths/Μαθηματικά"/>
+        <skos:related rdf:resource="http://thesaurus.duth.gr/maths/επιχειρησιακή_έρευνα"/>
+        <skos:related rdf:resource="http://thesaurus.duth.gr/maths/θεωρία_πιθανοτήτων"/>
+        <skos:broader rdf:resource="http://thesaurus.duth.gr/maths/μαθηματικά"/>
+        <skos:related rdf:resource="http://thesaurus.duth.gr/maths/στατιστική"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://thesaurus.duth.gr/maths/μαθηματικοί -->
+
+    <owl:NamedIndividual rdf:about="http://thesaurus.duth.gr/maths/μαθηματικοί">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:notation rdf:datatype="http://dewey.info/schema-terms/Notation">510.92</skos:notation>
+        <skos:prefLabel xml:lang="el">μαθηματικοί</skos:prefLabel>
+        <skos:prefLabel xml:lang="en">mathematicians</skos:prefLabel>
+        <skos:broaderTransitive rdf:resource="http://thesaurus.duth.gr/maths/Μαθηματικά"/>
+        <skos:broader rdf:resource="http://thesaurus.duth.gr/maths/θετικοί_επιστήμονες"/>
+        <skos:related rdf:resource="http://thesaurus.duth.gr/maths/μαθηματικά"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://thesaurus.duth.gr/maths/μαθηματικός_προγραμματισμός -->
+
+    <owl:NamedIndividual rdf:about="http://thesaurus.duth.gr/maths/μαθηματικός_προγραμματισμός">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:notation rdf:datatype="http://dewey.info/schema-terms/Notation">519.7</skos:notation>
+        <skos:prefLabel xml:lang="el">μαθηματικός προγραμματισμός</skos:prefLabel>
+        <skos:altLabel xml:lang="el">προγραμματισμός (μαθηματικά)</skos:altLabel>
+        <skos:prefLabel xml:lang="en">mathematical programming</skos:prefLabel>
+        <skos:altLabel xml:lang="en">programming (mathematics)</skos:altLabel>
+        <skos:broaderTransitive rdf:resource="http://thesaurus.duth.gr/maths/Μαθηματικά"/>
+        <skos:broader rdf:resource="http://thesaurus.duth.gr/maths/επιχειρησιακή_έρευνα"/>
+        <skos:narrower rdf:resource="http://thesaurus.duth.gr/maths/κυρτότητα"/>
+        <skos:related rdf:resource="http://thesaurus.duth.gr/maths/προγραμματισμός_ηλεκτρονικών_υπολογιστών"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://thesaurus.duth.gr/maths/μερικές_διαφορικές_εξισώσεις -->
+
+    <owl:NamedIndividual rdf:about="http://thesaurus.duth.gr/maths/μερικές_διαφορικές_εξισώσεις">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:notation rdf:datatype="http://dewey.info/schema-terms/Notation">515.353</skos:notation>
+        <skos:prefLabel xml:lang="el">μερικές διαφορικές εξισώσεις</skos:prefLabel>
+        <skos:prefLabel xml:lang="en">partial differential equations</skos:prefLabel>
+        <skos:broaderTransitive rdf:resource="http://thesaurus.duth.gr/maths/Μαθηματικά"/>
+        <skos:broader rdf:resource="http://thesaurus.duth.gr/maths/διαφορικές_εξισώσεις"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://thesaurus.duth.gr/maths/μη_γραμμικά_δυναμικά_συστήματα -->
+
+    <owl:NamedIndividual rdf:about="http://thesaurus.duth.gr/maths/μη_γραμμικά_δυναμικά_συστήματα">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:notation rdf:datatype="http://dewey.info/schema-terms/Notation">515.352</skos:notation>
+        <skos:prefLabel xml:lang="el">μη γραμμικά δυναμικά συστήματα</skos:prefLabel>
+        <skos:prefLabel xml:lang="en">nonlinear dynamical systems</skos:prefLabel>
+        <skos:broaderTransitive rdf:resource="http://thesaurus.duth.gr/maths/Μαθηματικά"/>
+        <skos:related rdf:resource="http://thesaurus.duth.gr/maths/διαφορικά_δυναμικά_συστήματα"/>
+        <skos:related rdf:resource="http://thesaurus.duth.gr/maths/θεωρία_συνδέσμων"/>
+        <skos:narrower rdf:resource="http://thesaurus.duth.gr/maths/θεωρία_του_χάους"/>
+        <skos:broader rdf:resource="http://thesaurus.duth.gr/maths/μαθηματικά_μοντέλα"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://thesaurus.duth.gr/maths/μη_ευκλείδειες_γεωμετρίες -->
+
+    <owl:NamedIndividual rdf:about="http://thesaurus.duth.gr/maths/μη_ευκλείδειες_γεωμετρίες">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:notation rdf:datatype="http://dewey.info/schema-terms/Notation">516.9</skos:notation>
+        <skos:prefLabel xml:lang="el">μη ευκλείδειες γεωμετρίες</skos:prefLabel>
+        <skos:prefLabel xml:lang="en">non-Euclidean geometries</skos:prefLabel>
+        <skos:broaderTransitive rdf:resource="http://thesaurus.duth.gr/maths/Μαθηματικά"/>
+        <skos:broader rdf:resource="http://thesaurus.duth.gr/maths/γεωμετρία"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://thesaurus.duth.gr/maths/μιγαδική_ανάλυση -->
+
+    <owl:NamedIndividual rdf:about="http://thesaurus.duth.gr/maths/μιγαδική_ανάλυση">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:prefLabel xml:lang="el">μιγαδική ανάλυση</skos:prefLabel>
+        <skos:prefLabel xml:lang="en">complex analysis</skos:prefLabel>
+        <skos:broaderTransitive rdf:resource="http://thesaurus.duth.gr/maths/Μαθηματικά"/>
+        <skos:broader rdf:resource="http://thesaurus.duth.gr/maths/μαθηματική_ανάλυση"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://thesaurus.duth.gr/maths/ολοκληρωτικός_λογισμός -->
+
+    <owl:NamedIndividual rdf:about="http://thesaurus.duth.gr/maths/ολοκληρωτικός_λογισμός">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:notation rdf:datatype="http://dewey.info/schema-terms/Notation">515.43</skos:notation>
+        <skos:prefLabel xml:lang="el">ολοκληρωτικός λογισμός</skos:prefLabel>
+        <skos:prefLabel xml:lang="en">integral calculus</skos:prefLabel>
+        <skos:broaderTransitive rdf:resource="http://thesaurus.duth.gr/maths/Μαθηματικά"/>
+        <skos:broader rdf:resource="http://thesaurus.duth.gr/maths/πραγματική_ανάλυση"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://thesaurus.duth.gr/maths/ομάδες_μετασχηματισμών -->
+
+    <owl:NamedIndividual rdf:about="http://thesaurus.duth.gr/maths/ομάδες_μετασχηματισμών">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:prefLabel xml:lang="el">ομάδες μετασχηματισμών</skos:prefLabel>
+        <skos:prefLabel xml:lang="en">transformation groups</skos:prefLabel>
+        <skos:broaderTransitive rdf:resource="http://thesaurus.duth.gr/maths/Μαθηματικά"/>
+        <skos:broader rdf:resource="http://thesaurus.duth.gr/maths/θεωρία_ομάδων"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://thesaurus.duth.gr/maths/ομολογική_άλγεβρα -->
+
+    <owl:NamedIndividual rdf:about="http://thesaurus.duth.gr/maths/ομολογική_άλγεβρα">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:notation rdf:datatype="http://dewey.info/schema-terms/Notation">512.55</skos:notation>
+        <skos:altLabel xml:lang="el">ομολογιακή άλγεβρα</skos:altLabel>
+        <skos:prefLabel xml:lang="el">ομολογική άλγεβρα</skos:prefLabel>
+        <skos:prefLabel xml:lang="en">homological algebra</skos:prefLabel>
+        <skos:broaderTransitive rdf:resource="http://thesaurus.duth.gr/maths/Μαθηματικά"/>
+        <skos:broader rdf:resource="http://thesaurus.duth.gr/maths/άλγεβρα"/>
+        <skos:related rdf:resource="http://thesaurus.duth.gr/maths/θεωρία_κατηγοριών"/>
+        <skos:related rdf:resource="http://thesaurus.duth.gr/maths/θεωρία_συνόλων"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://thesaurus.duth.gr/maths/παραστατική_γεωμετρία -->
+
+    <owl:NamedIndividual rdf:about="http://thesaurus.duth.gr/maths/παραστατική_γεωμετρία">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:notation rdf:datatype="http://dewey.info/schema-terms/Notation">516.6</skos:notation>
+        <skos:prefLabel xml:lang="el">παραστατική γεωμετρία</skos:prefLabel>
+        <skos:altLabel xml:lang="el">περιγραφική γεωμετρία</skos:altLabel>
+        <skos:prefLabel xml:lang="en">descriptive geometry</skos:prefLabel>
+        <skos:broaderTransitive rdf:resource="http://thesaurus.duth.gr/maths/Μαθηματικά"/>
+        <skos:broader rdf:resource="http://thesaurus.duth.gr/maths/γεωμετρία"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://thesaurus.duth.gr/maths/πραγματική_ανάλυση -->
+
+    <owl:NamedIndividual rdf:about="http://thesaurus.duth.gr/maths/πραγματική_ανάλυση">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:prefLabel xml:lang="el">πραγματική ανάλυση</skos:prefLabel>
+        <skos:prefLabel xml:lang="en">real analysis</skos:prefLabel>
+        <skos:broaderTransitive rdf:resource="http://thesaurus.duth.gr/maths/Μαθηματικά"/>
+        <skos:narrower rdf:resource="http://thesaurus.duth.gr/maths/απειροστικός_λογισμός"/>
+        <skos:narrower rdf:resource="http://thesaurus.duth.gr/maths/διαφορικός_λογισμός"/>
+        <skos:broader rdf:resource="http://thesaurus.duth.gr/maths/μαθηματική_ανάλυση"/>
+        <skos:narrower rdf:resource="http://thesaurus.duth.gr/maths/ολοκληρωτικός_λογισμός"/>
+        <skos:narrower rdf:resource="http://thesaurus.duth.gr/maths/ακολουθίες_(μαθηματικά)"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://thesaurus.duth.gr/maths/προβολική_γεωμετρία -->
+
+    <owl:NamedIndividual rdf:about="http://thesaurus.duth.gr/maths/προβολική_γεωμετρία">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:notation rdf:datatype="http://dewey.info/schema-terms/Notation">516.5</skos:notation>
+        <skos:prefLabel xml:lang="el">προβολική γεωμετρία</skos:prefLabel>
+        <skos:prefLabel xml:lang="en">projective geometry</skos:prefLabel>
+        <skos:broaderTransitive rdf:resource="http://thesaurus.duth.gr/maths/Μαθηματικά"/>
+        <skos:broader rdf:resource="http://thesaurus.duth.gr/maths/γεωμετρία"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://thesaurus.duth.gr/maths/προγραμματισμός_ηλεκτρονικών_υπολογιστών -->
+
+    <owl:NamedIndividual rdf:about="http://thesaurus.duth.gr/maths/προγραμματισμός_ηλεκτρονικών_υπολογιστών"/>
+    
+
+
+    <!-- http://thesaurus.duth.gr/maths/ρομπότ -->
+
+    <owl:NamedIndividual rdf:about="http://thesaurus.duth.gr/maths/ρομπότ"/>
+    
+
+
+    <!-- http://thesaurus.duth.gr/maths/στατιστική -->
+
+    <owl:NamedIndividual rdf:about="http://thesaurus.duth.gr/maths/στατιστική"/>
+    
+
+
+    <!-- http://thesaurus.duth.gr/maths/στερεομετρία -->
+
+    <owl:NamedIndividual rdf:about="http://thesaurus.duth.gr/maths/στερεομετρία">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:prefLabel xml:lang="el">στερεομετρία</skos:prefLabel>
+        <skos:prefLabel xml:lang="en">solid geometry</skos:prefLabel>
+        <skos:broaderTransitive rdf:resource="http://thesaurus.duth.gr/maths/Μαθηματικά"/>
+        <skos:broader rdf:resource="http://thesaurus.duth.gr/maths/σχολική_γεωμετρία"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://thesaurus.duth.gr/maths/στοχαστικά_μοντέλα -->
+
+    <owl:NamedIndividual rdf:about="http://thesaurus.duth.gr/maths/στοχαστικά_μοντέλα">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:prefLabel xml:lang="el">στοχαστικά μοντέλα</skos:prefLabel>
+        <skos:prefLabel xml:lang="en">stochastic models</skos:prefLabel>
+        <skos:broaderTransitive rdf:resource="http://thesaurus.duth.gr/maths/Μαθηματικά"/>
+        <skos:broader rdf:resource="http://thesaurus.duth.gr/maths/μαθηματικά_μοντέλα"/>
+        <skos:related rdf:resource="http://thesaurus.duth.gr/maths/στοχαστικές_ανελίξεις"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://thesaurus.duth.gr/maths/στοχαστικές_ανελίξεις -->
+
+    <owl:NamedIndividual rdf:about="http://thesaurus.duth.gr/maths/στοχαστικές_ανελίξεις">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:notation rdf:datatype="http://dewey.info/schema-terms/Notation">519.23</skos:notation>
+        <skos:prefLabel xml:lang="el">στοχαστικές ανελίξεις</skos:prefLabel>
+        <skos:altLabel xml:lang="el">στοχαστικές διαδικασίες</skos:altLabel>
+        <skos:prefLabel xml:lang="en">stochastic processes</skos:prefLabel>
+        <skos:broaderTransitive rdf:resource="http://thesaurus.duth.gr/maths/Μαθηματικά"/>
+        <skos:broader rdf:resource="http://thesaurus.duth.gr/maths/θεωρία_πιθανοτήτων"/>
+        <skos:related rdf:resource="http://thesaurus.duth.gr/maths/στοχαστικά_μοντέλα"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://thesaurus.duth.gr/maths/συμβολική_λογική -->
+
+    <owl:NamedIndividual rdf:about="http://thesaurus.duth.gr/maths/συμβολική_λογική"/>
+    
+
+
+    <!-- http://thesaurus.duth.gr/maths/συναρτησιακή_ανάλυση -->
+
+    <owl:NamedIndividual rdf:about="http://thesaurus.duth.gr/maths/συναρτησιακή_ανάλυση">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:notation rdf:datatype="http://dewey.info/schema-terms/Notation">515.7</skos:notation>
+        <skos:prefLabel xml:lang="el">συναρτησιακή ανάλυση</skos:prefLabel>
+        <skos:prefLabel xml:lang="en">functional analysis</skos:prefLabel>
+        <skos:broaderTransitive rdf:resource="http://thesaurus.duth.gr/maths/Μαθηματικά"/>
+        <skos:related rdf:resource="http://thesaurus.duth.gr/maths/αριθμητική_ανάλυση"/>
+        <skos:broader rdf:resource="http://thesaurus.duth.gr/maths/μαθηματική_ανάλυση"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://thesaurus.duth.gr/maths/συνδυαστική_ανάλυση -->
+
+    <owl:NamedIndividual rdf:about="http://thesaurus.duth.gr/maths/συνδυαστική_ανάλυση">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:notation rdf:datatype="http://dewey.info/schema-terms/Notation">511.6</skos:notation>
+        <skos:prefLabel xml:lang="el">συνδυαστική ανάλυση</skos:prefLabel>
+        <skos:prefLabel xml:lang="en">combinatorial analysis</skos:prefLabel>
+        <skos:broaderTransitive rdf:resource="http://thesaurus.duth.gr/maths/Μαθηματικά"/>
+        <skos:related rdf:resource="http://thesaurus.duth.gr/maths/άλγεβρα"/>
+        <skos:related rdf:resource="http://thesaurus.duth.gr/maths/θεωρία_αριθμών"/>
+        <skos:related rdf:resource="http://thesaurus.duth.gr/maths/θεωρία_γραφημάτων"/>
+        <skos:broader rdf:resource="http://thesaurus.duth.gr/maths/θεωρία_πιθανοτήτων"/>
+        <skos:related rdf:resource="http://thesaurus.duth.gr/maths/θεωρία_συνόλων"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://thesaurus.duth.gr/maths/συστήματα_αρίθμησης -->
+
+    <owl:NamedIndividual rdf:about="http://thesaurus.duth.gr/maths/συστήματα_αρίθμησης">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:prefLabel xml:lang="el">συστήματα αρίθμησης</skos:prefLabel>
+        <skos:prefLabel xml:lang="en">number systems</skos:prefLabel>
+        <skos:broaderTransitive rdf:resource="http://thesaurus.duth.gr/maths/Μαθηματικά"/>
+        <skos:broader rdf:resource="http://thesaurus.duth.gr/maths/διακριτά_μαθηματικά"/>
+        <skos:broader rdf:resource="http://thesaurus.duth.gr/maths/θεωρία_αριθμών"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://thesaurus.duth.gr/maths/σχολικά_μαθηματικά -->
+
+    <owl:NamedIndividual rdf:about="http://thesaurus.duth.gr/maths/σχολικά_μαθηματικά">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:prefLabel xml:lang="el">σχολικά μαθηματικά</skos:prefLabel>
+        <skos:prefLabel xml:lang="en">school mathematics</skos:prefLabel>
+        <skos:broaderTransitive rdf:resource="http://thesaurus.duth.gr/maths/Μαθηματικά"/>
+        <skos:narrower rdf:resource="http://thesaurus.duth.gr/maths/αριθμητική"/>
+        <skos:broader rdf:resource="http://thesaurus.duth.gr/maths/μαθηματικά"/>
+        <skos:narrower rdf:resource="http://thesaurus.duth.gr/maths/σχολική_άλγεβρα"/>
+        <skos:narrower rdf:resource="http://thesaurus.duth.gr/maths/σχολική_γεωμετρία"/>
+        <skos:narrower rdf:resource="http://thesaurus.duth.gr/maths/τριγωνομετρία"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://thesaurus.duth.gr/maths/σχολική_άλγεβρα -->
+
+    <owl:NamedIndividual rdf:about="http://thesaurus.duth.gr/maths/σχολική_άλγεβρα">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:prefLabel xml:lang="el">σχολική άλγεβρα</skos:prefLabel>
+        <skos:prefLabel xml:lang="en">school algebra</skos:prefLabel>
+        <skos:broaderTransitive rdf:resource="http://thesaurus.duth.gr/maths/Μαθηματικά"/>
+        <skos:broader rdf:resource="http://thesaurus.duth.gr/maths/σχολικά_μαθηματικά"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://thesaurus.duth.gr/maths/σχολική_γεωμετρία -->
+
+    <owl:NamedIndividual rdf:about="http://thesaurus.duth.gr/maths/σχολική_γεωμετρία">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:prefLabel xml:lang="el">σχολική γεωμετρία</skos:prefLabel>
+        <skos:prefLabel xml:lang="en">school geometry</skos:prefLabel>
+        <skos:broaderTransitive rdf:resource="http://thesaurus.duth.gr/maths/Μαθηματικά"/>
+        <skos:narrower rdf:resource="http://thesaurus.duth.gr/maths/επιπεδομετρία"/>
+        <skos:related rdf:resource="http://thesaurus.duth.gr/maths/ευκλείδεια_γεωμετρία"/>
+        <skos:narrower rdf:resource="http://thesaurus.duth.gr/maths/στερεομετρία"/>
+        <skos:broader rdf:resource="http://thesaurus.duth.gr/maths/σχολικά_μαθηματικά"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://thesaurus.duth.gr/maths/τεχνητή_νοημοσύνη -->
+
+    <owl:NamedIndividual rdf:about="http://thesaurus.duth.gr/maths/τεχνητή_νοημοσύνη">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:notation rdf:datatype="http://dewey.info/schema-terms/Notation">006.3</skos:notation>
+        <skos:prefLabel xml:lang="el">τεχνητή νοημοσύνη</skos:prefLabel>
+        <skos:prefLabel xml:lang="en">artificial intelligence</skos:prefLabel>
+        <skos:broaderTransitive rdf:resource="http://thesaurus.duth.gr/maths/Μαθηματικά"/>
+        <skos:related rdf:resource="http://thesaurus.duth.gr/maths/βιονική"/>
+        <skos:broader rdf:resource="http://thesaurus.duth.gr/maths/μαθηματική_λογική"/>
+        <skos:related rdf:resource="http://thesaurus.duth.gr/maths/προγραμματισμός_ηλεκτρονικών_υπολογιστών"/>
+        <skos:related rdf:resource="http://thesaurus.duth.gr/maths/ρομπότ"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://thesaurus.duth.gr/maths/τοπολογία -->
+
+    <owl:NamedIndividual rdf:about="http://thesaurus.duth.gr/maths/τοπολογία">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:notation rdf:datatype="http://dewey.info/schema-terms/Notation">514</skos:notation>
+        <skos:prefLabel xml:lang="el">τοπολογία</skos:prefLabel>
+        <skos:prefLabel xml:lang="en">topology</skos:prefLabel>
+        <skos:broaderTransitive rdf:resource="http://thesaurus.duth.gr/maths/Μαθηματικά"/>
+        <skos:related rdf:resource="http://thesaurus.duth.gr/maths/γραμμική_άλγεβρα"/>
+        <skos:related rdf:resource="http://thesaurus.duth.gr/maths/διαφορική_γεωμετρία"/>
+        <skos:related rdf:resource="http://thesaurus.duth.gr/maths/θεωρία_γραφημάτων"/>
+        <skos:related rdf:resource="http://thesaurus.duth.gr/maths/θεωρία_συνδέσμων"/>
+        <skos:broader rdf:resource="http://thesaurus.duth.gr/maths/μαθηματική_ανάλυση"/>
+        <skos:related rdf:resource="http://thesaurus.duth.gr/maths/φράκταλ_γεωμετρία"/>
+        <skos:related rdf:resource="http://thesaurus.duth.gr/maths/θεωρία_καταστροφών_(μαθηματικά)"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://thesaurus.duth.gr/maths/τριγωνομετρία -->
+
+    <owl:NamedIndividual rdf:about="http://thesaurus.duth.gr/maths/τριγωνομετρία">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:notation rdf:datatype="http://dewey.info/schema-terms/Notation">516.24</skos:notation>
+        <skos:prefLabel xml:lang="el">τριγωνομετρία</skos:prefLabel>
+        <skos:prefLabel xml:lang="en">trigonometry</skos:prefLabel>
+        <skos:broaderTransitive rdf:resource="http://thesaurus.duth.gr/maths/Μαθηματικά"/>
+        <skos:related rdf:resource="http://thesaurus.duth.gr/maths/ευκλείδεια_γεωμετρία"/>
+        <skos:broader rdf:resource="http://thesaurus.duth.gr/maths/σχολικά_μαθηματικά"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://thesaurus.duth.gr/maths/υπολογιστικά_μαθηματικά -->
+
+    <owl:NamedIndividual rdf:about="http://thesaurus.duth.gr/maths/υπολογιστικά_μαθηματικά">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:altLabel xml:lang="el">μαθηματικά επιστήμης υπολογιστών</skos:altLabel>
+        <skos:prefLabel xml:lang="el">υπολογιστικά μαθηματικά</skos:prefLabel>
+        <skos:prefLabel xml:lang="en">computational mathematics</skos:prefLabel>
+        <skos:broaderTransitive rdf:resource="http://thesaurus.duth.gr/maths/Μαθηματικά"/>
+        <skos:narrower rdf:resource="http://thesaurus.duth.gr/maths/αριθμητική_ανάλυση"/>
+        <skos:narrower rdf:resource="http://thesaurus.duth.gr/maths/διακριτά_μαθηματικά"/>
+        <skos:narrower rdf:resource="http://thesaurus.duth.gr/maths/θεωρία_γραφημάτων"/>
+        <skos:broader rdf:resource="http://thesaurus.duth.gr/maths/μαθηματικά"/>
+        <skos:narrower rdf:resource="http://thesaurus.duth.gr/maths/υπολογιστική_γεωμετρία"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://thesaurus.duth.gr/maths/υπολογιστική_γεωμετρία -->
+
+    <owl:NamedIndividual rdf:about="http://thesaurus.duth.gr/maths/υπολογιστική_γεωμετρία">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:prefLabel xml:lang="el">υπολογιστική γεωμετρία</skos:prefLabel>
+        <skos:prefLabel xml:lang="en">computational geometry</skos:prefLabel>
+        <skos:broaderTransitive rdf:resource="http://thesaurus.duth.gr/maths/Μαθηματικά"/>
+        <skos:broader rdf:resource="http://thesaurus.duth.gr/maths/γεωμετρία"/>
+        <skos:broader rdf:resource="http://thesaurus.duth.gr/maths/υπολογιστικά_μαθηματικά"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://thesaurus.duth.gr/maths/φιλοσοφία_των_μαθηματικών -->
+
+    <owl:NamedIndividual rdf:about="http://thesaurus.duth.gr/maths/φιλοσοφία_των_μαθηματικών"/>
+    
+
+
+    <!-- http://thesaurus.duth.gr/maths/φράκταλ_γεωμετρία -->
+
+    <owl:NamedIndividual rdf:about="http://thesaurus.duth.gr/maths/φράκταλ_γεωμετρία">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:notation rdf:datatype="http://dewey.info/schema-terms/Notation">514.742</skos:notation>
+        <skos:altLabel xml:lang="el">κλασμοειδή</skos:altLabel>
+        <skos:altLabel xml:lang="el">μορφοκλασματικά</skos:altLabel>
+        <skos:prefLabel xml:lang="el">φράκταλ γεωμετρία</skos:prefLabel>
+        <skos:prefLabel xml:lang="en">fractal geometry</skos:prefLabel>
+        <skos:altLabel xml:lang="en">fractals</skos:altLabel>
+        <skos:broaderTransitive rdf:resource="http://thesaurus.duth.gr/maths/Μαθηματικά"/>
+        <skos:broader rdf:resource="http://thesaurus.duth.gr/maths/γεωμετρία"/>
+        <skos:related rdf:resource="http://thesaurus.duth.gr/maths/γραφικά_υπολογιστή"/>
+        <skos:related rdf:resource="http://thesaurus.duth.gr/maths/θεωρία_του_χάους"/>
+        <skos:related rdf:resource="http://thesaurus.duth.gr/maths/μαθηματική_ανάλυση"/>
+        <skos:related rdf:resource="http://thesaurus.duth.gr/maths/τοπολογία"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://thesaurus.duth.gr/maths/φυσική -->
+
+    <owl:NamedIndividual rdf:about="http://thesaurus.duth.gr/maths/φυσική"/>
+    
+
+
+    <!-- http://thesaurus.duth.gr/maths/ακολουθίες_(μαθηματικά) -->
+
+    <owl:NamedIndividual rdf:about="http://thesaurus.duth.gr/maths/ακολουθίες_(μαθηματικά)">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:notation rdf:datatype="http://dewey.info/schema-terms/Notation">515.24</skos:notation>
+        <skos:prefLabel xml:lang="el">ακολουθίες (μαθηματικά)</skos:prefLabel>
+        <skos:prefLabel xml:lang="en">sequences (mathematics)</skos:prefLabel>
+        <skos:broaderTransitive rdf:resource="http://thesaurus.duth.gr/maths/Μαθηματικά"/>
+        <skos:related rdf:resource="http://thesaurus.duth.gr/maths/άλγεβρα"/>
+        <skos:broader rdf:resource="http://thesaurus.duth.gr/maths/πραγματική_ανάλυση"/>
+        <skos:narrower rdf:resource="http://thesaurus.duth.gr/maths/σειρές_(μαθηματικά)"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://thesaurus.duth.gr/maths/θεωρία_καταστροφών_(μαθηματικά) -->
+
+    <owl:NamedIndividual rdf:about="http://thesaurus.duth.gr/maths/θεωρία_καταστροφών_(μαθηματικά)">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:notation rdf:datatype="http://dewey.info/schema-terms/Notation">514.74</skos:notation>
+        <skos:prefLabel xml:lang="el">θεωρία καταστροφών (μαθηματικά)</skos:prefLabel>
+        <skos:altLabel xml:lang="el">καταστροφές (μαθηματικά)</skos:altLabel>
+        <skos:prefLabel xml:lang="en">catastrophe theory (mathematics)</skos:prefLabel>
+        <skos:altLabel xml:lang="en">catastrophes (mathematics)</skos:altLabel>
+        <skos:broaderTransitive rdf:resource="http://thesaurus.duth.gr/maths/Μαθηματικά"/>
+        <skos:related rdf:resource="http://thesaurus.duth.gr/maths/γεωμετρία"/>
+        <skos:related rdf:resource="http://thesaurus.duth.gr/maths/τοπολογία"/>
+        <skos:broader rdf:resource="http://thesaurus.duth.gr/maths/ολική_ανάλυση_(μαθηματικά)"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://thesaurus.duth.gr/maths/ολική_ανάλυση_(μαθηματικά) -->
+
+    <owl:NamedIndividual rdf:about="http://thesaurus.duth.gr/maths/ολική_ανάλυση_(μαθηματικά)">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:notation rdf:datatype="http://dewey.info/schema-terms/Notation">514.74</skos:notation>
+        <skos:prefLabel xml:lang="el">ολική ανάλυση (μαθηματικά)</skos:prefLabel>
+        <skos:prefLabel xml:lang="en">global analysis (mathematics)</skos:prefLabel>
+        <skos:broaderTransitive rdf:resource="http://thesaurus.duth.gr/maths/Μαθηματικά"/>
+        <skos:broader rdf:resource="http://thesaurus.duth.gr/maths/μαθηματική_ανάλυση"/>
+        <skos:narrower rdf:resource="http://thesaurus.duth.gr/maths/θεωρία_καταστροφών_(μαθηματικά)"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://thesaurus.duth.gr/maths/πολλαπλότητες_(μαθηματικά) -->
+
+    <owl:NamedIndividual rdf:about="http://thesaurus.duth.gr/maths/πολλαπλότητες_(μαθηματικά)">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:notation rdf:datatype="http://dewey.info/schema-terms/Notation">516.07</skos:notation>
+        <skos:prefLabel xml:lang="el">πολλαπλότητες (μαθηματικά)</skos:prefLabel>
+        <skos:prefLabel xml:lang="en">manifolds (mathematics)</skos:prefLabel>
+        <skos:broaderTransitive rdf:resource="http://thesaurus.duth.gr/maths/Μαθηματικά"/>
+        <skos:broader rdf:resource="http://thesaurus.duth.gr/maths/διαφορική_γεωμετρία"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://thesaurus.duth.gr/maths/σειρές_(μαθηματικά) -->
+
+    <owl:NamedIndividual rdf:about="http://thesaurus.duth.gr/maths/σειρές_(μαθηματικά)">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:notation rdf:datatype="http://dewey.info/schema-terms/Notation">515.24</skos:notation>
+        <skos:prefLabel xml:lang="el">σειρές (μαθηματικά)</skos:prefLabel>
+        <skos:prefLabel xml:lang="en">series (mathematics)</skos:prefLabel>
+        <skos:broaderTransitive rdf:resource="http://thesaurus.duth.gr/maths/Μαθηματικά"/>
+        <skos:broader rdf:resource="http://thesaurus.duth.gr/maths/ακολουθίες_(μαθηματικά)"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://thesaurus.duth.gr/maths/σχετικότητα_(φυσική) -->
+
+    <owl:NamedIndividual rdf:about="http://thesaurus.duth.gr/maths/σχετικότητα_(φυσική)"/>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 3.5.0) http://owlapi.sourceforge.net -->
+
