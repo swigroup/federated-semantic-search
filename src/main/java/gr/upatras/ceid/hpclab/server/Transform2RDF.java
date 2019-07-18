@@ -3,13 +3,13 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package gr.dataverse.duth.semantic.server;
+package gr.upatras.ceid.hpclab.server;
 
 /**
  *
  * @author koutsomi
  */
-import gr.dataverse.duth.semantic.response.model.Results;
+import gr.upatras.ceid.hpclab.response.model.Results;
 import java.io.OutputStream;
 import java.util.logging.Level;
 import java.util.logging.Logger;

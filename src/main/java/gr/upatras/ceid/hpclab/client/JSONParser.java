@@ -57,7 +57,7 @@ public class JSONParser {
             return value;
         } catch (URISyntaxException | IOException ex ) {
             Logger.getLogger(JSONParser.class.getName()).
-                    log(Level.WARNING, "error getting " + key + " from " + inputUri + ". ", ex);
+                    log(Level.WARNING, "error getting " + key + " from " + inputUri + ". ", ex.getMessage());
         } finally {
             return value;
         }

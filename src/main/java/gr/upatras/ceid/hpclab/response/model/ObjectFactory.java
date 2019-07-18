@@ -11,7 +11,6 @@ import javax.xml.bind.annotation.XmlRegistry;
 
 
 /**
-<<<<<<< HEAD:SemanticMiddleware/src/main/java/gr/upatras/ceid/hpclab/response/model/ObjectFactory.java
  * This object contains factory methods for each Java content interface and Java
  * element interface generated in the gr.upatras.ceid.hpclab.response.model
  * package.
@@ -21,36 +20,15 @@ import javax.xml.bind.annotation.XmlRegistry;
  * can consist of schema derived interfaces and classes representing the binding
  * of schema type definitions, element declarations and model groups. Factory
  * methods for each of these are provided in this class.
- *
-=======
- * This object contains factory methods for each 
- * Java content interface and Java element interface 
- * generated in the gr.dataverse.duth.semantic.response.model package. 
- * <p>An ObjectFactory allows you to programatically 
- * construct new instances of the Java representation 
- * for XML content. The Java representation of XML 
- * content can consist of schema derived interfaces 
- * and classes representing the binding of schema 
- * type definitions, element declarations and model 
- * groups.  Factory methods for each of these are 
- * provided in this class.
- * 
->>>>>>> 6840f92... - Move to version 1.1:SemanticMiddleware/src/main/java/gr/dataverse/duth/semantic/response/model/ObjectFactory.java
- */
+  */
 @XmlRegistry
 public class ObjectFactory {
 
 
     /**
-<<<<<<< HEAD:SemanticMiddleware/src/main/java/gr/upatras/ceid/hpclab/response/model/ObjectFactory.java
      * Create a new ObjectFactory that can be used to create new instances of
      * schema derived classes for package:
      * gr.upatras.ceid.hpclab.response.model
-     *
-=======
-     * Create a new ObjectFactory that can be used to create new instances of schema derived classes for package: gr.dataverse.duth.semantic.response.model
-     * 
->>>>>>> 6840f92... - Move to version 1.1:SemanticMiddleware/src/main/java/gr/dataverse/duth/semantic/response/model/ObjectFactory.java
      */
     public ObjectFactory() {
     }

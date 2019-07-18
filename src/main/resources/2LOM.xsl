@@ -5,8 +5,8 @@
   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
   xmlns:xsd="http://www.w3.org/2001/XMLSchema#">
   <xsl:template match="/">
-  <rdf:RDF xmlns="http://lom.duth.gr/"
-     xml:base="http://lom.duth.gr"
+  <rdf:RDF xmlns="http://lom.hpclab.ceid.upatras.gr/"
+     xml:base="http://lom.hpclab.ceid.upatras.gr"
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"

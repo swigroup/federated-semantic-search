@@ -23,7 +23,9 @@ import org.xml.sax.SAXException;
  * @author koutsomi
  */
 class MerlotConnectorImpl implements RepositoryConnector {
-    private static final String licenseKey = "your_key_here";
+
+    private static final APIKeysConfiguration keys = new APIKeysConfiguration();
+    private static final String licenseKey = keys.getKey("merlot_key");
 
     @Override
     public Set parseResponse(InputStream xml) {
@@ -57,7 +59,7 @@ class MerlotConnectorImpl implements RepositoryConnector {
     public String buildConnectionUrl(String query) {
         String request;
         //25 results per page (default). Get the first 10.
-        request = Repository.MERLOT.getURL() + "?licenseKey=" + licenseKey 
+        request = Repository.MERLOT.getURL() + "?licenseKey=" + licenseKey
                 + "&allKeyWords=true&keywords=" + query + "&size=10";
         return request;
     }

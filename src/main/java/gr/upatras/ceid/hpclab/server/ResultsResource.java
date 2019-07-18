@@ -18,8 +18,6 @@ import javax.ws.rs.Path;
 import javax.ws.rs.QueryParam;
 import java.io.OutputStream;
 import java.io.OutputStreamWriter;
-import java.io.StringWriter;
-import java.io.InputStreamReader;
 import javax.ws.rs.WebApplicationException;
 import javax.ws.rs.core.Response;
 import javax.ws.rs.core.StreamingOutput;
@@ -51,14 +49,8 @@ public class ResultsResource {
 
     /**
      * Retrieves representation of an instance of
-<<<<<<< HEAD:SemanticMiddleware/src/main/java/gr/upatras/ceid/hpclab/server/ResultsResource.java
      * gr.upatras.ceid.hpclab.server.ResultsResource
-=======
-     * gr.dataverse.duth.semantic.server.ResultsResource
-     *
      * @Path matches either /results or /results/update
-     *
->>>>>>> 4490bcf... - added support for converting RDF to json (content negotiated):SemanticMiddleware/src/main/java/gr/dataverse/duth/semantic/server/ResultsResource.java
      * @param query
      * @return an instance of gr.upatras.ceid.hpclab.response.model.Results
      */
