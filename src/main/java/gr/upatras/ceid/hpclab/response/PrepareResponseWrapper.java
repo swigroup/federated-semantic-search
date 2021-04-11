@@ -11,17 +11,13 @@ import gr.upatras.ceid.hpclab.owl.OntologyManager;
 import gr.upatras.ceid.hpclab.owl.SKOSConcept;
 import gr.upatras.ceid.hpclab.query.QueryManager;
 import gr.upatras.ceid.hpclab.query.QueryTerm;
-import gr.upatras.ceid.hpclab.response.model.CategoryType;
-import gr.upatras.ceid.hpclab.response.model.ConceptType;
-import gr.upatras.ceid.hpclab.response.model.ObjectFactory;
-import gr.upatras.ceid.hpclab.response.model.ResultType;
-import gr.upatras.ceid.hpclab.response.model.Results;
-import gr.upatras.ceid.hpclab.response.model.TranslationType;
+import gr.upatras.ceid.hpclab.response.model.*;
 import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Set;
+
 /**
  *
  * @author koutsomi
@@ -43,11 +39,13 @@ public class PrepareResponseWrapper {
         return ct.getResult().addAll(resultsList);
     }
 
-    private void buildMatchingConcepts(QueryTerm keyword, CategoryType ct) {
-        Set<SKOSConcept> concepts = qm.getMatchingConcepts(keyword);
-
+    private void buildMatchingConcepts(Set<SKOSConcept> concepts, CategoryType ct) {
         for (SKOSConcept c : concepts) {
             ConceptType cons = fact.createConceptType();
+            /*cons.setLabel(qt.getLabel());
+            if (qt.getLang() != null) {
+                cons.setLang(qt.getLang());
+            }*/
             cons.setIRI(c.getIRI().toString());
             ct.getMatchingConcept().add(cons);
         }
@@ -68,14 +66,66 @@ public class PrepareResponseWrapper {
         ct.setKeyword(keyword.getLabel());
         ct.setLang(keyword.getLang());
         buildTranslations(keyword, ct);
-        buildMatchingConcepts(keyword, ct);
         res.getCategory().add(ct);
         return ct;
     }
 
+    private void addLabelsToKeyword(KeywordType kt, CategoryType ct) {
+        KeywordType.Label l = fact.createKeywordTypeLabel();
+        l.setValue(ct.getKeyword());
+        l.setLang(ct.getLang());
+        kt.getLabel().add(l);
+    }
+
+    /**
+     *
+     * @param kt
+     * @param queryTermSet
+     * @return whether an inserted label matches the category keyword, so the
+     * latter should be removed.
+     */
+    private boolean addLabelsToKeyword(KeywordType kt, CategoryType ct, Set<QueryTerm> queryTermSet) {
+        boolean value = false;
+        for (QueryTerm s : queryTermSet) {
+            KeywordType.Label l = fact.createKeywordTypeLabel();
+            l.setValue(s.getLabel());
+            l.setLang(s.getLang());
+            kt.getLabel().add(l);
+            if (s.getLabel().equalsIgnoreCase(ct.getKeyword())) {
+                //keyword already exists with an IRI
+                value = true;
+            }
+        }
+        return value;
+    }
+
+    private void addKeywordsToResultsInCategory(Set<SKOSConcept> concepts, CategoryType ct) {
+        KeywordType kw = fact.createKeywordType();
+        addLabelsToKeyword(kw, ct);
+        for (ResultType rt : ct.getResult()) {
+            if (rt != null) {
+                kw.setScore(0.99);
+                rt.getKeyword().add(kw);
+                for (SKOSConcept cons : concepts) {
+                    KeywordType kt = fact.createKeywordType();
+                    kt.setIRI(cons.getIRI().toString());
+                    if (addLabelsToKeyword(kt,ct, cons.getPrefLabels())) {
+                        rt.getKeyword().remove(kw);
+                    }
+                    kt.setScore(1.0);
+                    rt.getKeyword().add(kt);
+                }
+            }
+        }
+    }
+
     private Boolean buildResults(QueryTerm keyword) {
+        Set<SKOSConcept> concepts = qm.getMatchingConcepts(keyword);
         CategoryType ct = buildCategory(keyword);
-        return addResultsListToCategory(ct, returnResults(keyword.getLabel()));
+        buildMatchingConcepts(concepts, ct);
+        boolean changed = addResultsListToCategory(ct, returnResults(keyword.getLabel()));
+        addKeywordsToResultsInCategory(concepts, ct);
+        return changed;
     }
 
     public Results getResults(List<String> keywords) {
