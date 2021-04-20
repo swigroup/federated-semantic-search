@@ -42,9 +42,9 @@ public class ResultsResource {
     public ResultsResource() {
     }
 
-    private Results getResultsInXML(List<String> query) {
+    private Results getResultsInXML(List<String> query, boolean validate) {
         PrepareResponseWrapper response = new PrepareResponseWrapper();
-        return response.getResults(query);
+        return response.getResults(query, validate);
     }
 
     /**
@@ -58,7 +58,7 @@ public class ResultsResource {
     @GET
     @Produces({"application/xml", "application/rdf+xml"})
     public Response getRdf(@QueryParam("q") List<String> query) {
-        final Results res = getResultsInXML(query);
+        final Results res = getResultsInXML(query, true);
         StreamingOutput stream = new StreamingOutput() {
             @Override
             public void write(OutputStream output) throws IOException, WebApplicationException {
@@ -73,7 +73,7 @@ public class ResultsResource {
     @GET
     @Produces({"application/json"})
     public Response getJson(@QueryParam("q") List<String> query) {
-        final Results res = getResultsInXML(query);
+        final Results res = getResultsInXML(query, true);
         StreamingOutput stream = new StreamingOutput() {
             @Override
             public void write(OutputStream output) throws IOException, WebApplicationException {
@@ -93,9 +93,9 @@ public class ResultsResource {
     @Path("/results2")
     @GET
     @Produces({"application/xml", "application/json"})
-    public Results getXml(@QueryParam("q") List<String> query) {
+    public Results getXml(@QueryParam("q") List<String> query, @QueryParam("validate") boolean validate) {
 
-        return getResultsInXML(query);
+        return getResultsInXML(query, validate);
     }
 
 }

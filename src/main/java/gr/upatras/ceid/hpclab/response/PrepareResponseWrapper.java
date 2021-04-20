@@ -29,7 +29,7 @@ public class PrepareResponseWrapper {
     private final OntologyManager om = new OntologyManager();
     private final CategoryFactory cf = new CategoryFactory(qm);
 
-    public Results getResults(List<String> keywords) {
+    public Results getResults(List<String> keywords, boolean validate) {
         Set temp = new HashSet();
 
         for (String keyword : polishKeywordSet(keywords)) {
@@ -62,7 +62,7 @@ public class PrepareResponseWrapper {
             int counter = 0;
             while (counter < 4 && it.hasNext()) {
                 QueryTerm v = it.next();
-                CategoryType ct = cf.createCategory(v);
+                CategoryType ct = cf.createCategory(v, validate);
                 res.getCategory().add(ct);
                 counter++;
             }

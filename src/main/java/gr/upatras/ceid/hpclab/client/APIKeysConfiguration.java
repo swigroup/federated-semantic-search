@@ -14,11 +14,11 @@ import org.apache.commons.configuration.PropertiesConfiguration;
  *
  * @author koutsomi
  */
-class APIKeysConfiguration {
+public class APIKeysConfiguration {
 
     private PropertiesConfiguration prop = new PropertiesConfiguration();
 
-    APIKeysConfiguration() {
+    public APIKeysConfiguration() {
         try {
             // load a properties file
             prop = new PropertiesConfiguration("keys");
@@ -28,7 +28,7 @@ class APIKeysConfiguration {
         }
     }
 
-    String getKey(String name) {
+    public String getKey(String name) {
 
         String key = prop.getStringArray(name)[0];
         if (key == null || key.equals("")) {

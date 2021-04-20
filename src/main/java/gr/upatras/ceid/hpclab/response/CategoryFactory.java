@@ -12,9 +12,13 @@ import gr.upatras.ceid.hpclab.query.QueryTerm;
 import gr.upatras.ceid.hpclab.response.model.CategoryType;
 import gr.upatras.ceid.hpclab.response.model.ConceptType;
 import gr.upatras.ceid.hpclab.response.model.KeywordType;
+import gr.upatras.ceid.hpclab.response.model.KeywordType.Label;
 import gr.upatras.ceid.hpclab.response.model.ObjectFactory;
 import gr.upatras.ceid.hpclab.response.model.ResultType;
 import gr.upatras.ceid.hpclab.response.model.TranslationType;
+import gr.upatras.ceid.hpclab.validator.HFModel;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Set;
 
 /**
@@ -26,8 +30,10 @@ public class CategoryFactory {
     private final ObjectFactory fact;
     private final QueryClientManager client;
     private final QueryManager qm;
+    private final HFModel model = new HFModel();
     private QueryTerm keyword;
     private CategoryType ct;
+    private boolean validate;
 
     public CategoryFactory(QueryManager qm) {
         this.client = new QueryClientManager();
@@ -106,7 +112,6 @@ public class CategoryFactory {
         addLabelsToKeyword(kw, ct);
         for (ResultType rt : ct.getResult()) {
             if (rt != null) {
-                kw.setScore(0.99);
                 rt.getKeyword().add(kw);
                 for (SKOSConcept cons : concepts) {
                     KeywordType kt = fact.createKeywordType();
@@ -114,14 +119,35 @@ public class CategoryFactory {
                     if (addLabelsToKeyword(kt, cons.getPrefLabels())) {
                         rt.getKeyword().remove(kw);
                     }
-                    kt.setScore(1.0);
                     rt.getKeyword().add(kt);
+                }
+                if (validate) {
+                    for (KeywordType kt : rt.getKeyword()) {
+                        computeScoreForKeyword(kt, rt);
+                    }
                 }
             }
         }
     }
 
-    protected CategoryType createCategory(QueryTerm keyword) {
+    private void computeScoreForKeyword(KeywordType kt, ResultType rt) {
+        String input = rt.getTitle() + " " + rt.getDescription();
+        //clear HTML tags
+        input = input.replaceAll("\\<.*?\\>", "");
+        //Label is a pair with xml:lang and value
+        List<Label> labels = kt.getLabel();
+        List<String> labelslist = new ArrayList<String>();
+        for (Label l : labels) {
+            labelslist.add(l.getValue());
+        }
+        double score = model.getScore(input, labelslist);
+        if (score != -1) {
+            kt.setScore(score);
+        }
+    }
+
+    protected CategoryType createCategory(QueryTerm keyword, boolean validate) {
+        this.validate = validate;
         this.keyword = keyword;
         this.ct = fact.createCategoryType();
         Set<SKOSConcept> concepts = qm.getMatchingConcepts(keyword);

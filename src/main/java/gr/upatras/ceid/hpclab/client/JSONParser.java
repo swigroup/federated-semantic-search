@@ -10,7 +10,6 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
-import java.net.MalformedURLException;
 import java.net.URI;
 import java.net.URISyntaxException;
 import java.nio.charset.StandardCharsets;
@@ -26,7 +25,7 @@ import org.json.JSONTokener;
  */
 public class JSONParser {
 
-    static JSONObject parse(InputStream json) {
+    public static JSONObject parse(InputStream json) {
         BufferedReader in = new BufferedReader(new InputStreamReader(json, StandardCharsets.UTF_8));
         JSONTokener tokener = new JSONTokener(in);
         JSONObject js = new JSONObject(tokener);
