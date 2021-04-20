@@ -1,5 +1,6 @@
 # Federated Semantic Search
 A service for federated semantic search, classification and harvesting of Open Educational Resources over multiple repositories.
+To enable zero-shot validation of terms, pass URL parameter validate=true.
 
 ![Alt text](images/figure.jpg?raw=true "The architecture of the Federated Semantic Search framework")
 
