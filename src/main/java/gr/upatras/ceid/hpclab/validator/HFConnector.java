@@ -9,9 +9,7 @@ import gr.upatras.ceid.hpclab.client.APIKeysConfiguration;
 import com.sun.jersey.api.client.Client;
 import com.sun.jersey.api.client.ClientResponse;
 import com.sun.jersey.api.client.WebResource;
-import com.sun.jersey.core.util.MultivaluedMapImpl;
 import java.io.InputStream;
-import javax.ws.rs.core.MultivaluedMap;
 
 class HFConnector {
 
@@ -50,7 +48,7 @@ class HFConnector {
         String uri = endpoint + model.getModelID();
         WebResource webResource = client.resource(uri);
 
-        MultivaluedMap<String, String> queryPStrarams = new MultivaluedMapImpl();
+        
         //Get response from RESTful Server get(ClientResponse.class);
         ClientResponse response = webResource
                 .header("Content-Type", "application/json;charset=UTF-8")

@@ -47,7 +47,7 @@ public class HFModel {
             JSONArray scoresArray = json.getJSONArray("scores");
 
             //implement argmax
-            List<Double> scoresList = new ArrayList<Double>();
+            List<Double> scoresList = new ArrayList<>();
             for (Object s : scoresArray) {
                 scoresList.add((Double) s);
             }

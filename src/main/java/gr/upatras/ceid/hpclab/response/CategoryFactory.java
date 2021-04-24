@@ -108,10 +108,15 @@ public class CategoryFactory {
     }
 
     private void addKeywordsToResultsInCategory(Set<SKOSConcept> concepts) {
-        KeywordType kw = fact.createKeywordType();
-        addLabelsToKeyword(kw, ct);
         for (ResultType rt : ct.getResult()) {
             if (rt != null) {
+                /*
+                assign category keyword to results. This may be 
+                common for all results in category, but score is different.
+                So create new kw for each result.
+                */
+                KeywordType kw = fact.createKeywordType();
+                addLabelsToKeyword(kw, ct);
                 rt.getKeyword().add(kw);
                 for (SKOSConcept cons : concepts) {
                     KeywordType kt = fact.createKeywordType();
@@ -136,9 +141,13 @@ public class CategoryFactory {
         input = input.replaceAll("\\<.*?\\>", "");
         //Label is a pair with xml:lang and value
         List<Label> labels = kt.getLabel();
-        List<String> labelslist = new ArrayList<String>();
+        List<String> labelslist = new ArrayList<>();
         for (Label l : labels) {
+            //prefer labels that match the language of the seed keyword, if any.
+            //A concept can have at most 1 prefLabel per language tag.
+            if ((ct.getLang()==null)||(l.getLang()==null)|| (l.getLang().equals(ct.getLang()))) {
             labelslist.add(l.getValue());
+            }
         }
         double score = model.getScore(input, labelslist);
         if (score != -1) {

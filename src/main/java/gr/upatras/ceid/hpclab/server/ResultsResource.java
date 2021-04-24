@@ -57,8 +57,8 @@ public class ResultsResource {
     @Path("/results{p: (/update)?}")
     @GET
     @Produces({"application/xml", "application/rdf+xml"})
-    public Response getRdf(@QueryParam("q") List<String> query) {
-        final Results res = getResultsInXML(query, true);
+    public Response getRdf(@QueryParam("q") List<String> query, @QueryParam("validate") boolean validate) {
+        final Results res = getResultsInXML(query, validate);
         StreamingOutput stream = new StreamingOutput() {
             @Override
             public void write(OutputStream output) throws IOException, WebApplicationException {
@@ -72,8 +72,8 @@ public class ResultsResource {
     @Path("/results{p: (/update)?}")
     @GET
     @Produces({"application/json"})
-    public Response getJson(@QueryParam("q") List<String> query) {
-        final Results res = getResultsInXML(query, true);
+    public Response getJson(@QueryParam("q") List<String> query, @QueryParam("validate") boolean validate) {
+        final Results res = getResultsInXML(query, validate);
         StreamingOutput stream = new StreamingOutput() {
             @Override
             public void write(OutputStream output) throws IOException, WebApplicationException {
