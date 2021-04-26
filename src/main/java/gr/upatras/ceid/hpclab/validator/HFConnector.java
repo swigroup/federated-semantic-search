@@ -16,7 +16,15 @@ class HFConnector {
     private static final APIKeysConfiguration keys = new APIKeysConfiguration();
     private static final String apiKey = keys.getKey("hf_key");
     private static final String endpoint = "https://api-inference.huggingface.co/models/";
+    private static final Client client;
+    private final WebResource webResource;
     protected Model model;
+    
+    static {
+        client = Client.create();
+        client.setConnectTimeout(500);
+        client.setReadTimeout(1000);
+    }
 
     enum Model {
         BART("facebook/bart-large-mnli"), XLMR("joeddav/xlm-roberta-large-xnli");
@@ -39,16 +47,15 @@ class HFConnector {
 
     HFConnector (Model model) {
         this.model = model;
+   
+        String uri = endpoint + model.getModelID();
+        webResource = client.resource(uri);
     }
     
 
     InputStream submit(String payload) throws Exception {
 
-        Client client = Client.create();
-        String uri = endpoint + model.getModelID();
-        WebResource webResource = client.resource(uri);
-
-        
+       
         //Get response from RESTful Server get(ClientResponse.class);
         ClientResponse response = webResource
                 .header("Content-Type", "application/json;charset=UTF-8")
@@ -59,7 +66,7 @@ class HFConnector {
                     + model
                     + ". HTTP error code : "
                     + response.getStatus()
-                    + " URI: " + uri
+                    + " URI: " + webResource.getURI()
                     + " JSON: " + payload
                     + " response: " + response.toString()
             );

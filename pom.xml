@@ -138,7 +138,6 @@
                     </execution>
                 </executions>
                 <configuration>
-                    <catalog>src/main/resources/jaxb/catalog.xml</catalog>
                     <catalogResolver>org.jvnet.jaxb2.maven2.resolver.tools.ClasspathCatalogResolver</catalogResolver>
                     <generateDirectory>${project.build.directory}/generated-sources/xjc</generateDirectory>
                     <verbose>true</verbose>
